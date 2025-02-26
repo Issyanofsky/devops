@@ -33,6 +33,7 @@
   pull to the folder (local) from a specific branch
 
 # branches
+  
   git branch - display a list of all branches in the repository, with an asterisk (*) next to the currently active branch.
   git branch -a - lists all branches in the Git repository, both local and remote. 
   git branch <branch-Name> - create branch
