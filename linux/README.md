@@ -141,10 +141,7 @@
   wc [options] [file...]
   (wc myfile.txt)
   count the number of lines, words, characters, and bytes in a text file or input provided.
-## chmod
-  chmod [options] mode file
-  (chmod 755 myfile.txt) - Set permissions using numeric mode.
-  (chmod u+x myfile.txt) - Set permissions using symbolic mode
+
 ## lsmod
   lsmod
   list all currently loaded kernel modules.
@@ -289,3 +286,99 @@
   top
 
   real-time monitoring tool used to display information about the system’s resource usage, including CPU, memory, and running processes.
+
+# user/group
+
+## USER
+
+    /etc/passwd - user info
+  
+    /etc/shadow - passwd info
+
+    /etc/group - group info
+
+    #UID
+
+    #USER
+
+    #GID
+  
+## whoami
+
+    whoami - current logged-in user's username.
+
+## id
+
+  id [OPTION] [USER] - display the user and group information
+
+  id
+
+## su
+
+  su -c <command> <user> - execute command with other user.
+
+  sudo su - - switch to root user.
+
+## useradd
+
+  useradd <user_Name> - create a new user.
+
+  userdell <user_Name> - delete user. 
+
+## passwd
+
+  sudo passwd <user_Name> - Setting or Changing the Password for a User.
+
+## groupadd
+
+  sudo groupadd GROUP_NAME - create a new group.
+  
+## gpasswd
+
+  gpasswd [OPTION] GROUP_NAME - group password.
+
+  sudo gpasswd -A user GROUP_NAME - Add group administrators.
+  
+## usermod
+
+  sudo usermod [OPTIONS] USERNAME - modify user accounts.
+
+  (sudo usermod -aG group_name username) - Change a User's Group.
+
+## chmod
+
+  chmod [options] mode file.
+  
+  (chmod 755 myfile.txt) - Set permissions using numeric mode.
+  
+  (chmod u+x myfile.txt) - Set permissions using symbolic mode.
+
+## chown
+
+  sudo chown [OPTIONS] OWNER[:GROUP] FILE - change the ownership of files and directories.
+
+  (sudo chown john file.txt) - Change the owner of a file or directory.
+
+  (sudo chown john:admins file.txt) - Change both the owner and the group of a file.
+
+## chgrp
+
+  sudo chgrp GROUP FILE - change the group ownership of a file or directory.
+
+  (sudo chgrp developers file.txt) - Change the group of a file.
+
+  (sudo chgrp -R developers /path/to/directory) - Change the group of a directory recursively (change the group of a directory and all files/subdirectories inside it). 
+
+## umask
+
+  umask [OPTION] [MASK] - set default file permissions to files and directories.
+
+    (umask) - Display the current umask settings.
+
+    (umask 022) - value 022 removes write permissions for group and others.
+
+## sticky bit
+
+  only the file's owner, the directory's owner, and the root user can delete or rename the files inside that directory, regardless of the directory's permissions. 
+
+  (chmod +t directory_name) -  set the sticky bit on a directory.
