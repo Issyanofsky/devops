@@ -178,11 +178,17 @@
   unset VARIABLE_NAME
   (unset MY_VAR)
   remove environment variables or shell functions.
+  
 ## Builtin Varibales
+
   $PATH - list of  executable files.
+  
   $HOME - path to the current user's home directory.
+  
   $USER - the name of the user logged into the system.
+  
   $SHELL - tells you which shell is being used in your terminal.
+  
   $PWD - current working directory. This is the directory in which the user is currently operating in the terminal.
 
 # services
