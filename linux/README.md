@@ -195,7 +195,9 @@
   $PWD - current working directory. This is the directory in which the user is currently operating in the terminal.
 
 # services
+
 ## systemctl
+
   systemctl [OPTION] COMMAND [SERVICE]
   
   used for start, stop, restart, enable, disable, and check the status of services, as well as manage system shutdowns and reboots.
@@ -214,7 +216,10 @@
   
   (sudo systemctl disable nginx)
 
+  (systemctl list-unit --type service) - display all services.
+
 # Firewall
+
   firewall settings in Linux systems that use firewalld (a dynamic firewall manager). 
   
   firewall-cmd [options] [command] [arguments]
@@ -232,6 +237,7 @@
   systemctl restart firewalld - restart firewall
 
 # processes
+
 ## ps
   
   ps [options]
