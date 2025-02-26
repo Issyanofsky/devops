@@ -89,6 +89,16 @@
 ## ping
   ping <ip-address>
   pinging to a specific address (check connectivity).
+## netstat
+  netstat [OPTIONS]
+  (netstat -l) - Displays only the listening ports.
+  (netstat -p) - Displays the PID (Process ID).
+  (netstat -a) - Displays all connections and listening ports.
+  (network statistics) display information about network connections, routing tables, interface statistics, and other network-related data.
+## nmap
+  nmap [options] [target]
+  (nmap -sn 192.168.1.0/24) -Discover hosts on a network without port scanning.
+  (Network Mapper) network discovery and security auditing
 ## wget
   wget [options] <URL>
   (wget https://example.com/file.txt)
@@ -142,19 +152,69 @@
   similar to strace, but it specifically traces library calls (function calls made to shared libraries) instead of system calls.
 
 
-  # locations
-  ## /etc/passwd 
-    list of users
-  ## /etc/default/useradd 
-    tasks for adding user.
-  ## /etc/group
-    group on the computer
-  ## /usr/share/zoneinfo
-    time zone setting
-  ## /proc
-    contains a wealth of real-time information about the system's hardware, running processes, kernel parameters, and more.
-  ## /var/log
-    contain system logs
-  ##
-    
+# locations
+## /etc/passwd 
+  list of users
+## /etc/default/useradd 
+  tasks for adding user.
+## /etc/group
+  group on the computer
+## /usr/share/zoneinfo
+  time zone setting
+## /proc
+  contains a wealth of real-time information about the system's hardware, running processes, kernel parameters, and more.
+## /var/log
+  contain system logs
+##
+
+# Enviroment variable
+## env
+  display or set environment variables.
+## export
+  export VARIABLE_NAME=value
+  (export MY_VAR="Hello, world!")
+  set environment variables for the current session or for child processes of the current shell.
+## unset
+  unset VARIABLE_NAME
+  (unset MY_VAR)
+  remove environment variables or shell functions.
+## Builtin Varibales
+  $PATH - list of  executable files.
+  $HOME - path to the current user's home directory.
+  $USER - the name of the user logged into the system.
+  $SHELL - tells you which shell is being used in your terminal.
+  $PWD - current working directory. This is the directory in which the user is currently operating in the terminal.
+
+# services
+## systemctl
+  systemctl [OPTION] COMMAND [SERVICE]
+  used for start, stop, restart, enable, disable, and check the status of services, as well as manage system shutdowns and reboots.
+  sudo systemctl start <service_name>
+  (sudo systemctl start nginx)
+  (sudo systemctl stop nginx)
+  (sudo systemctl restart nginx)
+  (systemctl status nginx)
+  (sudo systemctl enable nginx)
+  (sudo systemctl disable nginx)
+
+# Firewall
+  firewall settings in Linux systems that use firewalld (a dynamic firewall manager). 
+  firewall-cmd [options] [command] [arguments]
+  (firewall-cmd --state) - Show the current state of the firewall.
+  (firewall-cmd --reload) - Reload the firewall to apply permanent changes.
+  (firewall-cmd --add-service=http --permanent) - Allow HTTP service permanently.
+  (firewall-cmd --get-service) - display service list.
+  firewall-cmd --add-port=<portNumber/protocol - (firewall-cmd --add-port=80/tcp).
+
+  systemctl restart firewalld - restart firewall
+
+# processes
+## ps
+  ps [options]
+  display prossess.
+  (ps -e) - Show all processes running on the system (including those from other users).
+  (ps -f) - Display full-format listing with additional details (including the parent process ID).
+  (ps -u <userName>) - Show processes for a specific user.
+  (ps aux --sort=%cpu) - Sort processes by CPU usage.
+  
   
