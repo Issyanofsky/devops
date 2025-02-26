@@ -188,33 +188,54 @@
 # services
 ## systemctl
   systemctl [OPTION] COMMAND [SERVICE]
+  
   used for start, stop, restart, enable, disable, and check the status of services, as well as manage system shutdowns and reboots.
+  
   sudo systemctl start <service_name>
+  
   (sudo systemctl start nginx)
+  
   (sudo systemctl stop nginx)
+  
   (sudo systemctl restart nginx)
+  
   (systemctl status nginx)
+  
   (sudo systemctl enable nginx)
+  
   (sudo systemctl disable nginx)
 
 # Firewall
   firewall settings in Linux systems that use firewalld (a dynamic firewall manager). 
+  
   firewall-cmd [options] [command] [arguments]
+  
   (firewall-cmd --state) - Show the current state of the firewall.
+  
   (firewall-cmd --reload) - Reload the firewall to apply permanent changes.
+  
   (firewall-cmd --add-service=http --permanent) - Allow HTTP service permanently.
+  
   (firewall-cmd --get-service) - display service list.
+  
   firewall-cmd --add-port=<portNumber/protocol - (firewall-cmd --add-port=80/tcp).
 
   systemctl restart firewalld - restart firewall
 
 # processes
 ## ps
+  
   ps [options]
+  
   display prossess.
+  
   (ps -e) - Show all processes running on the system (including those from other users).
+  
   (ps -f) - Display full-format listing with additional details (including the parent process ID).
+  
   (ps -u <userName>) - Show processes for a specific user.
+  
   (ps aux --sort=%cpu) - Sort processes by CPU usage.
+  
   
   
