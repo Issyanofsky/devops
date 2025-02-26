@@ -142,4 +142,19 @@
   similar to strace, but it specifically traces library calls (function calls made to shared libraries) instead of system calls.
 
 
+  # locations
+  ## /etc/passwd 
+    list of users
+  ## /etc/default/useradd 
+    tasks for adding user.
+  ## /etc/group
+    group on the computer
+  ## /usr/share/zoneinfo
+    time zone setting
+  ## /proc
+    contains a wealth of real-time information about the system's hardware, running processes, kernel parameters, and more.
+  ## /var/log
+    contain system logs
+  ##
+    
   
