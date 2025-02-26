@@ -94,3 +94,52 @@
   (wget https://example.com/file.txt)
   (wget -P /path/to/destination https://example.com/file.txt) - download a file to a specific location.
   download files from the web.
+## df
+  df - Display disk space for all filesystems
+  df -h - Display disk space in human-readable format.
+## mount
+  sudo mount <folder_name> <destination_folder>
+  (mount /dev/sdb1 /mnt/usb)
+  mount a filesystem to a specified directory.
+## file
+  file [options] <file>
+  (file example.txt)
+  determine the type of a file based on its content and not just its file extension.
+## lsblk 
+  lsblk [options]
+  (lsblk -f) - List block devices with detailed information.
+   list information about block devices.
+## lscpu
+  lscpu
+  display detailed information about the CPU architecture.
+## free
+  free [options]
+  display system memory usage.
+## swapon
+  swapon [options] [device]
+  enable swap devices and swap files.
+## uptime
+  uptime
+  display the system's uptime.
+## wc
+  wc [options] [file...]
+  (wc myfile.txt)
+  count the number of lines, words, characters, and bytes in a text file or input provided.
+## chmod
+  chmod [options] mode file
+  (chmod 755 myfile.txt) - Set permissions using numeric mode.
+  (chmod u+x myfile.txt) - Set permissions using symbolic mode
+## lsmod
+  lsmod
+  list all currently loaded kernel modules.
+## strace
+  strace [options] command [arguments...]
+  (strace -p <PID>) - trace a process by its PID (Process ID)
+  trace system calls and signals made by a program during its execution. 
+## ltrace
+  ltrace [options] command [arguments...]
+  (ltrace ls)
+  similar to strace, but it specifically traces library calls (function calls made to shared libraries) instead of system calls.
+
+
+  
