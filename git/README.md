@@ -59,7 +59,27 @@
 
     (git reset --soft HEAD~1) - keep changes in your working directory but move HEAD to an earlier commit.
 
-git reset --soft/hard/mixed HEAD~2 - undo changes by moving the current HEAD (and possibly the index and working directory) to a specific state.
+## reset
 
-git revert <commit_hash> - undo changes without disrupting others.
+  git reset --soft/hard/mixed HEAD~2 - undo changes by moving the current HEAD (and possibly the index and working directory) to a specific state.
+
+## revert
+
+  git revert <commit_hash> - undo changes without disrupting others.
+  
+## cherry-pick
+
+  git cherry-pick <commit_hash> - merging commit (or range of commit) from one branch to another (add it as a new commit).
+
+## rebase
+
+ main has new commits that you don’t have in your feature-xyz branch, and you want to update your branch with those changes.
+ 
+  git rebase main 
+
+  (git rebase -i HEAD~5) - Clean Up Commit History
+
+## log
+
+  git log - view the commit history of a Git repository.
   
