@@ -33,11 +33,11 @@
   pull to the folder (local) from a specific branch
 
 # branches
-git branch - display a list of all branches in the repository, with an asterisk (*) next to the currently active branch.
-git branch -a - lists all branches in the Git repository, both local and remote. 
-git branch <branch-Name> - create branch
-git checkout <branch-Name> - switch branches.
-git switch <branch_Name> - switch branches (like checkout - new command).
-git diff - show the differences between files in your working directory, staged changes, or between commits.
+  git branch - display a list of all branches in the repository, with an asterisk (*) next to the currently active branch.
+  git branch -a - lists all branches in the Git repository, both local and remote. 
+  git branch <branch-Name> - create branch
+  git checkout <branch-Name> - switch branches.
+  git switch <branch_Name> - switch branches (like checkout - new command).
+  git diff - show the differences between files in your working directory, staged changes, or between commits.
 
 
