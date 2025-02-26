@@ -249,5 +249,43 @@
   
   (ps aux --sort=%cpu) - Sort processes by CPU usage.
   
+## jobs
   
+  jobs [options]
   
+  (jobs -l) - List jobs with more details
+  
+  list the jobs that are running in the current terminal session.
+
+  ## & 
+
+  some_command &
+  
+  Start a job in the background:
+
+  ## fg
+    
+    fg %<jod id> 
+    
+    Bring a job to the foreground
+
+
+  ## bg
+    
+    bg %<jod id> 
+    
+    Bring a job to the backeground
+
+## nohup
+
+  nohup command [arguments] &
+
+  (nohup ./my_script.sh &)
+
+  No Hang Up. run a command or process in the background, and it ensures that the process will continue running even if the user logs out or the terminal is closed.  
+
+## top
+
+  top
+
+  real-time monitoring tool used to display information about the system’s resource usage, including CPU, memory, and running processes.
