@@ -90,11 +90,17 @@
   ping <ip-address>
   pinging to a specific address (check connectivity).
 ## netstat
+
   netstat [OPTIONS]
+  
   (netstat -l) - Displays only the listening ports.
+  
   (netstat -p) - Displays the PID (Process ID).
+  
   (netstat -a) - Displays all connections and listening ports.
+  
   (network statistics) display information about network connections, routing tables, interface statistics, and other network-related data.
+  
 ## nmap
   nmap [options] [target]
   (nmap -sn 192.168.1.0/24) -Discover hosts on a network without port scanning.
