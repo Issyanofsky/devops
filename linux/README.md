@@ -16,8 +16,7 @@
 ## man 
   man <command
   show manual of the command
-## cat
-  display file content
+
 ## mkdir
   mkdir <Folder-Name>
   create new folder
@@ -64,10 +63,7 @@
 ## tail
   tail <file_name>
   display last 10 lines of a the file.
-## grep <string>
-  grep [options] pattern <source>
-  (grep "error" /var/log/syslog)
-  search for specific patterns within files.
+
 ## |
   command1 | command2
   (ls | grep "file")
@@ -214,9 +210,11 @@
 
 ## grep
 
-  grep - search for specific patterns (using regular expressions) within files or input streams. 
+  grep [options] pattern <source> - search for specific patterns (using regular expressions) within files or input streams. 
 
   (grep 'pattern' file.txt) - Search for a word in a file
+
+  (grep "error" /var/log/syslog)
   
 # locations
 
