@@ -137,10 +137,6 @@
 ## uptime
   uptime
   display the system's uptime.
-## wc
-  wc [options] [file...]
-  (wc myfile.txt)
-  count the number of lines, words, characters, and bytes in a text file or input provided.
 
 ## lsmod
   lsmod
@@ -154,32 +150,120 @@
   (ltrace ls)
   similar to strace, but it specifically traces library calls (function calls made to shared libraries) instead of system calls.
 
+# text-processing
 
+## tee
+
+  tee - Reads from standard input and writes to both standard output and files simultaneously.
+
+## cut 
+
+  cut - desplay content.
+
+  (cut text.txt)
+
+## sed
+
+  sed - modify, delete, insert, or substitute text within files or output.
+
+  (sed 's/old_text/new_text/' file.txt) - replaces the first occurrence of "old_text" with "new_text" in each line of file.txt.
+
+## paste
+
+  paste - Merges lines of files side by side, combining them into a single line.
+
+  (paste -s <file_name1> <file_name2> - merge those files.
+
+## join
+
+  join - Combines lines of two files based on a common field or column.
+
+## split
+
+  split - Divides a file into smaller chunks based on specified criteria (e.g., line count).
+
+## sort
+
+  sort - Arranges the lines of input data in a specified order (alphabetical, numerical, etc.).
+  
+  (sort -r <text>) - reverse the list.
+
+## tr
+
+  tr - Translates or deletes characters in a stream of text.
+
+## uniq
+
+  uniq - Filters out repeated lines from input, leaving only unique entries.
+
+## wc
+
+  wc [options] [file...]
+  
+  (wc myfile.txt)
+  
+  count the number of lines, words, characters, and bytes in a text file or input provided.
+
+## nl
+
+  nl - umber the lines of a file and then display them, making it easy to see the line numbers.
+
+  (nl file.txt) - display the contents of file.txt with line numbers added at the beginning of each line.
+
+  (nl -b a file.txt) - Numbering only non-empty lines.
+
+## grep
+
+  grep - search for specific patterns (using regular expressions) within files or input streams. 
+
+  (grep 'pattern' file.txt) - Search for a word in a file
+  
 # locations
+
 ## /etc/passwd 
+
   list of users
+  
 ## /etc/default/useradd 
+
   tasks for adding user.
+  
 ## /etc/group
+
   group on the computer
+  
 ## /usr/share/zoneinfo
+
   time zone setting
+  
 ## /proc
+  
   contains a wealth of real-time information about the system's hardware, running processes, kernel parameters, and more.
+  
 ## /var/log
+
   contain system logs
-##
 
 # Enviroment variable
+
 ## env
+
   display or set environment variables.
+  
 ## export
+
   export VARIABLE_NAME=value
+
   (export MY_VAR="Hello, world!")
+  
   set environment variables for the current session or for child processes of the current shell.
+  
 ## unset
+  
   unset VARIABLE_NAME
+  
   (unset MY_VAR)
+  
   remove environment variables or shell functions.
   
 ## Builtin Varibales
