@@ -118,6 +118,22 @@
   
   try...except – Handles exceptions in code.
 
+## Lambda
+
+  lambda arguments: expression - one-line function that you can use when you need a simple function for a short period of time.
+
+    #Lambda function to add two numbers
+    
+    add = lambda x, y: x + y
+    
+    #Calling the lambda function
+
+    result = add(3, 5)
+    
+    print(result)  #Output: 8
+
+
+  
 
 # operation with numbers
 
@@ -255,4 +271,13 @@
 
       return int(self.variable)
     
+## super()
 
+  super() -  call methods from a parent class (or superclass) inside a child class. 
+
+  super().method_name(arguments)
+
+
+
+
+  
