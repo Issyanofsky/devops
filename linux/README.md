@@ -470,3 +470,49 @@
   only the file's owner, the directory's owner, and the root user can delete or rename the files inside that directory, regardless of the directory's permissions. 
 
   (chmod +t directory_name) -  set the sticky bit on a directory.
+
+# Package Management
+
+## gzip
+
+  gzip <file_Name> - compress files and reduce their size.
+
+  (gzip -d filename.gz) - decompress the file.
+  (gunzip filename.gz)  - decompress the file (same a gzip -d).
+
+## tar
+
+  tar - combining multiple files or directories into a single archive file. 
+
+  tar -cf <archive.tar> file1 file2 directory/ - archive from one or more files or directories.
+
+## file
+
+  file <file_Name> - return file type.
+
+## dpkg
+
+  dpkg - base tool for managing Debian package (Ubuntu).
+
+    dpkg -i <package.deb> - install package.
+
+    dpkg -r <package.deb> - Remove package.
+
+    dpkg -l <package.deb> - List package.    
+
+## rpm
+
+  rpm - base tool for managing Red Hat package.
+
+    rpm -i <package.rpm> - install package.
+
+    rpm -r <package.rpm> - Remove package.
+
+    rpm -qa <package.rpm> - List package.    
+
+
+    red-hat | Debian |
+    yum     | apt    | update - update.
+    yum     | apt    | install <package_name> - install package.
+    yum     | apt    | remove <package_name> - remove package.
+    yum     | apt    | show - list packages.
