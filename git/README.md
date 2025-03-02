@@ -106,4 +106,41 @@
       jobs: a list of jobs running
       steps: a list of steps within the job.
 
-    
+      ## example 
+
+      name: Python CI
+      
+      on:
+        push:
+          branches:
+            - main  # Trigger the action when there is a push to the `main` branch
+          pull_request:
+            branches:
+            - main  # Trigger when a pull request is made to the `main` branch
+
+    jobs:
+      test:
+        runs-on: ubuntu-latest  # Use the latest Ubuntu image for the runner
+
+        steps:
+        #Step 1: Checkout the code from the repository
+          - name: Checkout code
+            uses: actions/checkout@v2
+
+        #Step 2: Set up Python
+          - name: Set up Python
+            uses: actions/setup-python@v2
+            with:
+              python-version: '3.8'  # Set Python version
+
+        #Step 3: Install dependencies
+          - name: Install dependencies
+            run: |
+              python -m pip install --upgrade pip
+              pip install -r requirements.txt  # Install dependencies from `requirements.txt`
+
+        #Step 4: Run tests
+          - name: Run tests
+            run: |
+            pytest  # Run your tests using pytest or any other test framework
+
