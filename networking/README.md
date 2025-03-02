@@ -31,7 +31,7 @@
     - Class E: Reserved for future use.
 
 
-|    class    |      IP            |   network-part     |    host-part     |   number_hosts   |   subnet      |
+|    class    |     IP (example)   |   network-part     |    host-part     |   number_hosts   |   subnet      |
 |-------------|--------------------|--------------------|------------------|------------------|---------------|
 | class A     | 1.2.3.4            | 1                  | .2.3.4           | 16,777,214       | 255.0.0.0     |
 | class B     | 129.2.3.4          | 129.2              | .3.4             | 65,534           | 255.255.0.0   |
