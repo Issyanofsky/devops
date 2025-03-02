@@ -82,6 +82,36 @@
 ## log
 
   git log - view the commit history of a Git repository.
+
+## Blame
+
+  show what revision and author last modified each line of a file. It helps you track changes, find out who made a specific modification, and investigate the history of a file.
+
+  git blame <file>
+
+## clean  
+
+   used to remove untracked files or directories from your working directory. This is helpful when you want to clean up files that are not being tracked by Git but are still present in your local repository (e.g., temporary build files, editor backups, or other files that are not part of the version-controlled project).
+
+   git clean [options]
+
+  (git clean -f) - remove untracked files (not directories).
+
+  (git clean -fd) - remove untracked directories as well.
+
+## bisect
+
+  ommand used to help you find the commit that introduced a bug or issue in your code. It uses a binary search algorithm to efficiently narrow down the problematic commit by testing a series of commits.
+
+  bisect works:
+
+    git bisect start - Start the Bisect Process: You tell Git which commit is "good" and which one is "bad."
+    git bisect bad <bad_commit>   # Bad commit (where the bug exists)
+    git bisect good <good_commit> # Good commit (where everything worked)
+    ......
+      git bisect good/bad
+    ......
+    git bisect reset - End the Bisect Process. This will return you to your original working branch and state 
   
 
 # GitHub CI
