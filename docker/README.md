@@ -222,14 +222,23 @@
    define and manage multi-container Docker applications.  writen in YAML.
 
   version: '3'  # Version of the docker-compose file format
+  
     services:     # Defines the services (containers)
+    
       web:
+      
         image: nginx:latest     # The web service uses the official Nginx image
+        
         ports:
+        
          - "8080:80"           # Expose the container's port 80 on the host's port 8080
+         
       db:
+      
         image: postgres:latest  # The db service uses the official Postgres image
+        
         environment:
+        
           POSTGRES_PASSWORD: example_password  # Environment variable for database password
 
 ## docker-compose up
