@@ -120,8 +120,34 @@
 ![forward-reverse-proxy](forward-reverse-proxy.gif)
 
 
-# HTTP
+# HTTP (HyperText Transfer Protocol)
+
+  HTTP - sending and receiving data on the web. It's the protocol (or set of rules) that web browsers and servers use to communicate.
 
   ![HTTP](HTTP.gif)
 
   * use TCP
+
+  HTTP Request (Client -> Server): request made by the client to the server to get some information.
+  
+    - Method: What kind of action you want to perform (e.g., GET, POST, etc.).
+    - URL: The address of the resource (like www.example.com).
+    - Headers: Extra information (like the browser version, accepted formats, etc.).
+    - Body: The data being sent (for example, if you're submitting a form).
+
+  HTTP Response (Server -> Client): response sent by server to the client.
+
+    - Status Code: A number indicating if the request was successful (e.g., 200 means "OK", 404 means "Not Found").
+    - Headers: Information about the server and the data being sent (like the content type, length, etc.).
+    - Body: The actual content being returned (e.g., the HTML of a webpage).
+
+  
+  ## web service technology:
+
+    - XML-RPC - A protocol that uses XML to encode its data and HTTP as a transport method.
+    - SOAP (Simple Object Access Protocol) - A protocol that uses XML messages to request and send data over the web.
+    - JSON-RPC - A protocol that uses JSON (instead of XML) to encode data for remote procedure calls (RPC).
+    - REST (Representational State Transfer) - An architectural style for building APIs that uses standard HTTP methods (GET, POST, PUT, DELETE).
+    - GraphQL - A query language for APIs that allows clients to request specific data from a server.
+
+    
