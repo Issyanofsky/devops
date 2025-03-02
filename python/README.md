@@ -150,16 +150,26 @@
 # IF
 
   a = [1, 2]
+  
   x = [1, 2]
+  
   b = a
 
   if a == x # True
+  
   if a is x # False
+  
   if a is b # True
 
   if condition1:
+  
       # code if condition1 is true
+      
   elif condition2:
+  
       # code if condition2 is true
+      
   else:
+  
       # code if both conditions are false
+      
