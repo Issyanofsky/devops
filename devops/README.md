@@ -114,4 +114,34 @@ an architectural pattern in software design where software components, called "s
   
   SLI (Service Level Indicator) - measures the actual performance of a service against its objectives. 
 
-  
+  # TrubleShooting
+
+    determinating and finding the issue (error/bug).
+
+    example tools:
+
+      - logs analysis
+      - system monitoring.
+      - Idagnostic tools
+      - reproducing the issue in a controlled enviroment.
+
+  # metrics
+
+    - MTTR (mean time to repair)
+    - MTTD (mean time to Detect)
+    - MTTA (mean time to acknoladge)
+    - MTBF (mean time BEtween Filures)
+
+## post mortem 
+
+  process done after resolving the issue.
+
+    - incident sammery 
+      root cause analysis.
+      impact assessment.
+    - Timeline of events.
+    - what went well?
+    - what went bad?
+    - Action items
+
+    
