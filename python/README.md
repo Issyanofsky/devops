@@ -173,3 +173,23 @@
   
       # code if both conditions are false
       
+
+# for Loop
+
+  for item in sequence:
+    # Code to execute for each item
+
+  for i in range(5):  # range(5) gives numbers from 0 to 4
+    print(i)
+
+# while Loop
+
+  while condition:
+    # Code to execute as long as the condition is true
+
+  x = 0
+  while x < 5:
+    print(x)
+    x += 1
+
+  
