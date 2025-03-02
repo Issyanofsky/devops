@@ -516,3 +516,70 @@
     yum     | apt    | install <package_name> - install package.
     yum     | apt    | remove <package_name> - remove package.
     yum     | apt    | show - list packages.
+
+# BOOT processes
+
+## Boot processes:
+  
+  - BIOS - firmware that is built into a computer's motherboard. It is a low-level software responsible for initializing and testing hardware components during the booting process, and it provides an interface between the operating system and the hardware.
+  - Bootloader - load the Kernel to memory and start it.
+  - kernel - intermediary between the hardware and the software, managing system resources such as the CPU, memory, disk space, and peripheral devices. It essentially controls how the software and hardware communicate.
+  - Init - the first process that runs when a Unix-like operating system (like Linux or macOS) boots up. It is the ancestor of all other processes, and its primary responsibility is to initialize the system by starting other essential system services and processes required for the system to function properly.
+
+## SysVinit (Traditional init)
+
+Runlevels: SysVinit uses runlevels (0-6) to define different states of the system:
+
+ - 0: Halt
+ - 1: Single-user mode (for maintenance)
+ - 2: Multi-user mode (without network)
+ - 3: Multi-user mode with network
+ - 4: Unused or custom
+ - 5: Multi-user mode with graphical interface
+ - 6: Reboot
+
+   (init 3) - Switch to runlevel 3 (multi-user mode with network).
+
+## upstart
+
+  (until version 15.04, when it was replaced by systemd).
+
+## systemd
+
+  systemd -  modern init system and service manager used by many Linux distributions. 
+  Commands for Managing Services with systemd
+
+    sudo systemctl start <service_name>
+    sudo systemctl stop <service_name>
+    sudo systemctl restart <service_name>
+    sudo systemctl status <service_name>
+    sudo systemctl list-units --type=service
+
+## top
+
+  top -  desplay real-time information about the system’s processes, CPU usage, memory usage, and other performance-related statistics.
+
+## lsof 
+
+  lsof  - (List Open Files) command in Linux and Unix-like operating systems is a utility used to display information about files that are currently open by processes.
+
+## Processes 
+
+  Processes - A process is an independent program that is running in its own memory space. 
+  
+## process thread
+
+  thread - A thread is the smallest unit of execution within a process (like sub process). 
+  
+## ps
+
+  ps - (process status) command in Linux and Unix-like operating systems is used to display information about the currently running processes.
+
+  (ps -u $USER) - show Processes for the Current User.
+  (ps -ejH) - show Processes and Their Tree Hierarchy.
+  (ps -ef) - show Processes in Full Format.
+  (ps -p <PID>) - find more details about that process.
+  (ps aux --sort=-%cpu) - find the processes using the most CPU, you can sort by CPU usage.
+
+
+  
