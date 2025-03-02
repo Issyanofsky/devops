@@ -247,11 +247,11 @@
 
   * there are built-in class functions (example) set attribute for the class (like dog1.len()):
 
-      def __str__(self):
+      def _ _str_ _(self):
 
         return f"unit {0} value {1}"
 
-    def __len__(self):
+    def _ _len_ _(self):
 
       return int(self.variable)
     
