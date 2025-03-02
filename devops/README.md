@@ -89,6 +89,27 @@ an architectural pattern in software design where software components, called "s
 
   the key metrics that are importent (can vary depends on the demands)
 
-  
+## ON-CALL 
+
+    the worker on duty on support.
+
+## On-Call Rotation
+
+  rotation duty of supporters.
+
+## war room
+
+  where dealing with issue.
+
+    - roles for dealing, roles and assighnment.
+    - clear communication between all.
+    - using out-side assistent.
+    - following Best practice.
+
+## SLO, SLA, SLI
+
+  SLO (Service Level Objective) - specific target or goal that a service provider aims to meet in terms of performance.
+  SLA (Service Level Agreement) - binding SLO into metrics.
+  SLI (Service Level Indicator) - measures the actual performance of a service against its objectives. 
 
   
