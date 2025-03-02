@@ -87,3 +87,11 @@
 
 ![OSI model/TCP-model](udp_layers.gif)
 
+
+# Switch
+
+   Data Link leyer, can split networks to VLAN's allowing seperate networks to run each with it security settings, routing and such.
+
+# DHCP
+
+  DHCP (Dynamic Host Configuration Protocol) - is a network protocol used to automatically assign IP addresses and other network configuration settings to devices (such as computers, printers, and smartphones) on a network. 
