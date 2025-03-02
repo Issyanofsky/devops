@@ -83,3 +83,19 @@
 
   git log - view the commit history of a Git repository.
   
+
+# GitHub CI
+
+  method - testing, security, build images (packaging). all kind of test and packaging of the code.
+
+  after passing the CI phase the process can continue to the CD stage (production).
+
+  ## GitHub Action 
+
+    allows you to automate workflows like testing, building, and deploying your code directly from a GitHub repository.
+
+    location: .github/workflows 
+
+    type: YAML file type.
+
+    
