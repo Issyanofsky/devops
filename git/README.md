@@ -98,4 +98,12 @@
 
     type: YAML file type.
 
+    ## Workflow syntax and structure
+
+      [YAML]
+      name: workflow name (optional).
+      on: the event that trigger the workflow (push, pull...)
+      jobs: a list of jobs running
+      steps: a list of steps within the job.
+
     
