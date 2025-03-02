@@ -155,3 +155,43 @@
   - release - Runs when a release is published, created, or deleted.
   - create - Runs when a new branch or tag is created.
   
+## jobs & Runners
+
+  Runner - the environment (or machine) where the jobs run.
+
+    jobs:
+      test:
+        runs-on: ubuntu-latest  # This job runs on a GitHub-hosted runner with Ubuntu
+
+  Jobs - set of steps that execute as part of a workflow.
+
+    jobs:
+      test:
+        runs-on: ubuntu-latest  # The job runs on a GitHub-hosted runner with Ubuntu
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2  # Step 1: Checkout the code
+          - name: Install dependencies
+            run: |
+              python -m pip install --upgrade pip
+              pip install -r requirements.txt  # Step 2: Install dependencies
+          - name: Run tests
+            run: pytest  # Step 3: Run tests using pytest
+
+## need
+
+  used to control the order in which jobs run within a workflow. It allows you to specify dependencies between jobs, meaning that one job should only run after another job has successfully completed.
+
+  refer to another job in the workflow (will execute only if another job as accomplished).
+
+## step & Actions
+
+  steps - a single task that is part of a job in a GitHub Actions workflow. 
+
+  Action -  reusable block of code or a pre-built functionality that can be used within a step. 
+    
+    -  uses: actions/checkout@v2  # This uses a GitHub-hosted action to check out the repository code.
+    -  uses: actions/setup-python@v2  # This uses a GitHub-hosted action to set up a Python environment.
+    -  uses: actions/github-script@v5  # This uses a GitHub-hosted action to run a custom script.
+    
+  
