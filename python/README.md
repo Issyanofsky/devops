@@ -40,27 +40,27 @@
 
 ## List []
 
-  list [] - an ordered, mutable (changeable) collection of elements.
+    list [] - an ordered, mutable (changeable) collection of elements.
 
-  (my_list = [1,2,3,"apple",4.5])
+    (my_list = [1,2,3,"apple",4.5])
 
 ##  Dictionary (dict) {}
 
-  Dictionary - an unordered, mutable collection of key-value pairs.
+    Dictionary - an unordered, mutable collection of key-value pairs.
 
-  (my_dict = {"name": "Alice", "age": 25}).
+    (my_dict = {"name": "Alice", "age": 25}).
 
 ## Tuple (tuple) ()
 
-   tuple - an ordered, immutable (unchangeable) collection of elements.
+     tuple - an ordered, immutable (unchangeable) collection of elements.
 
-   (my_tuple = (1, 2, 3, "apple", 4.5)).
+     (my_tuple = (1, 2, 3, "apple", 4.5)).
 
 ## Set (set) {}
 
-  set - an unordered, mutable collection of unique elements.
+    set - an unordered, mutable collection of unique elements.
 
-  (my_set = {1, 2, 3, 4, 5}).
+    (my_set = {1, 2, 3, 4, 5}).
 
 # Built-in Functions
 
