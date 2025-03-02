@@ -194,4 +194,35 @@
     -  uses: actions/setup-python@v2  # This uses a GitHub-hosted action to set up a Python environment.
     -  uses: actions/github-script@v5  # This uses a GitHub-hosted action to run a custom script.
     
-  
+
+## Environment Variabls 
+
+  Default Environment Variables (provided by GitHub): 
+
+    - GITHUB_REPOSITORY - The name of the repository.
+    - GITHUB_ACTOR - The username of the person who triggered the workflow.
+    - GITHUB_REF - The branch or tag that triggered the workflow (e.g., refs/heads/main).
+    - GITHUB_SHA - The commit SHA that triggered the workflow.
+    - RUNNER_OS - The operating system of the runner (e.g., Ubuntu, Windows).
+
+  Custom Environment Variables (User-Defined):
+    
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        env:  # Define environment variables at the job level
+          MY_VARIABLE: "Hello, World!"
+        steps:
+          - name: Show environment variable
+            run: echo $MY_VARIABLE  # Output: Hello, World!
+
+  Secret Environment Variables:
+
+    Setting and Using Secrets in GitHub Actions:
+    To use secrets:
+
+      - Go to your repository's Settings.
+      - Navigate to Secrets.
+      - Add your secret key-value pair.
+
+    
