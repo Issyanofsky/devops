@@ -225,4 +225,20 @@
       - Navigate to Secrets.
       - Add your secret key-value pair.
 
+
+# caching Dependencies
+
+  powerful feature in GitHub Actions that helps to speed up workflows by reusing dependencies or other files that do not change frequently. For example, if your workflow involves installing dependencies (e.g., via npm install or pip install), these dependencies do not change unless you update them.
+
+# Notification
+
+  set up notifications to alert you or your team members about the status of your workflow runs, such as when a job succeeds, fails, or completes. Notifications can be sent through various channels such as email, Slack, or other integrated services.
+
+
+# Debugging
+
+  use echo command inside the workflow to debug the process.
+
     
+      - name: Output debug value
+        run: echo "Debug Output: ${{ steps.debug-step.outputs.debug_value }}"
