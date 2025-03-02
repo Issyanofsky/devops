@@ -33,3 +33,61 @@
 
     x = 1
     x_bool = bool(x)  # converts integer 1 to True
+
+# collection of elements.
+
+## Dict, List, Tuple, Set
+
+## List []
+
+  list [] - an ordered, mutable (changeable) collection of elements.
+
+  (my_list = [1,2,3,"apple",4.5])
+
+##  Dictionary (dict) {}
+
+  Dictionary - an unordered, mutable collection of key-value pairs.
+
+  (my_dict = {"name": "Alice", "age": 25}).
+
+## Tuple (tuple) ()
+
+   tuple - an ordered, immutable (unchangeable) collection of elements.
+
+   (my_tuple = (1, 2, 3, "apple", 4.5)).
+
+## Set (set) {}
+
+  set - an unordered, mutable collection of unique elements.
+
+  (my_set = {1, 2, 3, 4, 5}).
+
+# Built-in Functions
+
+##  Mathematical Functions
+  abs(x) – Returns the absolute value of x.
+  round(x, n) – Rounds x to n decimal places.
+  pow(x, y) – Returns x raised to the power of y (x ** y).
+  min(iterable, *[, key, default]) – Returns the smallest item from an iterable.
+  max(iterable, *[, key, default]) – Returns the largest item from an iterable.
+  sum(iterable, /, start=0) – Returns the sum of the items in the iterable.
+
+## Input/Output Functions
+  print(*objects, sep=' ', end='\n', file=sys.stdout) – Prints objects to the console.
+  input(prompt) – Reads a line of input from the user.
+  open(file, mode='r') – Opens a file for reading or writing.
+
+## Sequence Functions
+  len(s) – Returns the length (number of items) of an object.
+  sorted(iterable, *, key=None, reverse=False) – Returns a sorted list from the elements of any iterable.
+  reversed(seq) – Returns an iterator that yields the elements of seq in reverse order.
+
+## Miscellaneous Functions
+  help([object]) – Displays help for an object or function.
+  dir([object]) – Returns a list of attributes and methods of an object.
+  callable(object) – Checks if an object appears callable (i.e., can be called like a function).
+  eval(expression[, globals[, locals]]) – Evaluates a Python expression dynamically.
+  exec(object[, globals[, locals]]) – Executes a Python code dynamically.
+  slice(start, stop[, step]) – Returns a slice object (for slicing sequences).
+  any(iterable) – Returns True if any item in the iterable is True.
+  all(iterable) – Returns True if all items in the iterable are True.
