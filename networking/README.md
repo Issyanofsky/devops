@@ -142,7 +142,7 @@
     - Body: The actual content being returned (e.g., the HTML of a webpage).
 
   
-  ## web service technology:
+  ## web service technology (mostly for API):
 
     - XML-RPC - A protocol that uses XML to encode its data and HTTP as a transport method.
     - SOAP (Simple Object Access Protocol) - A protocol that uses XML messages to request and send data over the web.
