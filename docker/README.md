@@ -217,10 +217,54 @@
 
 
 
-  
-  
+# Docker Compose
 
+   define and manage multi-container Docker applications.  writen in YAML.
 
+  version: '3'  # Version of the docker-compose file format
+    services:     # Defines the services (containers)
+      web:
+        image: nginx:latest     # The web service uses the official Nginx image
+        ports:
+         - "8080:80"           # Expose the container's port 80 on the host's port 8080
+      db:
+        image: postgres:latest  # The db service uses the official Postgres image
+        environment:
+          POSTGRES_PASSWORD: example_password  # Environment variable for database password
+
+## docker-compose up
+
+  Starts all the containers defined in the docker-compose.yml file
+
+  (docker-compose up -d) - Starts the containers in detached mode, meaning they run in the background.
+
+## docker-compose down
+
+  docker-compose down - Stops and removes the containers, networks, and volumes created by docker-compose up.
+
+  docker-compose down
+
+## docker-compose logs
+
+  docker-compose logs - Shows the logs from the containers started with Docker Compose.
+
+  (docker-compose logs)
+
+## docker-compose ps
+
+  docker-compose ps - Lists the containers that are running as part of the Compose application.
+
+  (docker-compose ps)
+
+## docker-compose build
+
+  docker-compose build -  build or rebuild services defined in a docker-compose.yml file.
+
+  docker-compose build [OPTIONS] [SERVICE...]
+
+  (docker-compose build web) - build a specific service (e.g., web).
+ 
+ 
   
 
 
