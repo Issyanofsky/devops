@@ -215,6 +215,23 @@
   (grep 'pattern' file.txt) - Search for a word in a file
 
   (grep "error" /var/log/syslog)
+
+## strings
+
+  strings <file_Name> - extract printable strings (sequences of printable characters) from binary files, executables, or other non-text files. 
+
+  (strings example.bin) - view the hex dump of a binary file (like an executable, image, or any file).
+
+  (xxd -r -p example.hex > example_reconstructed.bin) - Reverse Operation (Hex to Binary).
+
+## xxd
+
+  xxd - create a hex dump (a representation of binary data in hexadecimal format) of a file or data. It is also capable of converting a hex dump back into binary data, making it a useful tool for analyzing and manipulating binary files.
+
+  xxd [options] [file]
+
+  (xxd example.bin) 
+  
   
 # locations
 
