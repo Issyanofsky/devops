@@ -84,3 +84,6 @@
   |subnet mask|  /24   |  /25   |   /26  |   /27  |  /28  |  /29  |  /30  |  /31  |  /32  | 
 
 
+
+![OSI model/TCP-model](udp_layers.gif)
+
