@@ -109,7 +109,9 @@ an architectural pattern in software design where software components, called "s
 ## SLO, SLA, SLI
 
   SLO (Service Level Objective) - specific target or goal that a service provider aims to meet in terms of performance.
+  
   SLA (Service Level Agreement) - binding SLO into metrics.
+  
   SLI (Service Level Indicator) - measures the actual performance of a service against its objectives. 
 
   
