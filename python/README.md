@@ -199,4 +199,49 @@
     x += 1
     
 
+# Functions
+
+  block of code that performs a specific task and can be used to organize and reuse code.
+
+  def function_name():
+      # Do something
+      return result
+
+  x = function_name() # x will get result value.
+
+# class
+
+  class -  like a blueprint or template for creating objects (or instances). It defines what attributes (characteristics) and methods (functions) an object will have.
+
+    # Define a class called Dog
+    
+    class Dog:
+    
+      # Constructor (method) to initialize attributes when creating an object
+    
+      def __init__(self, name, age):
+    
+        self.name = name  # Attribute: name of the dog
+        
+        self.age = age    # Attribute: age of the dog
+        
+      # Method: Function to make the dog bark
+    
+      def bark(self):
+    
+       return f"{self.name} says Woof!"
+
+  # Creating objects (instances) from the Dog class
+  
+  dog1 = Dog("Buddy", 3)
+  
+  dog2 = Dog("Lucy", 5)
+
+  # Calling the method on the objects
+  
+  print(dog1.bark())  # Output: Buddy says Woof!
+  
+  print(dog2.bark())  # Output: Lucy says Woof!
+  
+
   
