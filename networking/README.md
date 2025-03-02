@@ -119,3 +119,9 @@
 
 ![forward-reverse-proxy](forward-reverse-proxy.gif)
 
+
+# HTTP
+
+  ![HTTP](HTTP.gif)
+
+  * use TCP
