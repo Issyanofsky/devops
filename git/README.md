@@ -144,3 +144,14 @@
             run: |
             pytest  # Run your tests using pytest or any other test framework
 
+## Triggers and Events
+
+  events or actions that cause a workflow to run.
+
+  - push - Runs when a commit is pushed to a branch.
+  - pull_request - Runs when a pull request is created, synchronized, or reopened.
+  - workflow_dispatch - Allows you to manually trigger a workflow.
+  - schedule - Runs workflows on a schedule (similar to a cron job).
+  - release - Runs when a release is published, created, or deleted.
+  - create - Runs when a new branch or tag is created.
+  
