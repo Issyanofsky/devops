@@ -232,6 +232,15 @@
 
   (xxd example.bin) 
   
+## base64
+
+  base64 -  encode or decode data in Base64 format.
+
+  base64 [options] [file]
+
+  (base64 file.txt) - encoding a File.
+
+  (echo "Hello, World!" | base64) - encoding a String.
   
 # locations
 
