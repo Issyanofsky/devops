@@ -118,4 +118,48 @@
   
   try...except – Handles exceptions in code.
 
-##
+
+# operation with numbers
+
+## // (Floor Division)
+
+   It divides two numbers and returns the integer part of the result, discarding the remainder.
+
+   7 // 3  # Result: 2 (because 7 divided by 3 is 2.33, and we discard the decimal part)
+
+## % (Modulo)
+
+  get the remainder when one number is divided by another. 
+
+  7 % 3  # Result: 1 (because 7 divided by 3 gives a remainder of 1)
+
+## ** (Exponentiation)
+
+  raises a number (the base) to the power of another number (the exponent).
+  
+  (2 ** 3  # Result: 8 (because 2 raised to the power of 3 is 8))
+
+## continue
+
+  continue - continue with the next iteration of the loop. It allows you to skip certain parts of the loop body and move on to the next cycle of the loop.
+
+## pass
+
+  pass - null operation or placeholder. It is used when you need to write a block of code that does nothing. 
+
+# IF
+
+  a = [1, 2]
+  x = [1, 2]
+  b = a
+
+  if a == x # True
+  if a is x # False
+  if a is b # True
+
+  if condition1:
+      # code if condition1 is true
+  elif condition2:
+      # code if condition2 is true
+  else:
+      # code if both conditions are false
