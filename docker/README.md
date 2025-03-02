@@ -46,6 +46,14 @@
 
   docker inspect <image_name> - inspect the image logs
 
+## docker logs 
+
+  retrieve the logs of a running or stopped container.
+
+  docker logs [OPTIONS] CONTAINER_NAME_OR_ID
+
+  (docker logs -t my_container) - Includes timestamps in the log output.
+
 ## Data Volume
 
   docker run -p 80:80 -v /var/www
@@ -58,8 +66,29 @@
 
   (docker run --name <container_name> -v source_location:des_location -e MYSQL_ROOT_PASSWORD=a1a1a1 -d mysql) - run container in the background (-d), mount a drive and pass a env variable (password).
 
+## docker stats
+
+  docker stats - display real-time statistics about the resource usage (CPU, memory, disk I/O, network I/O, etc.) of running containers. 
+
+  docker stats [OPTIONS] [CONTAINER...]
+
+  (docker stats my_container_name) - show stats for a specific container.
+
+  (docker stats) - show stats for all containers.
+
+## docker Top
+
+  docker top - display the running processes inside a Docker container.
+
+  docker top <container_name_or_id>
+
+
+
+  
 # Key Dockerfile Instactions
 
+  by default the docker file caled Dockefile.
+  
   ## FROM
 
     FROM - Specifies the base image to use for the Docker image.
@@ -124,7 +153,74 @@
 
   (CMD ["python", "app.py"]) -  default command that gets run when the container starts, unless overridden by the user.
   
-    
+
+
+
+# build
+
+  ## docker build 
+
+    docker build . - (from the directory with the Dockerfile) - builds the image
+
+    (docker build . -t <image_name>) - build a image with a name describe.
+
+# DockerHub
+
+  ## docker tag 
+
+    docker tag <source_image>:<tag> <destinain_image_name>:<tag> - change image name.
+
+  ## docker login
+
+    docker login - log to DockerHub.
+
+  ## docker push
+
+    docker push <image_name>:<tag> - push an image to docker hub repository.
+
+
+# Docker Network
+
+## docker network ls
+
+  display networks list.
+
+## docke network inspect
+
+  docker network inspect <network_name> - info about the network.
+
+## docker netwrok create
+
+  create a network in docker.
+
+  docker network create [OPTIONS] NETWORK_NAME
+
+  options:
+
+    --driver bridge (none-closeNetwork, host-only inside containers, bridge-overlay network(open to all)).
+    --subnet 192.168.1.0/24
+    --gateway 192.168.1.1
+    --internal - Creates an internal network where containers can only communicate with each other, not with the external network.
+    --label "env=production"
+
+## docker network connect
+  
+  connect a running container to an existing Docker network.
+
+  docker network connect [OPTIONS] NETWORK_NAME CONTAINER_NAME_OR_ID
+
+## docker network disconnect
+
+  disconnect a running container from a network.
+
+  docker network disconnect [OPTIONS] NETWORK_NAME CONTAINER_NAME_OR_ID
+
+
+
+  
+  
+
+
   
 
 
