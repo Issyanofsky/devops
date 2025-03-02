@@ -245,4 +245,14 @@
   print(dog2.bark())  # Output: Lucy says Woof!
   
 
-  
+  * there are built-in class functions (example) set attribute for the class (like dog1.len()):
+
+      def __str__(self):
+
+        return f"unit {0} value {1}"
+
+    def __len__(self):
+
+      return int(self.variable)
+    
+
