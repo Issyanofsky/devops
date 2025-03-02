@@ -221,9 +221,10 @@
 
    define and manage multi-container Docker applications.  writen in YAML.
 
+
   version: '3'  # Version of the docker-compose file format
   
-    services:     # Defines the services (containers)
+      services:     # Defines the services (containers)
     
       web:
       
