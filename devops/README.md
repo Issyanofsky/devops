@@ -7,10 +7,10 @@
 
 ## software Architecture
 
-![monolith&Microservices](monolith&Microservices.gif)
+![Monolithic&Microservices](monolith&Microservices.gif)
 
 
-|                  |              MicroService          |              MicroService           |
+|                  |              MicroService          |              Monolithic           |
 |------------------|------------------------------------|-------------------------------------|
 |                  | - independent workflow             | - easy to implement (not many parts)|
 |                  | - fast to scale - easy upgrade.    | - minimum number of hops (all in one|         
