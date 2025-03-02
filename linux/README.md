@@ -576,9 +576,13 @@ Runlevels: SysVinit uses runlevels (0-6) to define different states of the syste
   ps - (process status) command in Linux and Unix-like operating systems is used to display information about the currently running processes.
 
   (ps -u $USER) - show Processes for the Current User.
+  
   (ps -ejH) - show Processes and Their Tree Hierarchy.
+  
   (ps -ef) - show Processes in Full Format.
+  
   (ps -p <PID>) - find more details about that process.
+  
   (ps aux --sort=-%cpu) - find the processes using the most CPU, you can sort by CPU usage.
 
 
