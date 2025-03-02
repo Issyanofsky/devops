@@ -111,4 +111,8 @@
     - Ingress - traffic entering.
     - egress - traffic OUTgoing.
 
-  
+
+  # Proxy
+
+    proxy - an intermediary server or service that sits between a client (e.g., a user’s computer or device) and a destination server (e.g., a website or online service) on the internet.
+    
