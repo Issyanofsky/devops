@@ -95,3 +95,20 @@
 # DHCP
 
   DHCP (Dynamic Host Configuration Protocol) - is a network protocol used to automatically assign IP addresses and other network configuration settings to devices (such as computers, printers, and smartphones) on a network. 
+
+
+# ACL (Access Control List)
+
+  ACL - set of rules or policies that define what traffic is allowed or denied to flow through a network device (such as a router or firewall).  It is used to filter traffic based on various criteria, such as IP addresses, protocol types, ports, and more.
+
+  ## ACL type:
+
+    1. file system (ACL) - filters for allow/deny for files and directories.
+    2. Network (ACL) - network traffic filtering (deny/allow).
+
+    traffic can:
+
+    - Ingress - traffic entering.
+    - egress - traffic OUTgoing.
+
+  
