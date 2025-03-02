@@ -103,8 +103,8 @@
 
   ## ACL type:
 
-    1. file system (ACL) - filters for allow/deny for files and directories.
-    2. Network (ACL) - network traffic filtering (deny/allow).
+    1. file system (ACL) - filters for allow/deny permssions for files and directories.
+    2. Network (ACL) - Network traffic filtering (deny/allow).
 
     traffic can:
 
