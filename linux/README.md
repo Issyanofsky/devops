@@ -632,9 +632,30 @@ Runlevels: SysVinit uses runlevels (0-6) to define different states of the syste
 
   sudo full-upgrade - upgrade all OS.
 
+## apt remove
+
+  sudo apt remove package_name - used to remove  package from your system using the APT package manager. 
+
 ## apt autoremove
 
   sudo apt autoremove - used to automatically remove packages.
+
+## apt show
+
+  apt show - display detailed information about a specific package that is installed or available in the repositories on your system.
+
+  apt show package_name
+
+  (apt show vim) - detailed information about the package vim.
+
+## apt show
+
+  apt show - display detailed information about a package. 
+
+  apt show package_name
+
+  (apt show curl) - details about the curl package.
+  * if a Depends package it will show here
 
 ## shutdown
 
