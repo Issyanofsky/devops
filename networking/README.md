@@ -122,7 +122,7 @@
 
 # HTTP (HyperText Transfer Protocol)
 
-  HTTP - sending and receiving data on the web. It's the protocol (or set of rules) that web browsers and servers use to communicate.
+  HTTP - sending and receiving data on the web. It's the protocol (or set of rules) that web browsers and servers use to communicate (good fo web-pages and API).
 
   ![HTTP](HTTP.gif)
 
@@ -141,6 +141,21 @@
     - Headers: Information about the server and the data being sent (like the content type, length, etc.).
     - Body: The actual content being returned (e.g., the HTML of a webpage).
 
+  common concepts:
+
+    - URL (Uniform Resource Locator) -  web address you enter in a browser to access a specific resource on the web (e.g., https://www.example.com).
+    - VERSION - The version refers to the version of the HTTP protocol being used, such as HTTP/1.1 or HTTP/2. It tells the server how to handle the request/response.
+    - STATUS - numbers sent by the server to indicate the result of the request (200 OK, 404 Not Found).
+    - BODY - The body of an HTTP request or response contains the data being sent to or received from the server.
+    - HEADER - contain meta-information about the request or response (such as content type, length, authentication tokens, etc.).
+    - Query String - the part of a URL that comes after the ? and contains parameters (in https://example.com/search?q=python, the query string is q=python, which is used to send data to the server).
+    - POST - POST is an HTTP method used to send data to the server (like submitting a form or uploading a file).
+    - GET - GET is an HTTP method used to retrieve data from the server (e.g., requesting a web page).
+    - PUT -  an HTTP method used to update an existing resource on the server with new data.
+    - PATCH - an HTTP method used to partially update a resource, meaning you send only the data that needs to be changed, not the whole resource.
+    - DELETE - an HTTP method used to remove a resource from the server (e.g., deleting a post or an item).
+    - HEAD -  an HTTP method similar to GET but only retrieves the headers (not the body) of the response.
+    - OPTIONS - an HTTP method used to request information about the available methods or features of a server (like asking, "What can I do with this resource?").
   
   ## web service technology (mostly for API):
 
