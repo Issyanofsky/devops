@@ -346,6 +346,44 @@
 
   systemctl restart firewalld - restart firewall
 
+# UFW (in Ubuntu)
+
+  UFW is a simple and easy-to-use tool for managing firewall rules. It helps control the incoming and outgoing network traffic on your system.
+
+    /etc/default/ufw - file location
+
+## netstat
+
+  (netstat -tanup) - dispplay open ports
+  
+## ufw default deny incoming
+
+  sudo ufw default deny incoming - block ALL incoming network connections (good for start setting).
+
+## ufw default allow outgoing
+
+  sudo ufw default allow outgoing - allows ALL outgoing network connections by default (e.g., connections from your system to the internet).
+
+## ufw allow ssh
+
+  sudo ufw allow ssh - This command allows incoming SSH connections (port 22) to your system. This is essential for remote access.
+  
+## iptables 
+
+  (iptables -L) - shows the current firewall rules using iptables. 
+
+## ufw enable
+
+  sudo ufw enable - activates UFW, turning on the firewall with the rules you've set.
+
+## ufw status
+
+  sudo ufw status - shows the current status of UFW, including which rules are active (e.g., allowed connections).
+
+## ufw delete
+
+  (sudo ufw delete ssh) -  deletes a specific firewall rule.
+  
 
 # user/group
 
