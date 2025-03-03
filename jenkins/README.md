@@ -158,6 +158,8 @@ reload the systemd daemon to apply the changes.
 
     Click on the Manager App. You will be asked to provide Tomcat admin username and password.
 
+## Add Jenkins to Tomcat 
+
     download to the server the Jenkins war file
 
         wget https://get.jenkins.io/war-stable/2.492.1/jenkins.war
