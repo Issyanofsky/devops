@@ -127,6 +127,8 @@
 ## free
   free [options]
   display system memory usage.
+## ip addr
+  ip addr -  display the IP addresses assigned to all network interfaces on your system. 
 ## parted 
   (sudo parted -l) -  list the partition tables of all storage devices on your system.
 ## swapon
