@@ -60,7 +60,7 @@ https://cloudinfrastructureservices.co.uk/how-to-install-apache-tomcat-server-on
 
         chown -R tomcat: /opt/tomcat
         
-   set the execution permission on Tomcat binary file.     
+    set the execution permission on Tomcat binary file.     
 
        sh -c 'chmod +x /opt/tomcat/bin/*.sh'
     
@@ -68,7 +68,7 @@ https://cloudinfrastructureservices.co.uk/how-to-install-apache-tomcat-server-on
 
         nano /etc/systemd/system/tomcat.service
 
-    Add the following configuration:
+Add the following configuration:
 
         [Unit]
         Description=Apache Tomcat
