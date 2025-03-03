@@ -153,5 +153,19 @@ reload the systemd daemon to apply the changes.
 ## Access Apache Tomcat
 
     Access it using the URL http://your-server-ip:8080 on your web browser.
+
+    ![Tomcat-dashboard](tomcat-dashboard.png)
+
+    Click on the Manager App. You will be asked to provide Tomcat admin username and password.
+
+    download to the server the Jenkins war file
+
+        wget https://get.jenkins.io/war-stable/2.492.1/jenkins.war
+
+    on tomcat under Deploy --> content path --> the location of he jenkins.war file 
+
+    (can copy the file directly to folder /opt/tomcat/webbapps)
+
+    in the Tomcat page press on  Jenkins, enter password --> system plugin --> install
     
     
