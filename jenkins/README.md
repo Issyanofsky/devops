@@ -20,3 +20,47 @@ open-source automation tool primarily used for continuous integration (CI) and c
 
 </div>
 
+two ways to install jenkins:
+        - plain installation using apt install.
+        - hosted on apache (tomcat)
+
+# install on tomcat
+
+## install java
+
+https://cloudinfrastructureservices.co.uk/how-to-install-apache-tomcat-server-on-ubuntu-22-04/
+
+    Apache Tomcat is based on Java
+    
+        apt install openjdk-11-jdk
+
+     verify the Java installation 
+     
+        java --version
+
+## install Apache Tomcat
+
+    create a dedicated user to run the Apache Tomcat server.
+
+        useradd -m -U -d /opt/tomcat -s /bin/false tomcat
+
+    download the latest version of Apache Tomcat from its official website 
+
+        wget https://archive.apache.org/dist/tomcat/tomcat-10/v10.0.20/bin/apache-tomcat-10.0.20.tar.gz
+
+    extract the downloaded file 
+
+        tar -xvf apache-tomcat-10.0.20.tar.gz
+
+    move the content of the extracted directory to the Apache Tomcat home directory.
+
+        mv apache-tomcat-10.0.20/* /opt/tomcat
+
+    change ownership of the Tomcat directory to tomcat.
+
+        chown -R tomcat: /opt/tomcat
+
+   set the execution permission on Tomcat binary file.     
+
+       sh -c 'chmod +x /opt/tomcat/bin/*.sh'
+    
