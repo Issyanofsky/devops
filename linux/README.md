@@ -610,3 +610,21 @@ Runlevels: SysVinit uses runlevels (0-6) to define different states of the syste
 
   real-time monitoring tool used to display information about the system’s resource usage, including CPU, memory, and running processes.
 
+# instal & Update (in Ubuntu or Debian-based Linux distributions)
+
+## apt update
+
+  sudo apt aupdate - check if there are updates.
+
+## apt upgrade
+
+  sudo apt upgrade - upgrade the Linux OS.
+
+## apt full-upgrade
+
+  sudo full-upgrade - upgrade all OS.
+
+## apt autoremove
+
+  sudo apt autoremove - used to automatically remove packages.
+
