@@ -148,7 +148,11 @@
   (ltrace ls)
   similar to strace, but it specifically traces library calls (function calls made to shared libraries) instead of system calls.
 
-# text-processing
+<div align="center">
+
+# **text-processing**
+
+</div>
 
 ## tee
 
@@ -243,8 +247,13 @@
   (base64 file.txt) - encoding a File.
 
   (echo "Hello, World!" | base64) - encoding a String.
-  
-# locations
+
+
+<div align="center">
+
+# **locations**
+
+</div>
 
 ## /etc/passwd 
 
@@ -270,7 +279,12 @@
 
   contain system logs
 
-# Enviroment variable
+
+<div align="center">
+
+# **Enviroment variable**
+
+</div>
 
 ## env
 
@@ -304,7 +318,14 @@
   
   $PWD - current working directory. This is the directory in which the user is currently operating in the terminal.
 
-# services
+
+
+<div align="center">
+
+# **services**
+
+</div>
+
 
 ## systemctl
 
@@ -328,7 +349,13 @@
 
   (systemctl list-unit --type service) - display all services.
 
-# Firewall
+
+<div align="center">
+
+# **Firewall**
+
+</div>
+
 
   firewall settings in Linux systems that use firewalld (a dynamic firewall manager). 
   
@@ -346,7 +373,13 @@
 
   systemctl restart firewalld - restart firewall
 
-# UFW (in Ubuntu)
+
+<div align="center">
+
+# **UFW (in Ubuntu)**
+
+</div>
+
 
   UFW is a simple and easy-to-use tool for managing firewall rules. It helps control the incoming and outgoing network traffic on your system.
 
@@ -385,7 +418,12 @@
   (sudo ufw delete ssh) -  deletes a specific firewall rule.
   
 
-# user/group
+<div align="center">
+
+# **user/group**
+
+</div>
+
 
 ## USER
 
@@ -487,7 +525,13 @@
 
   (chmod +t directory_name) -  set the sticky bit on a directory.
 
-# Package Management
+
+<div align="center">
+
+# **Package Management**
+
+</div>
+
 
 ## gzip
 
@@ -533,7 +577,12 @@
     yum     | apt    | remove <package_name> - remove package.
     yum     | apt    | show - list packages.
 
-# BOOT processes
+
+<div align="center">
+
+# **BOOT processes**
+
+</div>
 
 ## Boot processes:
   
@@ -656,7 +705,12 @@ Runlevels: SysVinit uses runlevels (0-6) to define different states of the syste
 
   real-time monitoring tool used to display information about the system’s resource usage, including CPU, memory, and running processes.
 
-# instal & Update (in Ubuntu or Debian-based Linux distributions)
+<div align="center">
+
+# **instal & Update (in Ubuntu or Debian-based Linux distributions)**
+
+</div>
+
 
 ## apt update
 
@@ -703,7 +757,12 @@ Runlevels: SysVinit uses runlevels (0-6) to define different states of the syste
 
   (sudo reboot now) - reboot the Linux OS.
 
-# SSH
+<div align="center">
+
+# **SSH**
+
+</div>
+
 
 ## install SSH 
 
