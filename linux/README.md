@@ -672,6 +672,12 @@ Runlevels: SysVinit uses runlevels (0-6) to define different states of the syste
   
   list the jobs that are running in the current terminal session.
 
+  ## $?
+
+    $? - retrieve the exit status of the last executed command.
+    
+    (echo $?)
+    
   ## & 
 
   some_command &
