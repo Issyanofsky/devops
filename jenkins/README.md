@@ -154,7 +154,7 @@ reload the systemd daemon to apply the changes.
 
     Access it using the URL http://your-server-ip:8080 on your web browser.
 
-    ![Tomcat-dashboard](tomcat-dashboard.png)
+![Tomcat-dashboard](tomcat-dashboard.png)
 
     Click on the Manager App. You will be asked to provide Tomcat admin username and password.
 
