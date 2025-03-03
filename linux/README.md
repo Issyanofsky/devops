@@ -344,62 +344,6 @@
 
   systemctl restart firewalld - restart firewall
 
-# processes
-
-## ps
-  
-  ps [options]
-  
-  display prossess.
-  
-  (ps -e) - Show all processes running on the system (including those from other users).
-  
-  (ps -f) - Display full-format listing with additional details (including the parent process ID).
-  
-  (ps -u <userName>) - Show processes for a specific user.
-  
-  (ps aux --sort=%cpu) - Sort processes by CPU usage.
-  
-## jobs
-  
-  jobs [options]
-  
-  (jobs -l) - List jobs with more details
-  
-  list the jobs that are running in the current terminal session.
-
-  ## & 
-
-  some_command &
-  
-  Start a job in the background:
-
-  ## fg
-    
-    fg %<jod id> 
-    
-    Bring a job to the foreground
-
-
-  ## bg
-    
-    bg %<jod id> 
-    
-    Bring a job to the backeground
-
-## nohup
-
-  nohup command [arguments] &
-
-  (nohup ./my_script.sh &)
-
-  No Hang Up. run a command or process in the background, and it ensures that the process will continue running even if the user logs out or the terminal is closed.  
-
-## top
-
-  top
-
-  real-time monitoring tool used to display information about the system’s resource usage, including CPU, memory, and running processes.
 
 # user/group
 
@@ -612,4 +556,57 @@ Runlevels: SysVinit uses runlevels (0-6) to define different states of the syste
   (ps aux --sort=-%cpu) - find the processes using the most CPU, you can sort by CPU usage.
 
 
+## lsb_release (Linux Standard Base)
+
+  (lsb_release -a) - display detailed information about the Linux distribution you're using.
+
+## uname
+
+  uname - display information about the system's kernel and hardware.
+
+  (uname -a) -  shows all available system information in one command.
+
+  (uname -o) - displays the operating system.
   
+ 
+## jobs
+  
+  jobs [options]
+  
+  (jobs -l) - List jobs with more details
+  
+  list the jobs that are running in the current terminal session.
+
+  ## & 
+
+  some_command &
+  
+  Start a job in the background:
+
+  ## fg
+    
+    fg %<jod id> 
+    
+    Bring a job to the foreground
+
+
+  ## bg
+    
+    bg %<jod id> 
+    
+    Bring a job to the backeground
+
+## nohup
+
+  nohup command [arguments] &
+
+  (nohup ./my_script.sh &)
+
+  No Hang Up. run a command or process in the background, and it ensures that the process will continue running even if the user logs out or the terminal is closed.  
+
+## top
+
+  top
+
+  real-time monitoring tool used to display information about the system’s resource usage, including CPU, memory, and running processes.
+
