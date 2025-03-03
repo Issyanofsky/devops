@@ -68,7 +68,7 @@ https://cloudinfrastructureservices.co.uk/how-to-install-apache-tomcat-server-on
 
         nano /etc/systemd/system/tomcat.service
 
-Add the following configuration:
+Add the following configuration (to the tomcat.service file):
 
         [Unit]
         Description=Apache Tomcat
@@ -95,3 +95,63 @@ Add the following configuration:
         [Install]
         WantedBy=multi-user.target
         
+
+reload the systemd daemon to apply the changes.
+
+        systemctl daemon-reload
+
+    start the Apache Tomcat service and enable it to start at system reboot with the following command.
+
+        systemctl enable --now tomcat
+
+    check the status of the Apache Tomcat service.
+
+        systemctl status tomcat
+
+    check the Apache Tomcat listening ports.
+
+        ss -antpl | grep -i java
+
+## Configure Apache Tomcat
+
+    add an admin user and password to secure the Apache Tomcat.
+
+        nano /opt/tomcat/conf/tomcat-users.xml
+
+    Add the following lines above the line </tomcat-users>:
+
+        <role rolename="admin-gui"/>
+        <role rolename="manager-gui"/>
+        <user username="admin" password="securepassword" roles="admin-gui,manager-gui"/>        
+
+## Enable Apache Tomcat Remote Access
+
+    By default, Apache Tomcat is accessed only from the localhost. To access the Apache Tomcat from the remote machine, you need to edit the context.xml file and remove the access restriction.
+
+    edit the context.xml file.
+
+        nano /opt/tomcat/webapps/manager/META-INF/context.xml
+
+    Remove the following lines:
+
+        <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+    
+    To enable remote access for Tomcat Host Manager, edit the context.xml file.
+
+        nano /opt/tomcat/webapps/host-manager/META-INF/context.xml
+
+    Remove the following lines:
+
+        <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
+
+     restart the Tomcat service to implement the changes.
+
+        systemctl restart tomcat         
+        
+## Access Apache Tomcat
+
+    Access it using the URL http://your-server-ip:8080 on your web browser.
+    
+    
