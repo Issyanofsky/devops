@@ -127,6 +127,8 @@
 ## free
   free [options]
   display system memory usage.
+## parted 
+  (sudo parted -l) -  list the partition tables of all storage devices on your system.
 ## swapon
   swapon [options] [device]
   enable swap devices and swap files.
@@ -387,6 +389,12 @@
 
   sudo passwd <user_Name> - Setting or Changing the Password for a User.
 
+## groups
+
+  (groups) - see your groups.
+
+  (getent group <groupname>) - see which users belong to a group.
+  
 ## groupadd
 
   sudo groupadd GROUP_NAME - create a new group.
@@ -628,3 +636,49 @@ Runlevels: SysVinit uses runlevels (0-6) to define different states of the syste
 
   sudo apt autoremove - used to automatically remove packages.
 
+## shutdown
+
+  sudo shutdown now - turn the OS down.
+
+## reboot
+
+  (sudo reboot now) - reboot the Linux OS.
+
+# SSH
+
+## install SSH 
+
+  sudo apt install openssh-server
+
+  (sudo systemctl status ssh) - check if the SSH server is running.
+
+  (netstat) (if nedded sudo apt install nettools) - check ports.
+  
+## ssh (Secure Shell)
+
+  ssh -  protocol used to securely access and manage remote systems over a network, such as connecting to another computer or server.
+
+  ssh username@hostname_or_IP - connect to a remote server via SSH.
+
+## ssh-copy-id
+
+  ssh-copy-id - install your public SSH key on a remote machine’s authorized_keys file, allowing you to log in to that machine without needing to enter a password each time.
+
+  ssh-copy-id username@hostname_or_IP
+  
+## ssh-keygen
+
+  ssh-keygen - generate a new pair of SSH keys (a public key and a private key).
+
+  (ssh-keygen -t RSA) - generate a key pair
+
+  ~/.ssh/Authentication - location of Authenticat file for entering a key (if not using ssh-copy-id).
+
+## scp (Secure Copy)
+
+  scp - a command used to transfer files between computers over a secure SSH connection.
+
+  scp [options] source_file username@remote_host:/path/to/destination
+
+  
+  
