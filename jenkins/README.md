@@ -21,6 +21,7 @@ open-source automation tool primarily used for continuous integration (CI) and c
 </div>
 
 two ways to install jenkins:
+
         - plain installation using apt install.
         - hosted on apache (tomcat)
 
