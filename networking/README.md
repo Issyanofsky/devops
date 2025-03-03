@@ -75,6 +75,12 @@
 
   NAT - allow multiple devices within the network to share a single public IP address when accessing the internet. 
 
+## type of Virtual Network
+
+  * Bridge - using the host to access external networks.
+  * NAT - allows containers to access the internet by mapping their internal IP addresses to the host's external IP address.
+  * Host - host only network. apply only inside the network.
+    
 ## Subnet Table
 
 
