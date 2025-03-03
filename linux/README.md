@@ -806,5 +806,73 @@ Runlevels: SysVinit uses runlevels (0-6) to define different states of the syste
 
   scp [options] source_file username@remote_host:/path/to/destination
 
+
+<div align="center">
+
+# **LVM**
+
+</div>
+
+LVN (Logical Volume Manager) in Linux is a system for managing disk space. It allows you to create logical volumes (LVs) on top of physical storage devices like hard drives or partitions.
+
+## PV (Physical Volumes)
+
+  These are your physical storage devices (like hard drives or partitions).
   
+  (pvdisplay) - Displays information about Physical Volumes (PVs).
+
+## VG (Volume Groups)
+
+  combine multiple PVs into one pool of storage.
+
+  (vgdisplay) - Displays information about Volume Groups (VGs).
+
+## LV (Logical Volumes)
+
+  These are the partitions you create inside a VG, which act like normal partitions on your system.
+
+  (lvdisplay) - Displays information about Logical Volumes (LVs).
+
+## lsblk 
+  lsblk [options]
+  (lsblk -f) - List block devices with detailed information.
+   list information about block devices.
+
+## df
+  df - Display disk space for all filesystems
+  df -hT - Display disk space in human-readable format.
+
+If there is not enough space in the Volume Group. to add a new disk or partition as Physical Volume (PV):
+
+  ## pvcreate & vgextend
+  
+    create a Physical Volume on a new disk:
+    
+    (pvcreate /dev/sdX) 
+
+    add this PV to your existing Volume Group:
+
+    (vgextend my_volume_group /dev/sdX)
+
+  ## lvextend 
+
+    extend the size of the Logical Volume (LV).
+
+    (lvextend -L +10G /dev/my_volume_group/my_logical_volume) - to add 10GB to the LV.
+
+  ## Resize the Filesystem
+
+    resizeing the filesystem to use the new space.
+
+    (resize2fs /dev/my_volume_group/my_logical_volume) - For ext4 filesystem.
+
+    (xfs_growfs /dev/my_volume_group/my_logical_volume) - For xfs filesystem.
+
+    ## verify
+
+    (lvdisplay /dev/my_volume_group/my_logical_volume) - check the LV size.
+
+    (df -h) - check the filesystem size.
+    
+    
   
