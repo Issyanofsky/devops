@@ -895,10 +895,10 @@ If there is not enough space in the Volume Group. to add a new disk or partition
 
   setting host name (server)
   
-  sudo nano /ect/hostname
+    sudo nano /ect/hostname
 
 ## Hosts 
 
   setting host in the network
 
-  sudo nano /etc/hosts
+    sudo nano /etc/hosts
