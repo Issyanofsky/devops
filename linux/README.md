@@ -874,5 +874,16 @@ If there is not enough space in the Volume Group. to add a new disk or partition
 
     (df -h) - check the filesystem size.
     
-    
+
+<div align="center">
+
+# **setting server IP & hostname**
+
+</div>    
   
+## set static IP-address
+
+  sudo nano /etc/netplan/50_cloud_init.yaml
+
+    DHCP
+      
