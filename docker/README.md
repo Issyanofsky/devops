@@ -9,17 +9,21 @@
 
   check if installed - retrive info on docker.
 
+    docker info
+    
 ## docker images
 
   display list of docker images.
 
+    docker images
+
 ## docker pull
 
-  docker pull <image_name>:<tag> - pull image from dockerHub.
+    docker pull <image_name>:<tag> - pull image from dockerHub.
 
 ## docker run
 
-  docker run <image_name>:<tag> - run an image in a container.
+    docker run <image_name>:<tag> - run an image in a container.
 
 ## docker ps
 
