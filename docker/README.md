@@ -7,13 +7,13 @@
 
 ## docker info
 
-  check if installed - retrive info on docker.
+check if installed - retrive info on docker.
 
     docker info
     
 ## docker images
 
-  display list of docker images.
+display list of docker images.
 
     docker images
 
@@ -41,7 +41,7 @@
 
 ## docker exec
 
-  execute command into a container
+execute command into a container.
 
     docker exec -it <container_name> <command>
 
@@ -57,7 +57,7 @@
 
 ## docker logs 
 
-  retrieve the logs of a running or stopped container.
+retrieve the logs of a running or stopped container.
 
     docker logs [OPTIONS] CONTAINER_NAME_OR_ID
 
@@ -77,7 +77,7 @@
 
 ## docker stats
 
-  docker stats - display real-time statistics about the resource usage (CPU, memory, disk I/O, network I/O, etc.) of running containers. 
+docker stats - display real-time statistics about the resource usage (CPU, memory, disk I/O, network I/O, etc.) of running containers. 
 
     docker stats [OPTIONS] [CONTAINER...]
 
@@ -87,7 +87,7 @@
 
 ## docker Top
 
-  docker top - display the running processes inside a Docker container.
+docker top - display the running processes inside a Docker container.
 
     docker top <container_name_or_id>
 
@@ -125,7 +125,7 @@
   
   ## FROM
 
-    FROM - Specifies the base image to use for the Docker image.
+  FROM - Specifies the base image to use for the Docker image.
 
       (FROM ubuntu:20.04)
   
@@ -135,55 +135,55 @@
 
   ## RUN
 
-    RUN - Executes a command during the build process of the image. This could be installing packages, or setting up files.
+  RUN - Executes a command during the build process of the image. This could be installing packages, or setting up files.
 
       (RUN apt-get update && apt-get install -y curl)
 
   ## COPY
 
-    COPY - Copies files or directories from the host machine to the container's filesystem.
+  COPY - Copies files or directories from the host machine to the container's filesystem.
 
       (COPY ./myapp /app)
 
   ## ENTRYPOINT
 
-    ENTRYPOINT - Defines the main command to run when the container starts. It is used to set a default command that can’t be overridden unless CMD is used.
+  ENTRYPOINT - Defines the main command to run when the container starts. It is used to set a default command that can’t be overridden unless CMD is used.
 
       (ENTRYPOINT ["python", "app.py"])
 
   ## WORKDIR
 
-    WORKDIR - Sets the working directory for any following RUN, CMD, ENTRYPOINT, COPY, or ADD instructions.
+  WORKDIR - Sets the working directory for any following RUN, CMD, ENTRYPOINT, COPY, or ADD instructions.
 
       (WORKDIR /app)
 
   ## EXPOSE
 
-    EXPOSE - Informs Docker that the container listens on the specified network ports at runtime.
+  EXPOSE - Informs Docker that the container listens on the specified network ports at runtime.
 
       (EXPOSE 8080)
     
   ## ENV
 
-    ENV - Sets an environment variable in the container.
+  ENV - Sets an environment variable in the container.
 
       (ENV APP_ENV=production)
 
   ## VOLUME
 
-    VOLUME - Creates a mount point and attaches it to a container, typically for persistent data storage.
+  VOLUME - Creates a mount point and attaches it to a container, typically for persistent data storage.
 
       (VOLUME ["/data"])
 
 ## ARG
 
-  ARG - Defines a build-time variable that can be passed to the Docker build command.
+ARG - Defines a build-time variable that can be passed to the Docker build command.
 
     (ARG VERSION=1.0) - defines a build-time argument VERSION with a default value of 1.0.
 
 ## CMD
 
-  CMD - Specifies the default command to run when the container starts.
+CMD - Specifies the default command to run when the container starts.
 
     (CMD ["python", "app.py"]) -  default command that gets run when the container starts, unless overridden by the user.
   
@@ -217,7 +217,7 @@
 
 ## docker network ls
 
-  display networks list.
+display networks list.
 
     docker network ls
 
@@ -227,7 +227,7 @@
 
 ## docker netwrok create
 
-  create a network in docker.
+create a network in docker.
 
   docker network create [OPTIONS] NETWORK_NAME
 
@@ -241,13 +241,13 @@
 
 ## docker network connect
   
-  connect a running container to an existing Docker network.
+connect a running container to an existing Docker network.
 
     docker network connect [OPTIONS] NETWORK_NAME CONTAINER_NAME_OR_ID
 
 ## docker network disconnect
 
-  disconnect a running container from a network.
+disconnect a running container from a network.
 
     docker network disconnect [OPTIONS] NETWORK_NAME CONTAINER_NAME_OR_ID
 
@@ -271,31 +271,31 @@
 
 ## docker-compose up
 
-  Starts all the containers defined in the docker-compose.yml file
+Starts all the containers defined in the docker-compose.yml file
 
     (docker-compose up -d) - Starts the containers in detached mode, meaning they run in the background.
 
 ## docker-compose down
 
-  docker-compose down - Stops and removes the containers, networks, and volumes created by docker-compose up.
+docker-compose down - Stops and removes the containers, networks, and volumes created by docker-compose up.
 
     docker-compose down
 
 ## docker-compose logs
 
-  docker-compose logs - Shows the logs from the containers started with Docker Compose.
+docker-compose logs - Shows the logs from the containers started with Docker Compose.
 
     (docker-compose logs)
 
 ## docker-compose ps
 
-  docker-compose ps - Lists the containers that are running as part of the Compose application.
+docker-compose ps - Lists the containers that are running as part of the Compose application.
 
     (docker-compose ps)
 
 ## docker-compose build
 
-  docker-compose build -  build or rebuild services defined in a docker-compose.yml file.
+docker-compose build -  build or rebuild services defined in a docker-compose.yml file.
 
   docker-compose build [OPTIONS] [SERVICE...]
 
