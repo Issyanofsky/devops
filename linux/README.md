@@ -885,5 +885,20 @@ If there is not enough space in the Volume Group. to add a new disk or partition
 
   sudo nano /etc/netplan/50_cloud_init.yaml
 
-    DHCP
-      
+    dhcp4: false
+    addresses: [192.168.1.70/24]
+    gateway4: 192.168.1.1
+    nameservers:
+      addresses: [192.168.1.1, 8.8.8.8]
+
+## Host Name
+
+  setting host name (server)
+  
+  sudo nano /ect/hostname
+
+## Hosts 
+
+  setting host in the network
+
+  sudo nano /etc/hosts
