@@ -33,63 +33,63 @@
 
 ## docker rm
 
-  docker rm <container _name> - delete docker container.
+    docker rm <container _name> - delete docker container.
 
 ## docker rmi
 
-  docker rmi <image_name> - delete docker image.
+    docker rmi <image_name> - delete docker image.
 
 ## docker exec
 
   execute command into a container
 
-  docker exec -it <container_name> <command>
+    docker exec -it <container_name> <command>
 
-  (docker exec -it <container_name> /bin/bash) - open bash prompt in the container.
+    (docker exec -it <container_name> /bin/bash) - open bash prompt in the container.
 
 ## docker stop
 
-  docker stop  <container_name>  - stop container 
+    docker stop  <container_name>  - stop container 
 
 ## docker inspect
 
-  docker inspect <image_name> - inspect the image logs
+    docker inspect <image_name> - inspect the image logs
 
 ## docker logs 
 
   retrieve the logs of a running or stopped container.
 
-  docker logs [OPTIONS] CONTAINER_NAME_OR_ID
+    docker logs [OPTIONS] CONTAINER_NAME_OR_ID
 
-  (docker logs -t my_container) - Includes timestamps in the log output.
+    (docker logs -t my_container) - Includes timestamps in the log output.
 
 ## Data Volume
 
-  docker run -p 80:80 -v /var/www
+    docker run -p 80:80 -v /var/www
 
-  docker volume ls - display volumes list.
+    docker volume ls - display volumes list.
 
-  (docker run -p 80:80 -v $(PWD):/var/www <image_name>) - run the container (image), connect ports 80 to 80, mount local(PWD) to /var/www in container.
+    (docker run -p 80:80 -v $(PWD):/var/www <image_name>) - run the container (image), connect ports 80 to 80, mount local(PWD) to /var/www in container.
 
-  (docker run --name <container_name> -p 80:80 -v c:\users:/user/shared/nginx/html:ro -d nginx) - deploy nginx, connect ports 80 tp 80, run in background (-d), mount a read-only (ro) drive located localy on c:users mounted on /user/shared/nginx/html).
+    (docker run --name <container_name> -p 80:80 -v c:\users:/user/shared/nginx/html:ro -d nginx) - deploy nginx, connect ports 80 tp 80, run in background (-d), mount a read-only (ro) drive located localy on c:users mounted on /user/shared/nginx/html).
 
-  (docker run --name <container_name> -v source_location:des_location -e MYSQL_ROOT_PASSWORD=a1a1a1 -d mysql) - run container in the background (-d), mount a drive and pass a env variable (password).
+    (docker run --name <container_name> -v source_location:des_location -e MYSQL_ROOT_PASSWORD=a1a1a1 -d mysql) - run container in the background (-d), mount a drive and pass a env variable (password).
 
 ## docker stats
 
   docker stats - display real-time statistics about the resource usage (CPU, memory, disk I/O, network I/O, etc.) of running containers. 
 
-  docker stats [OPTIONS] [CONTAINER...]
+    docker stats [OPTIONS] [CONTAINER...]
 
-  (docker stats my_container_name) - show stats for a specific container.
+    (docker stats my_container_name) - show stats for a specific container.
 
-  (docker stats) - show stats for all containers.
+    (docker stats) - show stats for all containers.
 
 ## docker Top
 
   docker top - display the running processes inside a Docker container.
 
-  docker top <container_name_or_id>
+    docker top <container_name_or_id>
 
 <div align="center">
 
@@ -127,7 +127,7 @@
 
     FROM - Specifies the base image to use for the Docker image.
 
-    (FROM ubuntu:20.04)
+      (FROM ubuntu:20.04)
   
   ## MAINTAINER
 
@@ -137,55 +137,55 @@
 
     RUN - Executes a command during the build process of the image. This could be installing packages, or setting up files.
 
-    (RUN apt-get update && apt-get install -y curl)
+      (RUN apt-get update && apt-get install -y curl)
 
   ## COPY
 
     COPY - Copies files or directories from the host machine to the container's filesystem.
 
-    (COPY ./myapp /app)
+      (COPY ./myapp /app)
 
   ## ENTRYPOINT
 
     ENTRYPOINT - Defines the main command to run when the container starts. It is used to set a default command that can’t be overridden unless CMD is used.
 
-    (ENTRYPOINT ["python", "app.py"])
+      (ENTRYPOINT ["python", "app.py"])
 
   ## WORKDIR
 
     WORKDIR - Sets the working directory for any following RUN, CMD, ENTRYPOINT, COPY, or ADD instructions.
 
-    (WORKDIR /app)
+      (WORKDIR /app)
 
   ## EXPOSE
 
     EXPOSE - Informs Docker that the container listens on the specified network ports at runtime.
 
-    (EXPOSE 8080)
+      (EXPOSE 8080)
     
   ## ENV
 
     ENV - Sets an environment variable in the container.
 
-    (ENV APP_ENV=production)
+      (ENV APP_ENV=production)
 
   ## VOLUME
 
     VOLUME - Creates a mount point and attaches it to a container, typically for persistent data storage.
 
-    (VOLUME ["/data"])
+      (VOLUME ["/data"])
 
 ## ARG
 
   ARG - Defines a build-time variable that can be passed to the Docker build command.
 
-  (ARG VERSION=1.0) - defines a build-time argument VERSION with a default value of 1.0.
+    (ARG VERSION=1.0) - defines a build-time argument VERSION with a default value of 1.0.
 
 ## CMD
 
   CMD - Specifies the default command to run when the container starts.
 
-  (CMD ["python", "app.py"]) -  default command that gets run when the container starts, unless overridden by the user.
+    (CMD ["python", "app.py"]) -  default command that gets run when the container starts, unless overridden by the user.
   
 
 
@@ -196,13 +196,13 @@
 
     docker build . - (from the directory with the Dockerfile) - builds the image
 
-    (docker build . -t <image_name>) - build a image with a name describe.
+      (docker build . -t <image_name>) - build a image with a name describe.
 
 # DockerHub
 
   ## docker tag 
 
-    docker tag <source_image>:<tag> <destinain_image_name>:<tag> - change image name.
+      docker tag <source_image>:<tag> <destinain_image_name>:<tag> - change image name.
 
   ## docker login
 
@@ -219,9 +219,11 @@
 
   display networks list.
 
+    docker network ls
+
 ## docke network inspect
 
-  docker network inspect <network_name> - info about the network.
+    docker network inspect <network_name> - info about the network.
 
 ## docker netwrok create
 
@@ -241,13 +243,13 @@
   
   connect a running container to an existing Docker network.
 
-  docker network connect [OPTIONS] NETWORK_NAME CONTAINER_NAME_OR_ID
+    docker network connect [OPTIONS] NETWORK_NAME CONTAINER_NAME_OR_ID
 
 ## docker network disconnect
 
   disconnect a running container from a network.
 
-  docker network disconnect [OPTIONS] NETWORK_NAME CONTAINER_NAME_OR_ID
+    docker network disconnect [OPTIONS] NETWORK_NAME CONTAINER_NAME_OR_ID
 
 
 
@@ -271,25 +273,25 @@
 
   Starts all the containers defined in the docker-compose.yml file
 
-  (docker-compose up -d) - Starts the containers in detached mode, meaning they run in the background.
+    (docker-compose up -d) - Starts the containers in detached mode, meaning they run in the background.
 
 ## docker-compose down
 
   docker-compose down - Stops and removes the containers, networks, and volumes created by docker-compose up.
 
-  docker-compose down
+    docker-compose down
 
 ## docker-compose logs
 
   docker-compose logs - Shows the logs from the containers started with Docker Compose.
 
-  (docker-compose logs)
+    (docker-compose logs)
 
 ## docker-compose ps
 
   docker-compose ps - Lists the containers that are running as part of the Compose application.
 
-  (docker-compose ps)
+    (docker-compose ps)
 
 ## docker-compose build
 
@@ -297,7 +299,7 @@
 
   docker-compose build [OPTIONS] [SERVICE...]
 
-  (docker-compose build web) - build a specific service (e.g., web).
+    (docker-compose build web) - build a specific service (e.g., web).
  
  
   
