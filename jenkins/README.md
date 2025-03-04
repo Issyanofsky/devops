@@ -190,44 +190,44 @@ two ways for creating Pipeline:
 
      define the entire deployment flow through code. using jenkinsfile.
 
-     ## Jenkinsfile
+## Jenkinsfile
 
         A Jenkinsfile is a text file that stores the entire workflow as code.
 
         written using the Groovy DSL and it can be created through a text/groovy editor or through the configuration page on the Jenkins instance.
         
 
-    ## Pipeline concepts  
+## Pipeline concepts  
 
         defined collection in stage inside Jenkinsfile. defined all a process inside pipeline block like build, test, compile and deploy.
 
             pipeline {
             }
     
-    ## Node
+## Node
 
         A node is a machine that executes an entire workflow. 
 
             node{
             }
 
-    ## Agent
+## Agent
 
         a machine or environment where the build or task runs. It can be the Jenkins server itself or another separate machine connected to Jenkins. The agent helps execute jobs or tasks defined in Jenkins pipelines.
 
-    ## Any
+## Any
 
         Runs the pipeline/ stage on any available agent.
 
-    ## None
+## None
 
         this parameter is applied at the root of the pipeline and it indicates that there is no global agent for the entire pipeline and each stage must specify its own agent.
 
-    ## Label
+## Label
 
         Executes the pipeline/stage on the labeled agent.
 
-    ## Docker
+## Docker
 
         This parameter uses docker container as an execution environment for the pipeline or a specific stage.
 
@@ -239,7 +239,7 @@ two ways for creating Pipeline:
                 }
             }
         
-    ## Stages
+## Stages
 
         used to organize and break down the steps of a pipeline. Each stage represents a specific phase of the process, like building, testing, or deploying. Stages help make the pipeline easier to understand and track by clearly               showing what part of the process is happening at any given time.
 
@@ -253,14 +253,42 @@ two ways for creating Pipeline:
                 }
             }
 
-    ## Stage 
+## Stage 
         
         steps is attribute dependent on Stages, here we cam defined new stage inside stages and what we need to do inside this block.
 
-    ## steps
+## steps
 
         steps is attribute dependent on Stage , we can defined series of steps inside one Stage , when we need execute stage will execute this steps in sequence, there must be at least one step within steps block.
 
+## example of jenkinsfile
+
+        pipeline {
+        agent any  // Runs the pipeline on any available agent
+    
+        stages {
+            stage('Build') {
+                steps {
+                    echo 'Building the project...'
+                    // Add build commands here (e.g., compile, package)
+                }
+            }
+            
+            stage('Test') {
+                steps {
+                    echo 'Running tests...'
+                    // Add test commands here (e.g., run unit tests)
+                }
+            }
+    
+            stage('Deploy') {
+                steps {
+                    echo 'Deploying the project...'
+                    // Add deployment commands here (e.g., deploy to a server)
+                }
+            }
+        }
+    }
 
 
 
