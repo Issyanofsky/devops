@@ -1,3 +1,8 @@
+<div align="center">
+
+# **Docker**
+
+</div>
 
 
 ## docker info
@@ -82,8 +87,33 @@
 
   docker top <container_name_or_id>
 
+<div align="center">
 
+# **Docker Install**
 
+</div>
+    install package:
+    
+      sudo apt update
+
+    install Docker:
+
+      sudo apt install docker-ce
+
+  Start and enable Docker service:
+
+      sudo systemctl start docker
+
+      sudo systemctl enable docker
+      
+  Verify Docker installation:
+
+      sudo docker --version
+  
+  Run Docker without sudo:
+
+      sudo usermod -aG docker $USER
+    
   
 # Key Dockerfile Instactions
 
