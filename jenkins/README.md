@@ -186,6 +186,10 @@ two ways for creating Pipeline:
     * create Job for each step (job one for test and job 2 for build and so one), and after that creat a Pipeline for running those jobs in sequential way.
     * new feature - jenkins pieline project. this why depend on "Jenkinsfile".
 
+file location:
+
+    /opt/tomcat/.jenkins/workspace/pipeline1-maven/target
+
 ## Jenkins Pipeline Project
 
      define the entire deployment flow through code. using jenkinsfile.
