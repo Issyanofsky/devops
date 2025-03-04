@@ -172,3 +172,99 @@ reload the systemd daemon to apply the changes.
     in the Tomcat page press on  Jenkins, enter password --> system plugin --> install
     
     
+<div align="center">
+
+# **Pipeline**
+
+</div>
+
+![jenkins](jenkins.gif)
+
+
+two ways for creating Pipeline:
+
+    * create Job for each step (job one for test and job 2 for build and so one), and after that creat a Pipeline for running those jobs in sequential way.
+    * new feature - jenkins pieline project. this why depend on "Jenkinsfile".
+
+## Jenkins Pipeline Project
+
+     define the entire deployment flow through code. using jenkinsfile.
+
+     ## Jenkinsfile
+
+        A Jenkinsfile is a text file that stores the entire workflow as code.
+
+        written using the Groovy DSL and it can be created through a text/groovy editor or through the configuration page on the Jenkins instance.
+        
+
+    ## Pipeline concepts  
+
+        defined collection in stage inside Jenkinsfile. defined all a process inside pipeline block like build, test, compile and deploy.
+
+            pipeline {
+            }
+    
+    ## Node
+
+        A node is a machine that executes an entire workflow. 
+
+            node{
+            }
+
+    ## Agent
+
+        a machine or environment where the build or task runs. It can be the Jenkins server itself or another separate machine connected to Jenkins. The agent helps execute jobs or tasks defined in Jenkins pipelines.
+
+    ## Any
+
+        Runs the pipeline/ stage on any available agent.
+
+    ## None
+
+        this parameter is applied at the root of the pipeline and it indicates that there is no global agent for the entire pipeline and each stage must specify its own agent.
+
+    ## Label
+
+        Executes the pipeline/stage on the labeled agent.
+
+    ## Docker
+
+        This parameter uses docker container as an execution environment for the pipeline or a specific stage.
+
+            pipeline{
+                agent{
+                    docker{
+                        image 'Ubuntu'
+                    }
+                }
+            }
+        
+    ## Stages
+
+        used to organize and break down the steps of a pipeline. Each stage represents a specific phase of the process, like building, testing, or deploying. Stages help make the pipeline easier to understand and track by clearly               showing what part of the process is happening at any given time.
+
+            pipeline{
+                agent any stages {
+                    stage {
+                        steps {
+                            ......
+                        }
+                    }
+                }
+            }
+
+    ## Stage 
+        
+        steps is attribute dependent on Stages, here we cam defined new stage inside stages and what we need to do inside this block.
+
+    ## steps
+
+        steps is attribute dependent on Stage , we can defined series of steps inside one Stage , when we need execute stage will execute this steps in sequence, there must be at least one step within steps block.
+
+
+
+
+
+
+    
+    
