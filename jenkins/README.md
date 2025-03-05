@@ -347,5 +347,76 @@ Check the "Node" page to see if the slave is online. You should see a "green" st
 
 In the job configuration, you can now specify which node to run the job on, and Jenkins will use the slave.    
 
-    
+
+
+<div align="center">
+
+# **Declerety Pipeline**
+
+</div>
+
+Declarative Pipeline is a way to define your Jenkins pipeline using a more structured and easier-to-read syntax compared to the scripted pipeline. It is a newer, more user-friendly style for writing Jenkins pipelines and provides built-in features like stages, steps, and post-actions.
+
+createing a Declarative Pipeline in Jenkins:
+
+# Go to Jenkins Dashboard
+
+    Open Jenkins in your browser.
+
+# Create a New Pipeline Job
+
+    * Click on New Item.
+    * Enter a name for your pipeline job.
+    * Select Pipeline and click OK.
+
+# Configure the Pipeline Script
+
+    * Under the Pipeline section, choose Pipeline script.
+    * In the Script field, you can define your pipeline using Declarative syntax.
+
+    Basic Declarative Pipeline Example:
+
+        pipeline {
+            agent any  // This specifies that Jenkins can run the pipeline on any available agent
+        
+            stages {  // Define the stages for the pipeline
+                stage('Build') {  // First stage of the pipeline
+                    steps {
+                        echo 'Building the project...'  // Step: print a message
+                        // Add your build steps here (e.g., mvn, npm, etc.)
+                    }
+                }
+        
+                stage('Test') {  // Second stage
+                    steps {
+                        echo 'Running tests...'
+                        // Add your testing commands here
+                    }
+                }
+        
+                stage('Deploy') {  // Third stage
+                    steps {
+                        echo 'Deploying the application...'
+                        // Add your deployment commands here
+                    }
+                }
+            }
+        
+            post {  // Actions to run after the pipeline execution
+                success {
+                    echo 'Pipeline succeeded!'
+                }
+                failure {
+                    echo 'Pipeline failed!'
+                }
+            }
+        }
+
+# Save the Pipeline
+
+    After adding the script, click Save.
+
+# Run the Pipeline
+
+    Go back to the job page and click Build Now to run the pipeline.    
     
