@@ -143,3 +143,16 @@ check if already kubectl install, by:
   minikube start driver=virtualbox --no-vtx-check
  
 
+<div align="center">
+
+# **Services (svc)**
+
+</div>
+
+Service is a resource that defines how to access a set of Pods, and it can automatically balance traffic between them.
+
+Types of Services:
+
+     * ClusterIP - only accessible within the Kubernetes cluster.
+     * NodePort - accessible from outside the cluster.
+     * LoadBalancer - uses an external load balancer to distribute traffic.
