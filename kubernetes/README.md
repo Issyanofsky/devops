@@ -36,6 +36,11 @@ Distribution of kubernetes:
 
 </div>
 
+check if already kubectl install, by:
+
+   which kubectl
+
+
 # Linux install
 
     Download the latest release:
