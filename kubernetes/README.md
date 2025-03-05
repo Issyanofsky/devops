@@ -4,6 +4,9 @@
 
 </div>
 
+
+
+
 Kubernetes is an open-source platform for automating the deployment, scaling, and management of containerized applications (like Docker containers).
 
 best practice setting: (min 3) Control plane servers. odd number of servers.
