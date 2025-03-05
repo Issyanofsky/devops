@@ -170,6 +170,8 @@ reload the systemd daemon to apply the changes.
     (can copy the file directly to folder /opt/tomcat/webbapps)
 
     in the Tomcat page press on  Jenkins, enter password --> system plugin --> install
+
+
     
     
 <div align="center">
@@ -177,6 +179,7 @@ reload the systemd daemon to apply the changes.
 # **Pipeline**
 
 </div>
+
 
 ![jenkins](jenkins.gif)
 
@@ -296,11 +299,14 @@ file location:
 
 
 
+
+
 <div align="center">
 
 # **Jenkins Slave**
 
 </div>
+
 
 Setting up a Jenkins slave (also called a "Jenkins agent") is simple. 
 
@@ -347,11 +353,14 @@ Check the "Node" page to see if the slave is online. You should see a "green" st
 
 In the job configuration, you can now specify which node to run the job on, and Jenkins will use the slave.    
 
+
+
 <div align="center">
 
 # **Create a Jenkins Slave in a Docker Container**
 
 </div>
+
 
 allow you to use a Docker container as a Jenkins agent (slave), running jobs inside the container.
 
@@ -430,11 +439,13 @@ If you want to run Docker commands inside the Jenkins slave container (i.e., Doc
           java -jar /usr/share/jenkins/agent.jar -jnlpUrl http://<JenkinsMasterURL>/computer/jenkins-slave/slave-agent.jnlp
 
 
+
 <div align="center">
 
 # **Declerety Pipeline**
 
 </div>
+
 
 Declarative Pipeline is a way to define your Jenkins pipeline using a more structured and easier-to-read syntax compared to the scripted pipeline. It is a newer, more user-friendly style for writing Jenkins pipelines and provides built-in features like stages, steps, and post-actions.
 
