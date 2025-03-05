@@ -156,3 +156,42 @@ Types of Services:
      * ClusterIP - only accessible within the Kubernetes cluster.
      * NodePort - accessible from outside the cluster (range port 30000-32767).
      * LoadBalancer - uses an external load balancer to distribute traffic.
+
+## display services
+
+    kubectl get services -A - display all services in the cluster.
+
+    kubectl get svc -n namespace - display services in a specific namespace.
+
+## discribe
+
+  kubectl describe svc <service_Name> - display descriptionn of the service setting.
+
+## delete service
+
+  kubectl delete -n <namespace>  svc <service_Name> - delete service name
+
+## deploy service using command (not yaml)
+
+  kubectl expose deploy <deploy_Name> --port 3000 --name <service_Name>
+
+## deply service using YAML
+
+  after creating a yaml file for creating a service:
+  
+      kubectl apply -f <yaml_file>
+
+  example of yaml:
+
+     apiVersion: v1
+     kind: Service
+     metadata:
+       name: myapp-service
+     spec:
+       selector:
+         app: myapp  # Selects Pods with this label
+       ports:
+         - protocol: TCP
+           port: 80
+           targetPort: 80
+       type: NodePort  # Exposes the service outside the cluster
