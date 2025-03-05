@@ -28,8 +28,22 @@ Distribution of kubernetes:
       - AKS - Azure kubernetes services.
       - EKS - Amazon (also eks).
       - IBM - cloud container service.
-   
-  
+
+
+ # cluster Architecture
+
+     * Control plane:
+       - API server - comunicating with the cluster (usualy port 8443). uses self certificate to secure communicating between nodes.
+       - Scheduler - The Scheduler is responsible for deciding where the workloads (like Pods) should run inside the cluster.
+       - Controller Manager - responsible for making sure that the current state of the cluster matches the desired state.
+       - etcd -  key-value store that Kubernetes uses to store all its cluster data.
+
+     * Worker nodes components:
+       - kubelet -  is an agent that runs on each node in your Kubernetes cluster.
+       - kube-proxy - a network proxy that runs on each node in the Kubernetes cluster.
+       - Container Runtime - oftware responsible for running containers on the nodes.
+
+     
    <div align="center">
 
 # **install Kubectl (Kubernetes command-line tool)**
