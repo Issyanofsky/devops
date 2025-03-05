@@ -70,6 +70,40 @@ check if already kubectl install, by:
      copy the kubectl.exe file to a folder.
      set his PATH in the enviroment.
 
+   <div align="center">
+
+# **Kubectl Commands**
+
+</div>
+
+    * kubectl get nodes - display cluster nodes.
+    * kubectl get pods -A - display all pods on cluster.
+    * kubectl delete pod <pod_Name> - delete pod.
+    * kubectl describe <pod_Name> - describe pod info.
+    * kubectl logs <pod_Name> - display pods log.
+
+ # running pod using yaml
+
+   apply pod:
+    
+       kubectl apply -f <file_Name.yaml>
+
+  delete pod
+
+      kubectl delete pod <pod_Name>
+
+ # kube exec
+
+   execute command on a running pod.
+
+      kubectl exec -it <pod_Name> --/bin/bash - open a bash on the running pod.
+
+ # kubectl run
+
+   applying (runing) a pod coommand (without yaml file)
+
+     kubectl run -i -tty --image=<image_name> --restart=never --sh
+
 
     
    <div align="center">
