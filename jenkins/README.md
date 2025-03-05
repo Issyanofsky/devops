@@ -501,3 +501,19 @@ createing a Declarative Pipeline in Jenkins:
 
     Go back to the job page and click Build Now to run the pipeline.    
     
+
+
+
+
+<div align="center">
+
+# **Create Pipeline from Jenkins file**
+
+    * create pipeline (like normal).
+    * under setting:
+        - github project --> project url
+        - set automatic check on changes (optional).
+        - pipeline --> Definition --> pipeline script from scm
+            set to the jenkins file 
+            Repository URL - enter github url address 
+</div>
