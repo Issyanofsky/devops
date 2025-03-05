@@ -108,13 +108,13 @@ check if already kubectl install, by:
     
    <div align="center">
 
-# **install Minikube**
+# **Minikube**
 
 </div>
 
 [follow the steps on (***](https://minikube.sigs.k8s.io/docs/start/?arch=%2Fwindows%2Fx86-64%2Fstable%2F.exe+download)
 
-## windows
+## windows install
 
    using PowerShell:
 
