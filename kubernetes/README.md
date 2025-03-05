@@ -154,5 +154,5 @@ Service is a resource that defines how to access a set of Pods, and it can autom
 Types of Services:
 
      * ClusterIP - only accessible within the Kubernetes cluster.
-     * NodePort - accessible from outside the cluster.
+     * NodePort - accessible from outside the cluster (range port 30000-32767).
      * LoadBalancer - uses an external load balancer to distribute traffic.
