@@ -89,9 +89,9 @@ check if already kubectl install, by:
    Add the minikube.exe binary to your PATH (Make sure to run PowerShell as Administrator).
 
     $oldPath = [Environment]::GetEnvironmentVariable('Path', [EnvironmentVariableTarget]::Machine)
-if ($oldPath.Split(';') -inotcontains 'C:\minikube'){
-  [Environment]::SetEnvironmentVariable('Path', $('{0};C:\minikube' -f $oldPath), [EnvironmentVariableTarget]::Machine)
-}
+    if ($oldPath.Split(';') -inotcontains 'C:\minikube'){
+      [Environment]::SetEnvironmentVariable('Path', $('{0};C:\minikube' -f $oldPath), [EnvironmentVariableTarget]::Machine)
+    }
 
 
 ## minikube commands
