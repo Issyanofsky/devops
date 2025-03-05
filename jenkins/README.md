@@ -304,6 +304,10 @@ file location:
 
 Setting up a Jenkins slave (also called a "Jenkins agent") is simple. 
 
+ check if needed to open Port for the slave (on the master server)
+
+     manage (on master server) --> security --> Fix (enter port).
+
 # Prepare the Slave Machine
 
     * Ensure the machine you want to use as a slave has Java installed.
