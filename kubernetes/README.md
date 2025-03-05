@@ -82,7 +82,7 @@ check if already kubectl install, by:
     * kubectl describe <pod_Name> - describe pod info.
     * kubectl logs <pod_Name> - display pods log.
 
- # running pod using yaml
+ ## running pod using yaml
 
    apply pod:
     
@@ -92,13 +92,13 @@ check if already kubectl install, by:
 
       kubectl delete pod <pod_Name>
 
- # kube exec
+ ## kube exec
 
    execute command on a running pod.
 
       kubectl exec -it <pod_Name> --/bin/bash - open a bash on the running pod.
 
- # kubectl run
+ ## kubectl run
 
    applying (runing) a pod coommand (without yaml file)
 
