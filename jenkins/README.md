@@ -347,6 +347,87 @@ Check the "Node" page to see if the slave is online. You should see a "green" st
 
 In the job configuration, you can now specify which node to run the job on, and Jenkins will use the slave.    
 
+<div align="center">
+
+# **Create a Jenkins Slave in a Docker Container**
+
+</div>
+
+allow you to use a Docker container as a Jenkins agent (slave), running jobs inside the container.
+
+https://devopscube.com/docker-containers-as-build-slaves-jenkins/
+
+# Install Docker on the Slave Machine
+
+    Make sure Docker is installed on the machine where you want to run the Jenkins slave container
+
+# Log in to the server and open the docker service file
+
+        sudo nano /lib/systemd/system/docker.service
+
+    Search for ExecStart and add to that line with the following.
+
+        -H tcp://0.0.0.0:4243
+
+    Reload and restart docker service.
+
+        sudo systemctl daemon-reload
+        sudo service docker restart
+
+    Validate API by executing the following curl commands
+
+        curl http://localhost:4243/version
+        curl http://< host IP>:4243/version
+
+# check plugin
+
+    in jenkins. plugin --> Docker --> plugin.
+
+# create Docker cloud (in jenkins)
+
+    manage --> new cloud
+
+    * enter URI (tcp://192.168.1.9:4243)
+    * enabled - set to True
+    * under Docker Agent Template - enter the image we want to deploy:
+        - image to deploy.
+        - name of slave (Labels, Enabled - True).
+        - set usage to run ony when deploy,
+        - under connect method --> connect with SSH --> enter the ssh key
+        - set "non verifying verification strategy"
+    * fill Remote file system Root (/home/jenkins/agent)
+    * pull once and update.
+
+# cloud setting
+
+Under Docker Cloud details:
+
+    - Docker Host URL - set the portof the host (ex. tcp://192.168.1.8:4243).
+    - Enable - set Ture.
+
+# Docker Agent template
+
+under Docker agent template:
+
+    - Labels - profile name for the image (ex. jenkins-docker-slave).
+    - Enabled - set True.
+    - Name - can be same as Labels.
+    - Docker Images - image name to download from DockerHub
+    - Remote file system Root - location for files to work on (ex. /home/jenkins/agents).
+    - Usage - Only Build jobs with label expression.....
+    - connect method - Attach docker container.
+    - pull strategy - pull once and update latest.
+
+# Optional: Using Docker Inside the Jenkins Slave
+
+If you want to run Docker commands inside the Jenkins slave container (i.e., Docker in Docker), you should mount the Docker socket (/var/run/docker.sock) into the container when you run it. This allows Jenkins to run Docker commands inside the slave container.
+
+        docker run -d --name jenkins-slave \
+          -e JENKINS_URL=http://<JenkinsMasterURL> \
+          -e AGENT_NAME=jenkins-slave \
+          -v /var/run/docker.sock:/var/run/docker.sock \
+          jenkins-slave:latest \
+          java -jar /usr/share/jenkins/agent.jar -jnlpUrl http://<JenkinsMasterURL>/computer/jenkins-slave/slave-agent.jnlp
 
 
 <div align="center">
