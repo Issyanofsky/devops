@@ -519,6 +519,8 @@ createing a Declarative Pipeline in Jenkins:
 <div align="center">
 
 # **Create Pipeline from Jenkins file**
+</div>
+
 
     * create pipeline (like normal).
     * under setting:
@@ -527,4 +529,4 @@ createing a Declarative Pipeline in Jenkins:
         - pipeline --> Definition --> pipeline script from scm
             set to the jenkins file 
             Repository URL - enter github url address 
-</div>
+
