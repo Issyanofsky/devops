@@ -296,7 +296,52 @@ file location:
 
 
 
+<div align="center">
 
+# **Jenkins Slave**
+
+</div>
+
+Setting up a Jenkins slave (also called a "Jenkins agent") is simple. 
+
+# Prepare the Slave Machine
+
+    * Ensure the machine you want to use as a slave has Java installed.
+    * Make sure the machine is connected to the same network as the Jenkins master.
+
+# Create a New Node in Jenkins
+
+    * Go to your Jenkins dashboard.
+    * Click on "Manage Jenkins" > "Manage Nodes and Clouds" > "New Node".
+    * Choose "Permanent Agent", name it, and click OK.
+
+# Configure the Node
+
+    * set the Remote root directory: The directory where Jenkins will store files on the slave  (ex. /home/user/folder_Name).
+    * ser Labels: (Optional) Tags to identify the node for specific jobs.
+    * Usage: Choose whether Jenkins can use the slave for all jobs or only some jobs.
+    * Launch method: Select the method to connect to the slave machine (e.g., via SSH, JNLP, etc.).
+    
+# Set Up the Slave on the Machine
+
+    launch method:
+
+        1. SSH - Make sure the slave machine allows SSH connections, and add the SSH credentials to Jenkins.
+        or
+        2. JNLP (Java Web Start):
+
+                * Download the agent.jar from your Jenkins master (you’ll get this link on the node configuration page).
+                * Run the agent using the command:
+                
+                        java -jar agent.jar -jnlpUrl http://<JenkinsMasterURL>/computer/<SlaveName>/slave-agent.jnlp
+
+# Verify Connection
+
+Check the "Node" page to see if the slave is online. You should see a "green" status.
+
+# Use the Slave for Jobs
+
+In the job configuration, you can now specify which node to run the job on, and Jenkins will use the slave.    
 
     
     
