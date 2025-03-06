@@ -1,9 +1,22 @@
+
+
 <div align="center">
 
 # **Kubernetes (K8s)**
 
 </div>
 
+Legend:
+
+   * [install Kubectl (Kubernetes command-line tool)](#install Kubectl (Kubernetes command-line tool))
+   * [Labels](#Labels)
+   * [Secrets](#Secrets)
+   * [Dashboard](#Dashboard)
+   * [Metrics Server](#Metrics Server)
+   * [Kubectl Commands](#Kubectl Commands)
+   * [Services (svc)](#Services (svc))
+
+     
 
 ![kubernetes](kubernetes.gif)
 
