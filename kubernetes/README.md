@@ -11,7 +11,6 @@
 
 Kubernetes is an open-source platform for automating the deployment, scaling, and management of containerized applications (like Docker containers).
 
-best practice setting: (min 3) Control plane servers. odd number of servers.
 
 Distribution of kubernetes:
 
@@ -42,6 +41,12 @@ Distribution of kubernetes:
        - kubelet -  is an agent that runs on each node in your Kubernetes cluster.
        - kube-proxy - a network proxy that runs on each node in the Kubernetes cluster.
        - Container Runtime - oftware responsible for running containers on the nodes.
+
+## high Availability
+
+Using more then one Control plain for high availability of the cluster. best practice setting odd number of servers (min 3 Control plane servers). 
+
+     * Importent: there is a need of a LoadBalancer for high availability and fault tolerance (must be installed primerly to the cluster). A Load Balancer is necessary to distribute incoming API requests evenly among the multiple Control Plane nodes and to ensure seamless operation in the following scenarios (HPProxy, Nginx, AWS (NLB,ALB)).
 
      
    <div align="center">
