@@ -66,9 +66,11 @@ Using more then one Control plain for high availability of the cluster. best pra
      
    <div align="center">
 
-# **install Kubectl (Kubernetes command-line tool)**
+# **install Kubectl**
 
 </div>
+
+(Kubernetes command-line tool)
 
 check if already kubectl install, by:
 
