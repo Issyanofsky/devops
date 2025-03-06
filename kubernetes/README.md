@@ -198,28 +198,6 @@ consumed by pods in two ways:
 
 1. Environment Variables
 
-    apiVersion: v1
-    kind: Pod
-    metadata:
-      name: my-pod
-    spec:
-      containers:
-      - name: my-app
-        image: my-app:latest
-        env:
-        - name: USERNAME
-          valueFrom:
-            secretKeyRef:
-              name: my-secret
-              key: username
-        - name: PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: my-secret
-              key: password
-
-2. Mounted Files
-
      apiVersion: v1
      kind: Pod
      metadata:
@@ -228,14 +206,36 @@ consumed by pods in two ways:
        containers:
        - name: my-app
          image: my-app:latest
-         volumeMounts:
+         env:
+         - name: USERNAME
+           valueFrom:
+             secretKeyRef:
+               name: my-secret
+               key: username
+         - name: PASSWORD
+           valueFrom:
+             secretKeyRef:
+               name: my-secret
+               key: password
+
+2. Mounted Files
+
+       apiVersion: v1
+       kind: Pod
+       metadata:
+         name: my-pod
+       spec:
+         containers:
+         - name: my-app
+           image: my-app:latest
+           volumeMounts:
+           - name: secret-volume
+             mountPath: "/etc/secrets"
+             readOnly: true
+         volumes:
          - name: secret-volume
-           mountPath: "/etc/secrets"
-           readOnly: true
-       volumes:
-       - name: secret-volume
-         secret:
-           secretName: my-secret
+           secret:
+             secretName: my-secret
 
 ## Managing Secrets
 
