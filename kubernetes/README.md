@@ -17,7 +17,9 @@ Legend:
    * [Kubectl Commands](#Kubectl-Commands)
    * [Services](#Services)
 
-     
+    kubernetes install:
+
+   * [minikube](MiniKube.md)
 
 ![kubernetes](kubernetes.gif)
 
