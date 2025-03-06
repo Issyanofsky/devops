@@ -35,3 +35,11 @@
 
   minikube start driver=virtualbox --no-vtx-check
  
+Display addons list
+
+        minikube addons list
+
+enable addon
+
+        minikube addons enable <addon_Name> (ex. metrics-server)
+        
