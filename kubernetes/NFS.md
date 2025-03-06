@@ -44,3 +44,6 @@ Restart NFS
 on each of the workers node
 
       apt install -y nfs-common
+
+# test connectivity
+
