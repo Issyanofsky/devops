@@ -13,6 +13,7 @@ Legend:
    * [Secrets](#Secrets)
    * [Dashboard](#Dashboard)
    * [Metrics Server](#Metrics-Server)
+   * [Auto-scaling](#Auto-scaling)
    * [Kubectl Commands](#Kubectl-Commands)
    * [Services](#Services)
 
@@ -373,6 +374,73 @@ Test Metrics Availability:
     kubectl top nodes
     kubectl top pods
 
+<div align="center">
+
+# **Auto-scaling**
+
+</div>
+
+Auto-Scaling in Kubernetes:
+
+    * Horizontal Pod Auto-Scaling (HPA): HPA automatically adjusts the number of pod replicas based on CPU utilization, memory usage, or custom metrics.
+    * Vertical Pod Auto-Scaling (VPA): VPA focuses on optimizing resource allocation within individual pods.
+
+* IMPORTANT - must install metric service in order to function.
+
+## Horizontal Pod Auto-Scaling (HPA)
+
+sets up the HPA for the Deployment:
+
+      Create a Horizontal Pod Autoscaler (HPA) yaml file:
+
+      apiVersion: autoscaling/v2beta2
+      kind: HorizontalPodAutoscaler
+      metadata:
+        name: my-app-hpa
+      spec:
+        scaleTargetRef:
+          apiVersion: apps/v1
+          kind: Deployment
+          name: my-app-deployment
+        minReplicas: 2
+        maxReplicas: 5
+        metrics:
+        - type: Resource
+          resource:
+            name: cpu
+            targetAverageUtilization: 70
+
+apply the YMAL file:
+
+        kubectl apply -f hpa.yaml
+
+## Vertical Pod Auto-Scaling (VPA)
+
+dynamically adjusting CPU and memory allocations, VPA helps improve resource utilization and reduce wastage, ultimately leading to cost savings and improved performance.
+
+Create a VPA configuration file (Yaml):
+
+      apiVersion: autoscaling.k8s.io/v1
+      kind: VerticalPodAutoscaler
+      metadata:
+        name: my-vpa
+      spec:
+        targetRef:
+          apiVersion: "apps/v1"
+          kind: Deployment
+          name: my-deployment
+        updatePolicy:
+          updateMode: "Auto"      
+
+Apply the VPA configuration to your Kubernetes cluster 
+
+      kubectl apply -f vpa.yaml
+
+Verify that the VPA is running and collecting data:
+
+      kubectl describe vpa my-vpa
+
+      
 <div align="center">
 
 # **Kubectl Commands**
