@@ -332,6 +332,27 @@ start the dashboard for testing on your local machine using the proxy command:
      On the greeting page. choose Token enter the Bearer token you copied earlier.
 
 
+<div align="center">
+
+# **Metrics Server**
+
+</div>
+
+## Basic Installation
+
+Installation:
+
+     kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+
+Verify Installation:
+
+    kubectl get pods -n kube-system | grep metrics-server
+    kubectl get apiservices | grep metrics
+
+Test Metrics Availability:
+
+    kubectl top nodes
+    kubectl top pods
 
 <div align="center">
 
