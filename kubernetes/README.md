@@ -6,7 +6,7 @@
 
 </div>
 
-Legend:
+# Legend:
 
    * [install Kubectl](#install-Kubectl)
    * [Labels](#Labels)
@@ -17,7 +17,7 @@ Legend:
    * [Kubectl Commands](#Kubectl-Commands)
    * [Services](#Services)
 
-    kubernetes install:
+## kubernetes install:
 
    * [minikube](MiniKube.md)
    * [Kubernetes (kubeadm)](kubernetes.md)
