@@ -27,6 +27,7 @@
 
    * [NFS Server](NFS.md)
    * [MetalLB](metallb.md)
+   * [Ingress](Ingress.md)
 
 ![kubernetes](kubernetes.gif)
 
