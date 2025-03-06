@@ -197,26 +197,26 @@ From Files:
 consumed by pods in two ways:
 
 1. Environment Variables
-
-     apiVersion: v1
-     kind: Pod
-     metadata:
-       name: my-pod
-     spec:
-       containers:
-       - name: my-app
-         image: my-app:latest
-         env:
-         - name: USERNAME
-           valueFrom:
-             secretKeyRef:
-               name: my-secret
-               key: username
-         - name: PASSWORD
-           valueFrom:
-             secretKeyRef:
-               name: my-secret
-               key: password
+  
+       apiVersion: v1
+       kind: Pod
+       metadata:
+         name: my-pod
+       spec:
+         containers:
+         - name: my-app
+           image: my-app:latest
+           env:
+           - name: USERNAME
+             valueFrom:
+               secretKeyRef:
+                 name: my-secret
+                 key: username
+           - name: PASSWORD
+             valueFrom:
+               secretKeyRef:
+                 name: my-secret
+                 key: password
 
 2. Mounted Files
 
