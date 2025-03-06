@@ -11,4 +11,4 @@ a tool that helps manage how outside traffic (like users on the internet) gets i
 
 on cloud we use LoadBalancer and Ingress:
 
-![Cloude - Ingress](cloud-ingress.gif)
+![Cloude-Ingress](cloud-ingress.jpg)
