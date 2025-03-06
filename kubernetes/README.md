@@ -61,8 +61,7 @@ check if already kubectl install, by:
 
    which kubectl
 
-
-# Linux install
+## Linux install
 
     Download the latest release:
 
@@ -80,7 +79,7 @@ check if already kubectl install, by:
 
      kubectl version --client
 
-# Windows installation
+## Windows installation
 
    Download the latest Windows version of kubectl from:
      
@@ -90,6 +89,38 @@ check if already kubectl install, by:
 
      copy the kubectl.exe file to a folder.
      set his PATH in the enviroment.
+
+
+# Connecting to Cluster
+
+list all the contexts defined in your kubectl configuration file and the active one (with "*").
+
+      kubectl config get-contexts
+
+      kubectl config view - display info of the cluster we connected.
+
+to connect the local computer to the cluster:
+
+     copy from the Control plane the file, located:
+
+     sudo cat ~/.kube/config
+
+     paste the content to a new file (ex. k8sconfig), located in the local computer (ex. C:\Users\ec\.kube):
+
+     export KUBECONFIG=~/.kube/k8config - set to the config file we created.
+
+Verifiy:
+
+    kubectl config get-contexts
+
+    or any kubectl command:
+
+    kubectl get nodes
+     
+
+     
+
+     
 
    <div align="center">
 
