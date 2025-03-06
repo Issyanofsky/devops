@@ -14,7 +14,7 @@ Legend:
    * [Dashboard](#Dashboard)
    * [Metrics Server](#Metrics-Server)
    * [Kubectl Commands](#Kubectl-Commands)
-   * [Services (svc)](#Services (svc))
+   * [Services (svc)](#Services-(svc))
 
      
 
