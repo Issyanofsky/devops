@@ -8,7 +8,7 @@
 
 Legend:
 
-   * [install Kubectl](#install-Kubectl-(Kubernetes-command-line-tool))
+   * [install Kubectl](#install-Kubectl)
    * [Labels](#Labels)
    * [Secrets](#Secrets)
    * [Dashboard](#Dashboard)
