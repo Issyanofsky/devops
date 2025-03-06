@@ -20,3 +20,68 @@ popular Ingress:
   * NGINX Ingress - fast and lightweight web server, to route traffic.
   * HAProxy Ingress - high-performance load balancer.
 
+<div align="center">
+
+# **Install NGINX Ingress**
+
+</div>
+
+Explanations:
+
+     https://github.com/kubernetes/ingress-nginx/tree/main
+
+
+installing Guide: 
+
+    https://kubernetes.github.io/ingress-nginx/deploy/
+
+download the correct yaml file (depends on the installed system - for server installation i choose Bare-Metal)
+
+   https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0/deploy/static/provider/baremetal/deploy.yaml
+
+edit the file that was download:
+
+   under "service" --> change the "type: NodePort" to "type: LoadBalancer"
+
+   kubectl apply -f <yaml_file_just_edited>
+
+Verify:
+
+   kubectl get svc -n ingress-nginx
+
+
+ ## example for ingress Rule
+
+    apiVersion: networking.k8s.io/v1
+    kind: Ingress
+    metadata:
+      name: example-ingress
+      namespace: default
+      annotations:
+        nginx.ingress.kubernetes.io/rewrite-target: /$2
+    spec:
+      ingressClassName: nginx
+      rules:
+      - host: example.com
+        http:
+          paths:
+          - path: /api(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: api-service
+                port:
+                  number: 80
+          - path: /web(/|$)(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: web-service
+                port:
+                  number: 80
+      tls:
+      - hosts:
+        - example.com
+        secretName: example-tls-secret
+            
+  
