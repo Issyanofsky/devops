@@ -23,7 +23,9 @@
    * [minikube](MiniKube.md)
    * [Kubernetes (kubeadm)](kubernetes.md)
 
+## Other install:
 
+   * [NFS Server](NFS.md)
 
 ![kubernetes](kubernetes.gif)
 
