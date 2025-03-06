@@ -47,11 +47,11 @@ check if already install
 
 if not install:
 
-   sudo modprobe nvme-tcp
+    sudo modprobe nvme-tcp
 
 set it perment (after restart):
 
-  echo "nvme-tcp" | sudo tee -a /etc/modules
+    echo "nvme-tcp" | sudo tee -a /etc/modules
 
 ## prepering HagePage
 
