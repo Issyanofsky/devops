@@ -80,7 +80,7 @@ Download the chart to a folder (if need to edit the chart - values file)- using 
 
 ## helm create
 
-Creates a new chart template to customize.
+Creates a new chart template to customize (create a folder under the folder the command was execute).
 
       helm create my-new-chart
 
