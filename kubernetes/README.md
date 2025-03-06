@@ -359,6 +359,10 @@ Installation:
 
      kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 
+* notice: i had to add this to te deploy to make it work:
+
+    --kubelet-insecure-tls=true
+  
 Verify Installation:
 
     kubectl get pods -n kube-system | grep metrics-server
