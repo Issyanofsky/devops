@@ -16,3 +16,45 @@
    * Snapshot Support: Allows you to take backups of your data.
    * Easy to Use: Seamless integration with Kubernetes for managing persistent storage.
 
+
+<div align="center">
+
+# **install**
+
+</div>
+
+## Prerequisites
+
+  * minimum 3 workers nodes.
+  * each node with an empty drive attached (for the storage).
+
+## install Helm
+
+on each worker node:
+
+     curl -o http://raw.githubusercontent.com/helm/helm/main/script/get-helm-3
+     ./get-helm-3
+
+verify installatin:
+
+    helm version
+
+## install nvme-tcp
+
+check if already install
+
+    modinfo nvme-tcp
+
+if not install:
+
+   sudo modprobe nvme-tcp
+
+set it perment (after restart):
+
+  echo "nvme-tcp" | sudo tee -a /etc/modules
+
+## prepering HagePage
+
+(swap must be turn off)
+
+ 
