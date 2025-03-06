@@ -554,4 +554,56 @@ Types of Services:
 
 service for dealing with storage for pod cluster.
 
-storage class (sc) - storage claim
+storage class (sc) - is like a "template" that tells Kubernetes how to automatically create storage (like a cloud disk or network drive) when you ask for it. It defines things like the type of storage (e.g., fast SSD or cheap hard drive) and where it comes from (e.g., AWS, Google Cloud, etc.).
+
+      kubectl get storageclass
+
+   example:
+
+      apiVersion: storage.k8s.io/v1
+      kind: StorageClass
+      metadata:
+        name: my-storage-class
+      provisioner: kubernetes.io/aws-ebs  # This says "use AWS EBS storage"
+      parameters:
+        type: gp2  # This is a general-purpose SSD in AWS
+      reclaimPolicy: Retain  # Keeps the storage after the PVC is deleted (optional)
+      
+Persistent Volume (PV): This is the actual storage space (like a disk) that Kubernetes can use.
+
+      kubectl get pv 
+
+  example:
+
+      apiVersion: v1
+      kind: PersistentVolume
+      metadata:
+        name: my-pv
+      spec:
+        capacity:
+          storage: 5Gi  # Size of the storage (5 gigabytes)
+        accessModes:
+          - ReadWriteOnce  # Can be used by one pod at a time
+        persistentVolumeReclaimPolicy: Retain  # Keeps the PV after use
+        storageClassName: my-storage-class  # Links to the StorageClass (optional)
+        hostPath:
+          path: "/mnt/data"  # Uses a folder on the local machine (for testing)    
+          
+Persistent Volume Claim (PVC): This is your request for storage.
+
+      kubectl get pvc
+
+  example:
+
+      apiVersion: v1
+      kind: PersistentVolumeClaim
+      metadata:
+        name: my-pvc
+      spec:
+        accessModes:
+          - ReadWriteOnce  # Matches the PV’s access mode
+        resources:
+          requests:
+            storage: 5Gi  # Asks for 5 gigabytes
+        storageClassName: my-storage-class  # Links to the StorageClass (optional)
+        
