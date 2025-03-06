@@ -117,12 +117,148 @@ Verifiy:
 
     kubectl get nodes
      
-
-     
-
      
 
    <div align="center">
+
+# **Labels**
+
+</div>
+
+Adding Labels to nodes allow to give more flexibility in scheduking pods to host (ex. GPU-nodes).
+
+Viewing Node Labels
+
+      kubectl get nodes --show-labels
+      
+   Or for a specific node:
+
+      kubectl describe node node-01
+
+Adding or Modifying Node Labels
+
+     kubectl label node node-01 disk=ssd
+     
+Update an existing label:
+
+    kubectl label node node-01 env=production --overwrite
+
+## Taints and Tolerations (Advanced Node Labeling)
+
+Labels alone don’t restrict access—they just help with selection. To prevent pods from scheduling on certain nodes, you use taints, and pods need tolerations to bypass them.
+
+Taint a node:
+
+     kubectl taint nodes node-01 special=gpu:NoSchedule - prevents pods from scheduling on node-01 unless they tolerate special=gpu.
+
+
+<div align="center">
+
+# **Secrets**
+
+</div>
+
+Secrets are Kubernetes objects designed to store and manage sensitive information, such as passwords, API keys, tokens, or certificates. They keep this data separate from your application code or pod definitions, improving security and flexibility.
+
+Common Use Cases:
+
+   * Database Credentials: Store username/password for a database.
+   * API Tokens: Pass tokens to apps securely.
+   * TLS Certificates: Use kubernetes.io/tls secrets for Ingress or apps needing HTTPS.
+   * Registry Authentication: Pull images from private Docker registries.
+
+## Creating a Secret
+
+Using kubectl:
+
+     kubectl create secret generic my-secret --from-literal=username=admin --from-literal=password=supersecret
+
+Using a YAML File:
+
+     apiVersion: v1
+     kind: Secret
+     metadata:
+       name: my-secret
+     type: Opaque
+     data:
+       username: YWRtaW4=  # base64 for "admin"
+       password: c3VwZXJzZWNyZXQ=  # base64 for "supersecret"     
+
+    * Note: The data field requires base64-encoded values. You can encode manually (echo -n "admin" | base64) or let kubectl handle it with --from-literal.
+
+From Files:
+
+    echo -n "admin" > username.txt
+    echo -n "supersecret" > password.txt
+    kubectl create secret generic my-secret --from-file=username.txt --from-file=password.txt
+
+## Using Secrets in Pods
+
+consumed by pods in two ways:
+
+1. Environment Variables
+
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: my-pod
+    spec:
+      containers:
+      - name: my-app
+        image: my-app:latest
+        env:
+        - name: USERNAME
+          valueFrom:
+            secretKeyRef:
+              name: my-secret
+              key: username
+        - name: PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: my-secret
+              key: password
+
+2. Mounted Files
+
+     apiVersion: v1
+     kind: Pod
+     metadata:
+       name: my-pod
+     spec:
+       containers:
+       - name: my-app
+         image: my-app:latest
+         volumeMounts:
+         - name: secret-volume
+           mountPath: "/etc/secrets"
+           readOnly: true
+       volumes:
+       - name: secret-volume
+         secret:
+           secretName: my-secret
+
+## Managing Secrets
+
+View Secrets:
+
+     kubectl get secrets
+     kubectl describe secret my-secret
+
+Decode Secrets:
+
+    kubectl get secret my-secret -o jsonpath='{.data.username}' | base64 -d
+
+Edit Secrets:
+
+    kubectl edit secret my-secret
+
+Delete Secrets:
+
+    kubectl delete secret my-secret
+
+    
+        
+<div align="center">
 
 # **Kubectl Commands**
 
