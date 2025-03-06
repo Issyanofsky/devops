@@ -26,7 +26,7 @@
 ## Other install:
 
    * [NFS Server](NFS.md)
-   * [Metallb](metallb.md)
+   * [MetalLB](metallb.md)
 
 ![kubernetes](kubernetes.gif)
 
