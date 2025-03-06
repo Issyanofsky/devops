@@ -21,23 +21,23 @@ this is a installation of a cluster contining 1 Control plane (there a need to i
 
 ## 2. Update the system and install dependencies:
 
-    in each node:
+in each node:
 
         sudo apt update && sudo apt upgrade -y
         sudo apt install apt-transport-https curl -y
     
-    Install containerd:
+Install containerd:
 
         sudo apt install containerd -y
 
-    Configure containerd:
+Configure containerd:
 
         sudo mkdir -p /etc/containerd
         containerd config default | sudo tee /etc/containerd/config.toml > /dev/null
         sudo sed -i 's/SystemdCgroup = false/SystemdCgroup = true/' /etc/containerd/config.toml
         sudo systemctl restart containerd
 
-    Install Kubernetes components (you can set here the version to install by setting the command):
+Install Kubernetes components (you can set here the version to install by setting the command):
 
         curl -fsSL https://pkgs.k8s.io/core:/stable:/v1.31/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
         echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable:/v1.31/deb/ /' | sudo tee /etc/apt/sources.list.d/kubernetes.list
@@ -45,12 +45,12 @@ this is a installation of a cluster contining 1 Control plane (there a need to i
         sudo apt install -y kubelet kubeadm kubectl
         sudo apt-mark hold kubelet kubeadm kubectl
 
-    Disable swap:
+Disable swap:
 
         sudo swapoff -a
         sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab - setting it permenetly - can done manualy by adding "#" on the swap line in sudo nano /etc/fstab).
 
-    Load necessary kernel modules:
+Load necessary kernel modules:
 
         sudo modprobe overlay
         sudo modprobe br_netfilter
