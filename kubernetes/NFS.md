@@ -12,9 +12,9 @@ installing a NFS server to the cluster nodes (workers).
 
 setting a linux server and adding it to the cluster network.
 
-      https://kubedemy.io/kubernetes-storage-part-1-nfs-complete-tutorial
-
 # Deploy and configure NFS server
+
+      https://kubedemy.io/kubernetes-storage-part-1-nfs-complete-tutorial
 
 Run the following commands on the node you considered for the NFS server.
 
