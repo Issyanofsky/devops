@@ -134,6 +134,12 @@ Verifiy:
     * kubectl describe <pod_Name> - describe pod info.
     * kubectl logs <pod_Name> - display pods log.
 
+## cluster commands
+
+    * sudo systemctl status kublete - check basic k8s kublete status.
+    * sudo system restart kubelete - way to refresh API connection.
+    * kubectl describe configmap kubeadm-config -n kube-system - display Cluser info
+
  ## running pod using yaml
 
    apply pod:
