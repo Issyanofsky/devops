@@ -14,7 +14,7 @@ Legend:
    * [Dashboard](#Dashboard)
    * [Metrics Server](#Metrics-Server)
    * [Kubectl Commands](#Kubectl-Commands)
-   * [Services (svc)](#Services-(svc))
+   * [Services](#Services)
 
      
 
@@ -411,11 +411,11 @@ Test Metrics Availability:
 
 <div align="center">
 
-# **Services (svc)**
+# **Services**
 
 </div>
 
-Service is a resource that defines how to access a set of Pods, and it can automatically balance traffic between them.
+Service (srv) is a resource that defines how to access a set of Pods, and it can automatically balance traffic between them.
 
 Types of Services:
 
