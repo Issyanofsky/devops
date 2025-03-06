@@ -16,6 +16,7 @@
    * [Auto-scaling](#Auto-scaling)
    * [Kubectl Commands](#Kubectl-Commands)
    * [Services](#Services)
+   * [Volumes](#Volumes)
 
 ## kubernetes install:
 
@@ -486,6 +487,12 @@ Verify that the VPA is running and collecting data:
 
      kubectl run -i -tty --image=<image_name> --restart=never --sh
 
+ ## Truble-shooting
+
+pod dont terminate on delete (need to be run on all workers nodes):
+
+      sudo apt purge --auto-remove apparmor
+      
 <div align="center">
 
 # **Services**
@@ -538,3 +545,13 @@ Types of Services:
            port: 80
            targetPort: 80
        type: NodePort  # Exposes the service outside the cluster
+
+<div align="center">
+
+# **Volumes**
+
+</div>
+
+service for dealing with storage for pod cluster.
+
+storage class (sc) - storage claim
