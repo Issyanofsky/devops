@@ -874,6 +874,36 @@ If there is not enough space in the Volume Group. to add a new disk or partition
 
     (df -h) - check the filesystem size.
     
+# Mount drive
+
+1. create a local drive on the server as mount point:
+
+     sudo mkdir <mount_point>
+     
+2.  mount the drive to the new directory. 
+
+    mount /dev/drivename <mount_point>
+
+3. on the server there need to give permissions:
+
+     sudo chmod 77 dev/drivename
+     sudo chown nobody:nogroup dev/drivename
+
+check permissions:
+
+     df -h
+
+4. for permemnent seeting of the mount:
+
+     sudo nano /etc/fstab
+
+   Add a line for he mount:
+
+     /dev/drivename <mount_point>
+
+verifiy:
+
+    sudo findmnt --verifiy
 
 <div align="center">
 
