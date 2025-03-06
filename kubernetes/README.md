@@ -256,8 +256,83 @@ Delete Secrets:
 
     kubectl delete secret my-secret
 
-    
+
         
+<div align="center">
+
+# **Dashboard**
+
+</div>
+
+Web-based interface that lets you manage and monitor your Kubernetes cluster (a system for running containerized apps) easily through a graphical UI instead of just using command lines.
+
+* OpenLens - Other software for managing Clusters.
+
+## installing Dashboard (using Helm)
+
+      helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
+      helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard --create-namespace --namespace kubernetes-dashboard
+      
+
+To uninstall using Helm:
+
+     helm delete kubernetes-dashboard --namespace kubernetes-dashboard
+
+## access and deploy Kubernetes Dashboard
+
+Create the service account:
+
+Create a file named dashboard-user.yaml with the following contents:
+
+      apiVersion: v1
+      kind: ServiceAccount
+      metadata:
+        name: dashboard-user
+        namespace: kubernetes-dashboard
+
+Apply the user:
+
+     kubectl apply -f dashboard-adminuser.yaml
+
+Create another file called dashboard-clusterrolebinding.yaml:
+
+      apiVersion: rbac.authorization.k8s.io/v1
+      kind: ClusterRoleBinding
+      metadata:
+        name: dashboard-user
+      roleRef:
+        apiGroup: rbac.authorization.k8s.io
+        kind: ClusterRole
+        name: cluster-admin
+      subjects:
+      - kind: ServiceAccount
+        name: dashboard-user
+        namespace: kubernetes-dashboard
+
+Apply the clusterrolebinding:
+
+      kubectl apply -f dashboard-clusterrolebinding.yaml
+
+Retrieve the bearer token and copy the output for later use.
+
+     kubectl get secret $(kubectl get serviceaccount dashboard-user -o jsonpath="{.secrets[0].name}") -o jsonpath="{.data.token}" | base64 --decode
+
+## Start the dashboard
+
+start the dashboard for testing on your local machine using the proxy command:
+
+     kubectl proxy
+
+## Access the Kubernetes Dashboard
+
+(assuming that we have already established an SSH tunnel binding to the localhost port 8001 at both end).
+
+     http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+
+     On the greeting page. choose Token enter the Bearer token you copied earlier.
+
+
+
 <div align="center">
 
 # **Kubectl Commands**
