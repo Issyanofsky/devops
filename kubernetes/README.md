@@ -29,6 +29,7 @@
    * [MetalLB](metallb.md)
    * [Ingress](Ingress.md)
    * [Helm](helm.md)
+   * [Istio (& kiali)](istio.md)
      
 
 ![kubernetes](kubernetes.gif)
