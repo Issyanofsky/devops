@@ -64,9 +64,89 @@ Load necessary kernel modules:
         overlay
         br_netfilter
 
-        
-        
-        
+Set required sysctl parameters:
 
+        cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+        net.bridge.bridge-nf-call-iptables  = 1
+        net.bridge.bridge-nf-call-ip6tables = 1
+        net.ipv4.ip_forward                 = 1
+        EOF
+      
+        sudo sysctl --system
+
+* if you have to duplicate the mechines (nodes) this is the phase!!!
+
+## setting each node - HostName, Hosts and IP Address
+
+    setting for each node (mechine): name, host list and IP adress.
+
+    HOSTNAME (server name)
+
+        sudo nano /etc/hostname
+
+        edit the server name (ex. control01)
+
+    HOSTS
+
+    setting HOSTS list of the nodes (and proxy if exist).
+
+        sudo nano /etc/hosts
+
+        add the nodes (and proxy)
+
+            (ex. 192.168.1.80 control01)
+
+    IP Address
+
+    setting each node with a uniqe IP address in the network.
+
+        sudo /etc/netplan/50_config
+
+    edit (change dhcp to false and add the following lines):
         
+        dhcp4: false
+        addresses: [192.168.1.80/24]
+        gateway4: 192.168.1.1
+        nameservers:
+            adresses: [192.168.1.1, 8.8.8.8]
+
+## Initialize the cluster (run only on Control plane node):
+
+diploying this phase done on ONE Control plane node only (other Controls will initialize with a command that will follow this phase).
+
+    (this line can vary, depend on the cluster architecture like LoadBalancer address and more).
     
+        sudo kubeadm init --pod-network-cidr=10.244.0.0/16 
+
+* Importanat: copy the join command needed from the result for using to join the other nodes (there is a join command for Control plane and Worker nodes).
+        
+ Set up kubeconfig for the user:   
+
+        mkdir -p $HOME/.kube
+        sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+        sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+        export KUBECONFIG=/path/to/cluster-config
+
+Install Flannel network plugin (run only on master node):
+
+        kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+
+Verify the installation:
+
+        kubectl get nodes
+        kubectl get pods --all-namespaces
+
+## Join Other nodes to the cluster:
+
+using the command line to join that was display after the init phase. in each node (not the one alresy init) you need to join to the cluster.
+
+    looks like:
+
+        kubeadm join 172.31.19.36:6443 --token 922x9d.v0jn4c8he0s286js --discovery-token-ca-cert-hash sha256:8897fd8eb97f2ea0686ccf7507f287ffffd5cf681496fb324940330561c80e4c
+        
+Verify the installation:
+
+        kubectl get nodes
+        kubectl get pods --all-namespaces
+
