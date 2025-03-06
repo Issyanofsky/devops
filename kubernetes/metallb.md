@@ -58,4 +58,5 @@ MetalLB provides load-balancing functionality for Kubernetes services of type Lo
    check:
 
        kubectl get svc
-      
+
+   * NOTE: MEtalLb wont allocate IP until it been used like with Ingress.
