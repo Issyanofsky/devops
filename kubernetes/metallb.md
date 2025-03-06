@@ -2,9 +2,9 @@ MetalLB provides load-balancing functionality for Kubernetes services of type Lo
 
 ## Prerequisites
 
-    * kubernetes cluster.
-    * cluster doesn’t already have a network load-balancing solution in place.
-    * a range of IPv4 addresses available for MetalLB to assign to services (these should be within your network’s subnet and not overlap with other allocations like DHCP).
+   * kubernetes cluster.
+   * cluster doesn’t already have a network load-balancing solution in place.
+   * a range of IPv4 addresses available for MetalLB to assign to services (these should be within your network’s subnet and not overlap with other allocations like DHCP).
 
 ## Install
 
