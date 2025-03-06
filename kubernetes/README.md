@@ -8,12 +8,12 @@
 
 Legend:
 
-   * [install Kubectl (Kubernetes command-line tool)](#install Kubectl (Kubernetes command-line tool))
+   * [install Kubectl](#install-Kubectl (Kubernetes command-line tool))
    * [Labels](#Labels)
    * [Secrets](#Secrets)
    * [Dashboard](#Dashboard)
-   * [Metrics Server](#Metrics Server)
-   * [Kubectl Commands](#Kubectl Commands)
+   * [Metrics Server](#Metrics-Server)
+   * [Kubectl Commands](#Kubectl-Commands)
    * [Services (svc)](#Services (svc))
 
      
