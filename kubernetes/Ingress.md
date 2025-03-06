@@ -52,6 +52,8 @@ Verify:
 
  ## example for ingress Rule
 
+add to deploy this on deploying the service needed the Ingress (not on installation).
+
     apiVersion: networking.k8s.io/v1
     kind: Ingress
     metadata:
