@@ -78,17 +78,17 @@ Set required sysctl parameters:
 
 ## setting each node - HostName, Hosts and IP Address
 
-    setting for each node (mechine): name, host list and IP adress.
+setting for each node (mechine): name, host list and IP adress.
 
-    HOSTNAME (server name)
+HOSTNAME (server name)
 
         sudo nano /etc/hostname
 
         edit the server name (ex. control01)
 
-    HOSTS
+HOSTS
 
-    setting HOSTS list of the nodes (and proxy if exist).
+setting HOSTS list of the nodes (and proxy if exist).
 
         sudo nano /etc/hosts
 
@@ -96,9 +96,9 @@ Set required sysctl parameters:
 
             (ex. 192.168.1.80 control01)
 
-    IP Address
+IP Address
 
-    setting each node with a uniqe IP address in the network.
+setting each node with a uniqe IP address in the network.
 
         sudo /etc/netplan/50_config
 
