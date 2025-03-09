@@ -18,7 +18,7 @@
    * [Load Balancer](./files/LoadBalancer.md)
    * [RDS (Relational Database Service)](./files/RDS.md)
    * [CloudFront (CDN)](./files/CDN.md)
-   * 
+   * [CloudFormation](./files/cloudFormation.md)
 
 __Cloud Service Models:__ 
 
