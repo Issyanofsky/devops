@@ -47,7 +47,7 @@ Adding users, creating groups, assigining 2fA (under "security credantials) and 
 
 <div align="center">
 
-# **VPC (Virtual Private Cloud**
+# **VPC (Virtual Private Cloud)**
 </div>
 
  A private network in the cloud where you can launch and manage your AWS resources (like EC2 instances, databases, and more). It allows you to control networking, security, and traffic routing for your resources in AWS.
@@ -71,3 +71,18 @@ Adding users, creating groups, assigining 2fA (under "security credantials) and 
 
   __NAT gateway__ (needed only if need connecting to Private subnet) - enough to choose 1 per AZ (one NAT for all zones).
   __VPC endpoints__ allow traffic to be ruted inside the VPC (without exiting the internet- less cost and better security).
+
+
+
+<div align="center">
+
+# **VPN**
+</div>
+
+Navigate to VPC webpage --> right side under Virtual private network (VPN)
+
+ways to connet using VPN:
+
+  __Virtual Private Gateway (VGW):__ A virtual gateway that connects your VPC (Virtual Private Cloud) to a remote network, like your on-premises data center or another VPC.
+  __Site-to-Site Connection:__ A secure connection between your on-premises network (e.g., office or data center) and your AWS VPC using a VPN (Virtual Private Network).
+  __Client VPN Endpoint:__ allows remote users (like employees) to securely connect to your AWS network from anywhere.
