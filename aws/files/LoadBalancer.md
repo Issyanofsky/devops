@@ -30,13 +30,13 @@ Navigate to EC2 webpage --> (on the right side under Load Balancing) Load Balanc
 
 Set the following settings:
 
-      __facing__ choose as you need between: internet facing and internal setting.
-      __VPC__ select network.
-      __Availability Zones and subnets__ select Availability Zones for the Cls (can and its recomended to choose more then one Zone).
-      __security Group__ setting the security group ( allow the traffic that should reach the LoadBalancer. e.g. HTTP, HTTPS).
-      __Listeners__ set the protocol and port for the LoadBalancer to listen to (if using HTTS there a need for certificate).
-      __helth check__ check web consistency (if change to TCP it will only check response - like ping).
-      __Attributes__enable both (enable cross-zone LoadBalancing and enable connection drin).
+   __facing__ choose as you need between: internet facing and internal setting.
+   __VPC__ select network.
+   __Availability Zones and subnets__ select Availability Zones for the Cls (can and its recomended to choose more then one Zone).
+   __security Group__ setting the security group ( allow the traffic that should reach the LoadBalancer. e.g. HTTP, HTTPS).
+   __Listeners__ set the protocol and port for the LoadBalancer to listen to (if using HTTS there a need for certificate).
+   __helth check__ check web consistency (if change to TCP it will only check response - like ping).
+   __Attributes__ enable both (enable cross-zone LoadBalancing and enable connection drin).
 
 ## Set LoadBalancer for forward
 
