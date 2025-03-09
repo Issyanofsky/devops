@@ -6,7 +6,7 @@
 
 # Legend:
 
-   * [S3](/files/s3.md)
+   * [S3](./files/s3.md)
 
 __Cloud Service Models:__ 
 
