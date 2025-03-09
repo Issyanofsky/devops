@@ -30,7 +30,7 @@
 
 ## 1. install Helm
 
-On each Worker Node:
+__On each Worker Node:__
 
      curl -o http://raw.githubusercontent.com/helm/helm/main/script/get-helm-3
      ./get-helm-3
