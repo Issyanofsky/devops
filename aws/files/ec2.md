@@ -90,3 +90,10 @@ Navigate to EC2 page --> select the Instance you want to connect to --> actions 
 Navigate to EC2 page --> select the Instance you want to connect to --> actions --> monitor and trubleshoot --> Get System logs
 
 (This will display logs).
+
+<div align="center">
+
+# **Auto Scaling**
+
+</div>
+
