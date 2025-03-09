@@ -6,7 +6,7 @@
 
 virtual computers (called instances) to run your applications, websites, or services.
 
-__Key Points:__
+## Key Points:
 
   * Virtual Machines: EC2 provides virtual servers that you can use to run any software, just like a physical server, but with more flexibility.
   * Scalable: You can easily increase or decrease the number of instances based on your needs (e.g., handle more traffic or reduce costs).
