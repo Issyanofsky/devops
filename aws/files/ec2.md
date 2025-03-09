@@ -97,3 +97,17 @@ Navigate to EC2 page --> select the Instance you want to connect to --> actions 
 
 </div>
 
+__Prerequisites:__
+
+  - __LoadBalancer__ for distriburing traffic across all running Instances.
+  - __CloudWatch__ retrive matrics. allow autoscaling by metrics matter.
+  - __Launch Template__ EC2 template for the auto scalig to deploy (setting Launch template is done under EC2 webpage).
+
+## setting:
+
+Navigate to EC2 webpage --> Auto scaling (right side) --> auto scaling groups --> create auto scaling group
+
+follow the steps - important setting are:
+
+  - choosing launch template.
+  - number of replica under scaling.
