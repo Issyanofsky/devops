@@ -7,6 +7,8 @@
 # Legend:
 
    * [S3](./files/s3.md)
+   * [Route 53](./files/route53.md)
+   * 
 
 __Cloud Service Models:__ 
 
