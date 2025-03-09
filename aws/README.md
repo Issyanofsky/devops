@@ -10,7 +10,7 @@
    * [Route 53](./files/route53.md)
    * [EC2 (Elastic Compute Cloud)](./files/ec2.md)
    * [Load Balancer](./files/LoadBalancer.md)
-   * 
+   * [RDS (Relational Database Service)](./files/RDS.md)
 
 __Cloud Service Models:__ 
 
