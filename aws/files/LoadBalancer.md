@@ -1,3 +1,7 @@
+<div align="center">
 
+# **Load Balancer**
+![LoadBalancer](../pic/LoadBalancer.gif)
 
-![Route 53](../pic/route53.gif)
+</div>
+
