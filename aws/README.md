@@ -6,7 +6,7 @@
 
 # Legent:
 
-    * [VPC (Virtual Private Cloud)](#VPC)
+   * [VPC (Virtual Private Cloud)](#VPC)
 # Services:
 
    * [S3](./files/s3.md)
