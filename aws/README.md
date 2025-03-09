@@ -4,13 +4,13 @@
 ![AWS](../pic/aws.gif)
 </div>
 
-# Legent:
+## Legent:
 
    * [VPC (Virtual Private Cloud)](#VPC)
    * [VPN](#VPN)
 
 
-# Services:
+## Services:
 
    * [S3](./files/s3.md)
    * [Route 53](./files/route53.md)
