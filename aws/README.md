@@ -9,7 +9,7 @@
    * [S3](./files/s3.md)
    * [Route 53](./files/route53.md)
    * [EC2 (Elastic Compute Cloud)](./files/ec2.md)
-   * [Load Balancer)](./files/LoadBalancer.md)
+   * [Load Balancer](./files/LoadBalancer.md)
    * 
 
 __Cloud Service Models:__ 
