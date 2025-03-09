@@ -6,7 +6,7 @@
 
 # Legent:
 
-   * [VPC (Virtual Private Cloud)](#VPC-(Virtual-Private-Cloud))
+   * [VPC (Virtual Private Cloud)](#VPC)
 # Services:
 
    * [S3](./files/s3.md)
@@ -50,7 +50,8 @@ Adding users, creating groups, assigining 2fA (under "security credantials) and 
 
 <div align="center">
 
-# **VPC (Virtual Private Cloud)**
+# **VPC**
+# (Virtual Private Cloud)
 </div>
 
  A private network in the cloud where you can launch and manage your AWS resources (like EC2 instances, databases, and more). It allows you to control networking, security, and traffic routing for your resources in AWS.
