@@ -29,4 +29,4 @@ __1. Create Subnet group__ setting on which AZ the Database will deploy.
 
              Create Database
 
-__IMportent__ check security group that is open for connection.
+__*IMPORTENT__ check security group that is open for connection.
