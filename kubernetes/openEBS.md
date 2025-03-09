@@ -43,7 +43,7 @@ verify installatin:
 
 fast storage technology used in modern computers. It's designed to make use of solid-state drives (SSDs) that connect directly to the computer’s motherboard through a high-speed interface (like PCIe).
 
-On each Worker Node:
+__On each Worker Node:__
 
 check if already install
 
@@ -66,7 +66,7 @@ set it perment (after restart):
 allows the system to use larger memory pages than the default size (which is typically 4KB). By using larger memory pages (like 2MB or 1GB), systems can reduce the overhead of managing a
 large number of smaller pages, which can lead to better performance, especially for memory-intensive applications.
 
-On each Worker Node:
+__On each Worker Node:__
 
 (swap must be turn off)
 
