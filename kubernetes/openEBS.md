@@ -110,6 +110,8 @@ execute on the Control plane (once):
 
 ## 6.  Setting Disk-pool (YAML)
 
+__For each of the Worker Node:__
+
     apiVersion: "openebs.io/v1beta1"
     kind: DiskPool
     metadata:
@@ -119,3 +121,23 @@ execute on the Control plane (once):
       node: workernode-1-hostname # name of the Working node.
       disks: ["/dev/disk/by-id/<id>"]
 
+
+apply the files:
+
+    kubectl apply -f <Disk-pool.yaml>
+
+## 7. Create StorageClass
+
+provisioner that will manage the storage (Mayastor's provisioner).
+
+    apiVersion: storage.k8s.io/v1
+    kind: StorageClass
+    metadata:
+      name: mayastor-3
+    parameters:
+      ioTimeout: "30"
+      protocol: nvmf
+      replicaCount: "3"   # number of replicas for Mayastor volumes.
+    provisioner: io.openebs.csi-mayastor
+
+   
