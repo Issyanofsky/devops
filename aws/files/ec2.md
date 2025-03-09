@@ -19,7 +19,7 @@ __region__ - each EC2 deploy in a specific region.
 ## EC2 instances types:
 
   * __On-Demand Instances (Regular Instances):__ the most flexible EC2 instances. You pay by the hour or second, depending on the instance type.
-  * __Reserved Instances:__ You reserve an EC2 instance for a 1- or 3-year term in exchange for a significant discount compared to on-demand prices.
+  * __Reserved Instances:__ You reserve an EC2 instance for a 1 or 3 year term in exchange for a significant discount compared to on-demand prices.
   * __Savings Plans:__ A flexible way to save money on EC2 usage. You commit to a certain amount of usage (in dollars) per hour for 1 or 3 years.
   * __Spot Instances:__  You can bid for unused EC2 capacity at a lower price. The catch is that AWS can terminate the instance with little notice if they need the capacity back.
 
