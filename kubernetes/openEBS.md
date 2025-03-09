@@ -28,9 +28,9 @@
   * minimum 3 workers nodes.
   * each node with an empty drive attached (for the storage).
 
-## install Helm
+## 1. install Helm
 
-on each worker node:
+On each Worker Node:
 
      curl -o http://raw.githubusercontent.com/helm/helm/main/script/get-helm-3
      ./get-helm-3
@@ -39,7 +39,11 @@ verify installatin:
 
     helm version
 
-## install nvme-tcp
+## 2. install nvme-tcp (needed for super-fast-storage like SSD) 
+
+fast storage technology used in modern computers. It's designed to make use of solid-state drives (SSDs) that connect directly to the computer’s motherboard through a high-speed interface (like PCIe).
+
+On each Worker Node:
 
 check if already install
 
@@ -47,14 +51,43 @@ check if already install
 
 if not install:
 
+   sudo apt install linux-modules-extra-$(uname -r) -y
+
+if not running:
+
     sudo modprobe nvme-tcp
 
 set it perment (after restart):
 
     echo "nvme-tcp" | sudo tee -a /etc/modules
 
-## prepering HagePage
+## 3.  prepering HugePages
+
+allows the system to use larger memory pages than the default size (which is typically 4KB). By using larger memory pages (like 2MB or 1GB), systems can reduce the overhead of managing a
+large number of smaller pages, which can lead to better performance, especially for memory-intensive applications.
+
+On each Worker Node:
 
 (swap must be turn off)
 
- 
+Get information related to HugePages:
+
+    cat /proc/meminfo | grep HugePages
+
+configure the number of HugePages available for the system (improve performance for memory-intensive applications.):
+
+    echo 1024 | sudo tee /sys/kernel/mm/hugepages/hugepages-2048kb/nr_hugepages
+
+make the HugePages configuration persistent across reboots (configure the system so that when the system is rebooted, it will automatically allocate 1024 HugePages):
+
+    echo vm.nr_hugepages=1024 | sudo tee -a /etc/sysctl.conf
+
+## 4. labeling Nodes
+
+specify which nodes should handle specific storage tasks (like hosting volumes or managing persistent data). Labeling nodes helps OpenEBS know which node should run storage workloads,
+ensuring proper resource allocation and management.
+
+Node is being assigned to run Mayastor for providing storage (repeat this step for each Worker Node - Labeling each node for Mayastor):
+
+     kubectl label nodes <node-name> openebs.io/engine=mayastor
+
