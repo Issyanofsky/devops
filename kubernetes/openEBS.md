@@ -91,3 +91,31 @@ Node is being assigned to run Mayastor for providing storage (repeat this step f
 
      kubectl label nodes <node-name> openebs.io/engine=mayastor
 
+## 5. Install OpenEBS & Mayastor
+
+execute on the Control plane (once):
+
+    helm repo add openebs http://openebs.github.io/charts
+    helm repo update
+    helm repo add mayastor http://openebs.github.io/mayastor-extensions/
+    helm install mayastor mayastor/mayastor -n mayastor --create-namespace
+
+* if needed to change the replica count (defult is set to 3 replica's):
+
+    kubectl edit sts openebs-etcd -n openebs
+
+  change replicas to the number requiered (ex. 2)
+
+  remove the line (to be the same as the replica number): ETCD_INITIAL_CLUSTER_CTCD
+
+## 6.  Setting Disk-pool (YAML)
+
+    apiVersion: "openebs.io/v1beta1"
+    kind: DiskPool
+    metadata:
+      name: pool-on-node-1 # name of the pool. should be uqniqe for each node.
+      namespace: mayastor
+    spec:
+      node: workernode-1-hostname # name of the Working node.
+      disks: ["/dev/disk/by-id/<id>"]
+
