@@ -45,3 +45,29 @@ lets you create and manage users, groups, and roles. helps keep your AWS environ
 
 Adding users, creating groups, assigining 2fA (under "security credantials) and more....
 
+<div align="center">
+
+# **VPC (Virtual Private Cloud**
+</div>
+
+ A private network in the cloud where you can launch and manage your AWS resources (like EC2 instances, databases, and more). It allows you to control networking, security, and traffic routing for your resources in AWS.
+
+ ## creating a VPC
+
+ Navigate to VPC webpage --> create VPC
+
+  * select VPC and More
+  * set the following settings:
+
+  __IPv4 CIDR block__ (dont need to change unless you wish other ipp range).
+  __Number of Availability Zones__ set the zones for the VPC (recommended minimum 2).
+  __Number of private subnets (minimum 2) --> expend "Customize subnets CIDR blocks and set the IP for each subnet:
+
+        example: 
+          Public subnet CIDR block in eu-central-1a - 10.0.101.0/24
+          Public subnet CIDR block in eu-central-1b - 10.0.102.0/24 
+          Private subnet CIDR block in eu-central-1a - 10.0.1.0/24
+          Private subnet CIDR block in eu-central-1b - 10.0.2.0/24
+
+  __NAT gateway__ (needed only if need connecting to Private subnet) - enough to choose 1 per AZ (one NAT for all zones).
+  __VPC endpoints__ allow traffic to be ruted inside the VPC (without exiting the internet- less cost and better security).
