@@ -6,7 +6,7 @@
 
 # Legend:
 
-   * [install Kubectl](#install-Kubectl)
+   * [S3](/files/s3.md)
 
 __Cloud Service Models:__ 
 
