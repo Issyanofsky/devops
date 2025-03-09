@@ -28,7 +28,7 @@ Load Balancer is a service that helps distribute incoming traffic (like website 
 
 Navigate to EC2 webpage --> (on the right side under Load Balancing) Load Balancer --> select "create Load Balancer" --> create (under Classic Load Balancer)
 
-Set the following settings:
+## Set the following settings:
 
    __facing__ choose as you need between: internet facing and internal setting.
    
