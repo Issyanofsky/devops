@@ -140,4 +140,62 @@ provisioner that will manage the storage (Mayastor's provisioner).
       replicaCount: "3"   # number of replicas for Mayastor volumes.
     provisioner: io.openebs.csi-mayastor
 
-   
+
+<div align="center">
+
+# **Test and usage Example**
+
+</div>
+
+Deploy a pod and creating a PVC using Mayastor disk management.
+
+## Create a PVC 
+
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    metadata:
+      name: my-volume-claim
+    spec:
+      accessModes:
+        - ReadWriteOnce
+      resources:
+        requests:
+          storage: 1Gi
+      storageClassName: mayastor-3  # storageClass name
+
+appy file:
+
+    kubectl apply -f <PVC.yaml>
+
+## launching a pod with volume
+
+   apiVersion: v1
+   kind: Pod
+   metadata:
+     name: fio
+   spec:
+     nodeSelector:
+       openebs.io/engine: mayastor
+     volumes:
+       - name: ms-volume
+         persistentVolumeClaim:
+           claimName: my-volume-claim
+     containers:
+       - name: fio
+         image: nixery.dev/shell/fio
+         args:
+           - sleep
+           - "1000000"
+     volumeMounts:
+       - mountPath: "/volume"
+         name: ms-volume
+
+appy file:
+
+    kubectl apply -f <Pod.yaml>
+
+## test
+
+    kubectl get pvc
+    kubectl get pv
+     
