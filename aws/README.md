@@ -84,5 +84,56 @@ Navigate to VPC webpage --> right side under Virtual private network (VPN)
 ways to connet using VPN:
 
   __Virtual Private Gateway (VGW):__ A virtual gateway that connects your VPC (Virtual Private Cloud) to a remote network, like your on-premises data center or another VPC.
+  
   __Site-to-Site Connection:__ A secure connection between your on-premises network (e.g., office or data center) and your AWS VPC using a VPN (Virtual Private Network).
+  
   __Client VPN Endpoint:__ allows remote users (like employees) to securely connect to your AWS network from anywhere.
+
+## VPN connection to EC2 (in a private Zone)
+
+__1. Session Manager__ establish secure shell-like connections directly from the AWS Management Console or AWS CLI.
+
+    Set Up Permissions for Session Manager:
+
+          Navigate to IAM webpage --> Create a IAM role with AmazonSSMManagedInstanceCore policy attached.
+
+          Attach this role to your EC2 instance.
+
+          Make sure your EC2 instance has the SSM agent installed (he SSM Agent is installed by default on most modern Amazon AMIs (like Amazon Linux, Ubuntu, etc.)).
+    
+    Verify EC2 Instance is Managed by Systems Manager:
+
+          Navigate to EC2 webpage --> Under Instances & Nodes, click Managed Instances.
+
+          Make sure your EC2 instance appears in the list with a green status (meaning it is successfully managed by Systems Manager).
+          
+    Start a Session:
+
+          Navigate to EC2 webpage --> Under Instances & Nodes, click Managed Instances.
+
+          Click Start Session.
+
+  __2. Bastion__
+
+  Acts as a gateway or jump server that allows you to access instances that do not have public IP addresses.
+
+  The Bastion Host need a public IP to allow SSH or RDP access from the internet (resident in public zone). it act like a proxy for the private Instances.
+
+  __Launch an EC2 instance (Bastion Host):__
+
+          Launch a EC2 instance in the public AZ (Ubuntu) with a public IP assign And key-pair.
+
+          set security groups: Add an inbound rule that allows SSH (port 22) access from your IP address or IP range.
+
+          ssh -o ProxyCommand="ssh -i bastion.pem -W %h:%p ec2-user@bastion-host" ec2-user@target-instance
+
+          (e.g. ssh -o proxycommand=="ssh -i bastion.pem -w %h:%p ubuntu@3.127.27.209" -i prod.pem ec2-user@10.0.1.51)
+
+  __* Note__ can use Route53 for using domain to reach the bastion.
+
+__3. OpenVPN__ 
+
+an open-source software that allows you to set up a VPN (Virtual Private Network). It creates a secure tunnel between your on-premises network (or local device) and a remote network (such as your AWS VPC).
+
+
+          
