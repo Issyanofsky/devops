@@ -1,1 +1,23 @@
+<div align="center">
 
+# **AWS**
+
+</div>
+
+# Legend:
+
+   * [install Kubectl](#install-Kubectl)
+
+Cloud Service Models: 
+
+  * aaS: You get hardware resources (ex. AWS EC2).
+  * PaaS: You get a platform to build and run apps (ex. Google App Engine).
+  * SaaS: You get a complete software application ready to use (ex. Microsoft 365).
+
+Types of clouds:
+
+  * Private Cloud: A cloud environment dedicated to a single organization.
+  * Hybrid Cloud: A combination of private and public clouds, allowing data and applications to be shared between them.
+  * Community Cloud: A cloud shared by a group of organizations with similar goals or security requirements. It’s like a private cloud but for a community of users.
+  * Public Cloud: A cloud that is open to everyone, and resources are shared among multiple users. You use it over the internet.
+    
