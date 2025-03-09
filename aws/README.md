@@ -10,9 +10,9 @@
 
 __Cloud Service Models:__ 
 
-  * aaS: You get hardware resources (ex. AWS EC2).
-  * PaaS: You get a platform to build and run apps (ex. Google App Engine).
-  * SaaS: You get a complete software application ready to use (ex. Microsoft 365).
+  * IaaS (Infrastructure as a Service): You get hardware resources (ex. AWS EC2).
+  * PaaS (Platform as a Service): You get a platform to build and run apps (ex. Google App Engine).
+  * SaaS (Software as a Service): You get a complete software application ready to use (ex. Microsoft 365).
 
 __Types of clouds:__
 
