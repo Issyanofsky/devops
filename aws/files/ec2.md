@@ -23,3 +23,70 @@ __region__ - each EC2 deploy in a specific region.
   * __Savings Plans:__ A flexible way to save money on EC2 usage. You commit to a certain amount of usage (in dollars) per hour for 1 or 3 years.
   * __Spot Instances:__  You can bid for unused EC2 capacity at a lower price. The catch is that AWS can terminate the instance with little notice if they need the capacity back.
 
+<div align="center">
+
+# **Launching Instance (EC2)**
+
+</div>
+
+     Navigate to EC2 page -->
+
+laumch instance
+
+    press - launch Instance -->
+
+set:
+
+   name - type Instance name.
+   number of instances - Number of Instances to create.
+   AMI - choosing Image and version for deploying on the Instance.
+   key-pair - if SSH is needed.
+
+       press "create new key-pair (choose RSA type .pen) --> "create key pair"
+
+   * best practice is to create each instance a key-pair of its own.
+
+   under firewall:
+
+      select security group.
+
+      chack the __SSH__ to allow ssh connect by IP.
+
+Launch Instance:
+
+     --> Launch Instance
+
+
+## Other settings Available
+
+   * __IAM instance role__ - allowing the Instance permission to other services over the cloud.
+   * __placement group__ - allow creating "cluster" group of Instances.
+   * __spot__ - deploying Instance in spot.
+   * __user_data__ - script that execute once the Instance deployed (once only).
+   
+
+<div align="center">
+
+# **Connecting to Instance (EC2)**
+
+</div>
+
+# SSH
+
+Navigate to EC2 page --> select the Instance you want to connect to.
+
+     --> press "connect"
+     --> copy the line for SSH connection (e.g ssh -i <key.pem> ubuntu@10.185.250.129)
+
+     * useing the key-pair you created for the Instance.
+
+# Monitor and Trubleshoot
+
+Navigate to EC2 page --> select the Instance you want to connect to --> actions --> monitor and trubleshoot --> Get Instance screen
+
+(This will display the Instance screen for preview).
+
+
+Navigate to EC2 page --> select the Instance you want to connect to --> actions --> monitor and trubleshoot --> Get System logs
+
+(This will display logs).
