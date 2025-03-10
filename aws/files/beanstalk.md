@@ -20,6 +20,8 @@ A service that helps you deploy and manage web applications and services in the 
 
 # Elastic Beanstal
 
+  Navigate to Beanstalk webpage --> Create applicatin
+
       Environment tier - choose the environment that fit your code.
       Application name - set a name for the Beanstalk environment.
 
