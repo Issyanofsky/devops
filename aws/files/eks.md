@@ -93,7 +93,7 @@ ways to deploy:
 
             --> create
             
-## 3. installing using EKSCTL (Recomended Way to Install EKS).
+## 3. installing using EKSctl (Recomended Way to Install EKS).
 
         
 
