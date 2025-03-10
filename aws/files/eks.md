@@ -157,3 +157,16 @@ __Create a YAML File for the Cluster__
               attachPolicyARNs:
                 - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
               resolveConflicts: overwrite
+
+    Open Gitbash (PowerShell):
+
+        Navigate to the Folder containing the YAML file.
+
+        Createing the cluster. type command:
+        
+            eksctl create cluster -f <cluster.yaml>
+
+__Delete__
+
+            eksctl delete cluster --region=ea-central-1 --name=cluster-demo --wait
+            
