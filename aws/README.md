@@ -28,7 +28,7 @@
 
 ## Other:
 
-   * [Cli](./files/cli.md)
+   * [AWS Cli](./files/cli.md)
      
 __Cloud Service Models:__ 
 
