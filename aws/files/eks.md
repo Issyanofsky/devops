@@ -15,8 +15,8 @@ __* NOTE__ the user that deploy the cluster has the admin privilage.
 
 ways to deploy:
 
-1. EKS Auto Mode - new feture to create a cluster.
-2. using web:
+## 1. EKS Auto Mode - new feture to create a cluster.
+## 2. using web:
 
        click create cluster --> custom configuration 
 
