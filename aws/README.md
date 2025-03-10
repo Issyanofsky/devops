@@ -2,7 +2,7 @@
 
 # **AWS**
 
-![AWS](/pic/aws.gif)
+![AWS](./pic/aws.gif)
 </div>
 
 ## Legent:
