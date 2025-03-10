@@ -59,7 +59,7 @@ __* NOTE__ the user that deploy the cluster has the admin privilage.
                   
                   create
 
-    ## Add Workers Nodes
+## Add Workers Nodes
 
         Navigate to EKS on the webpage --> enter the cluster --> compute --> add Node group
 
