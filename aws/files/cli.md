@@ -57,7 +57,13 @@ Verify  installation
 
              (This will list all the S3 buckets in your AWS account. If the configuration is correct, it will show the list of S3 buckets (if any)).
 
+<div align="center">
 
+# **Connecting to the cluster using GitBash (PowerShell)**
+
+</div>
+
+aws eks update-kubeconfig --name <Name_cluster> --region <region>
 
         
                   
