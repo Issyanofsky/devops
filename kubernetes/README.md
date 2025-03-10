@@ -20,7 +20,7 @@
 
 ## kubernetes install:
 
-   * [minikube](MiniKube.md)
+   * [minikube](files/MiniKube.md)
    * [Kubernetes (kubeadm)](kubernetes.md)
 
 ## Other install:
