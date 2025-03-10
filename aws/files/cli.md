@@ -4,7 +4,7 @@
 
 </div>
 
-# Install Aws Cli
+# Install AWS Cli
 
 download the install file from:
 
