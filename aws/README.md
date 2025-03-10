@@ -22,7 +22,8 @@
    * [CloudFormation](./files/cloudFormation.md)
    * [Elastik Beanstalk (EB)](./files/beanstalk.md)
    * [Lambda](./files/lambda.md)
-
+   * [CodeDeploy (CD)](./files/codedeploy.md)
+   * 
 __Cloud Service Models:__ 
 
   * IaaS (Infrastructure as a Service): You get hardware resources (ex. AWS EC2).
