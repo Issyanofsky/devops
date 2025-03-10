@@ -172,3 +172,11 @@ __Deleteing the Cluster__
 
             eksctl delete cluster --region=ea-central-1 --name=cluster-demo --wait
             
+
+<div align="center">
+
+# **Connecting to the cluster using GitBash (PowerShell)**
+
+</div>
+
+aws eks update-kubeconfig --name <Name_cluster> --region <region>
