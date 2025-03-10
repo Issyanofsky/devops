@@ -59,7 +59,7 @@ Verify  installation
 
 <div align="center">
 
-# **Connecting to the cluster using GitBash (PowerShell)**
+# **Connecting to EKS cluster using GitBash (PowerShell)**
 
 </div>
 
