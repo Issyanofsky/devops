@@ -18,6 +18,15 @@ Verify  installation
 
 # Configure the AWS CLI (Connect to AWS Cloud)
 
+
+    shows AWS credentials
+    
+        cat ~/.aws/credentials
+    
+    Displays information about the IAM user or role making the AWS request.
+    
+        aws sts get-caller-identity
+    
      Get Your AWS Access Key ID and Secret Access Key:
 
           1. Login to your AWS account and navigate to the IAM (Identity and Access Management) console.
