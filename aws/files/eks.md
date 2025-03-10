@@ -180,3 +180,21 @@ __Deleteing the Cluster__
 </div>
 
 aws eks update-kubeconfig --name <Name_cluster> --region <region>
+
+
+<div align="center">
+
+# **install NGINX Ingress on the EKS cluster**
+
+</div>
+
+Create NLB when installing Ingress Controller (https://amod-kadam.medium.com/setting-up-nginx-ingress-controller-with-eks-f27390bcf804).
+        
+__install ingress controller with NLB__
+
+        helm upgrade --install ingress-nginx ingress-nginx --repo https://kubernetes.github.io/ingress-nginx  --namespace ingress-nginx --create-namespace \
+          --set-string controller.service.annotations."service\.beta\.kubernetes\.io/aws-load-balancer-type"="nlb"
+
+__uninstall ingress controller__
+
+        helm uninstall ingress-nginx -n ingress-ngins
