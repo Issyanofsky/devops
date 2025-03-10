@@ -108,6 +108,8 @@ __Install eksctl__
         
 __Install AWS CLI & Configure AWS__
 
+[AWS Cli](cli.md)
+
         Make sure the AWS CLI is installed and configured with your AWS credentials.
 
             aws configure
