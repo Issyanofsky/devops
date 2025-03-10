@@ -20,6 +20,7 @@
    * [CloudFront (CDN)](./files/CDN.md)
    * [CloudFormation](./files/cloudFormation.md)
    * [Elastik Beanstalk (EB)](./files/beanstalk.md)
+   * [Lambda](./files/lambda.md)
 
 __Cloud Service Models:__ 
 
