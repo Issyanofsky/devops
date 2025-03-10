@@ -95,5 +95,65 @@ ways to deploy:
             
 ## 3. installing using EKSctl (Recomended Way to Install EKS).
 
-        
+Simple way to create and manage Kubernetes clusters on AWS.
 
+    __Install eksctl__
+
+        eksctl is a command-line tool for creating and managing EKS clusters. It allows you to define and deploy the cluster easily using a YAML configuration file.
+
+        Install guide:
+        
+            https://eksctl.io/installation/
+
+        
+    __Install AWS CLI & Configure AWS__
+
+        Make sure the AWS CLI is installed and configured with your AWS credentials.
+
+            aws configure
+
+            Enter your AWS Access Key ID, Secret Access Key, and the region (e.g., us-west-2).
+
+    __Create a YAML File for the Cluster__
+
+        Create a YAML file (cluster.yaml) to define your EKS cluster's settings.
+
+        Example:
+
+            apiVersion: eksctl.io/v1alpha5
+            kind: ClusterConfig
+            metadata:
+              name: cluster-demo
+              region: eu-central-1
+            vpc:
+              subnets:
+                public:
+                  eu-central-1a: { id: subnet-0d8a5cf25b3ac2688 }
+                  eu-central-1b: { id: subnet-08bcc9b1169ccf5ee }
+                  eu-central-1c: { id: subnet-04c60d9bcb3843d5f }
+              clusterEndpoints:
+                privateAccess: true
+                publicAccess: true
+            managedNodeGroups:
+              - name: managed-ng-1
+                minSize: 2
+                maxSize: 4
+                instanceType: t2.micro
+                desiredCapacity: 3
+                volumeSize: 30
+                ssh:
+                  allow: false
+                labels: {role: worker}
+                tags:
+                  nodegroup-role: worker
+                iam:
+                  withAddonPolicies:
+                    externalDNS: true
+                    certManager: true
+            iam:
+              withOIDC: true
+            addons:
+            - name: vpc-cni
+              attachPolicyARNs:
+                - arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy
+              resolveConflicts: overwrite
