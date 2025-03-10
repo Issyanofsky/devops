@@ -1,6 +1,6 @@
 <div align="center">
 
-# **ECS (Elastic Container Service**
+# **ECS (Elastic Container Service)**
 
 </div>
 
@@ -20,4 +20,36 @@ __not fit for large scales:__
   * can't add Database on the cluster.
   * cant move between clusers.
 
+<div align="center">
+
+# **Create ECS**
+
+</div>
+
+    Navigae to ECS webpage --> ECS
+
+    --> create cluster -->
+
+         Infrastructure - where to deploy the cluser (FARGATE or EC2 instance).
+
+         choose Operate System (i choosed Amazon Linux)
+
+         EC2 instance Role - (i let it create it).
+
+         Desire Capacity - number of instances to deploy.
+
+         key-pair - Optional. if need to enter the instances.
+
+    under network:
+
+        PVC - select the pvc to install the cluster.
+
+        security group - set port to open to the cluster ( i opened - port 80, 22, 5000-5500).
+
+        public IP - set this to get a public Ip for the cluster.
+
+    --> create
+    
+
+    
     
