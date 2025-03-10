@@ -21,16 +21,16 @@
 ## kubernetes install:
 
    * [minikube](files/MiniKube.md)
-   * [Kubernetes (kubeadm)](kubernetes.md)
+   * [Kubernetes (kubeadm)](files/kubernetes.md)
 
 ## Other install:
 
-   * [NFS Server](NFS.md)
-   * [MetalLB](metallb.md)
-   * [Ingress](Ingress.md)
-   * [Helm](helm.md)
-   * [Istio (& kiali)](istio.md)
-   * [OpenEBS (mayastor)](openEBS.md)
+   * [NFS Server](files/NFS.md)
+   * [MetalLB](files/metallb.md)
+   * [Ingress](files/Ingress.md)
+   * [Helm](files/helm.md)
+   * [Istio (& kiali)](files/istio.md)
+   * [OpenEBS (mayastor)](files/openEBS.md)
      
 
 ![kubernetes](kubernetes.gif)
