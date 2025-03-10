@@ -59,5 +59,33 @@ __* NOTE__ the user that deploy the cluster has the admin privilage.
                   
                   create
 
+    ## Add Workers Nodes
+
+        Navigate to EKS on the webpage --> enter the cluster --> compute --> add Node group
+
+            configure node group:
+
+                name: name for the group (e.x. EKS-ng)
+                node IAM - set permission for the nodes (workers).
+
+            --> create recomended
+
+                aws service
+                use case: EC2
+                (can add cloudWatch for monitoring)
+            
+            --> next
+
+            compute and scaling configuration:
+
+                set which and how many mechine (nodes)
+
+                Node auti repair configuration - service that fix issues with mechine (i set yes)
+
+            --> next
+
+                specifiy NEtworking - specify where the workers will run.
+
+            --> create
             
     
