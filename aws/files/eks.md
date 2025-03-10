@@ -166,7 +166,7 @@ __Create a YAML File for the Cluster__
         
             eksctl create cluster -f <cluster.yaml>
 
-__Delete__
+__Deleteing the Cluster__
 
             eksctl delete cluster --region=ea-central-1 --name=cluster-demo --wait
             
