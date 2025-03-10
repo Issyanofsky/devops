@@ -16,7 +16,7 @@ __* NOTE__ the user that deploy the cluster has the admin privilage.
     click create cluster --> custom configuration 
 
 
-          disable Eks Auto mode
+          disable EKS Auto mode
 
           cluster configuration:
 
