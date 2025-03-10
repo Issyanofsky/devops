@@ -85,7 +85,7 @@ The task definition is a blueprint for your application (Docker container) and t
 
      --> create
 
-## 2. create task (service) - execute container
+## 2. create task - execute container
 
      navigate to ECS webpage --> go to Clusters --> select the cluster you created --> create (in the service Tab)
 
@@ -99,6 +99,23 @@ The task definition is a blueprint for your application (Docker container) and t
 
      --> create
 
+## Deployment Configuration
+
+Service will make sure the containers are allways deploy (using autoscaling).
+
+setting service:
+
+      service name:
+
+      desire Task - how many task should deploy
+
+      availability Zone rebalncing - distribute mechine on the nodes.
+
+      deployment opetion: the way the deployment
+
+      listner - Load balancer
+
+   --> create
 
 ## Verify the Deployment:
    
