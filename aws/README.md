@@ -63,6 +63,27 @@ lets you create and manage users, groups, and roles. helps keep your AWS environ
 
 Adding users, creating groups, assigining 2fA (under "security credantials) and more....
 
+## Analytics Services
+
+  * __Amazon Athena:__ A serverless query service that lets you run SQL queries directly on data stored in Amazon S3.
+  * __Amazon CloudSearch:__ A managed search service that allows you to create search functionalities for your website or app. It helps you easily index and search large volumes of data.
+  * __AWS Data Firehose:__ A fully managed service to load streaming data (like logs or metrics) into destinations like Amazon S3, Redshift, or Elasticsearch for real-time analytics.
+  * __Amazon EMR (Elastic MapReduce):__ managed service for processing large amounts of data using big data frameworks like Hadoop, Spark, and Hive. It’s great for data analysis and machine learning tasks.
+  * __AWS Glue:__ A serverless ETL (Extract, Transform, Load) service to prepare and move data for analytics. It automates the data cleaning, transforming, and loading processes.
+  * __Amazon Kinesis:__ A platform for streaming data. It allows you to collect, process, and analyze real-time data (like logs or IoT data) at scale.
+  * __Amazon MSK (Managed Streaming for Kafka):__ A fully managed service to run Apache Kafka, a popular open-source tool for building real-time data streaming applications.
+  * __Amazon Redshift:__ A fully managed data warehouse that lets you store and analyze large amounts of structured data using SQL. It's fast and scalable for big data analytics.
+    
+## Application Integration
+
+  * __Amazon Simple Queue Service (SQS):__ a fully managed message queuing service. It allows you to send, store, and receive messages between distributed software systems or components.
+  * __Amazon MQ:__ managed message broker service. It supports Apache ActiveMQ and RabbitMQ, which are popular open-source messaging systems used for communication between software applications.
+  * __Amazon Simple Notification Service (SNS):__ a fully managed service that allows you to send messages or notifications to multiple recipients at once. It supports different message formats (like email, SMS, or HTTP).
+
+## Bussiness Application
+
+  * __AWS Trusted Advisor:__ an online tool provided by AWS that helps you optimize your AWS environment. It gives recommendations on how to improve your AWS resources' security, performance, cost efficiency, and fault tolerance.
+
 <div align="center">
 
 # **VPC**
