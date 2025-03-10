@@ -203,7 +203,7 @@ doesnt Build but can work with Jenkins (for example).
 
       step 1: pipeline name.
       step 2: source: girhub.
-      step3: build, choose Add Jenkins (in provider name) 
+      step 3: build, choose Add Jenkins (in provider name) 
       step 4: Service Role- set the service Role.
       step 5: review.
 
