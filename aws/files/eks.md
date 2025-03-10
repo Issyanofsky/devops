@@ -97,7 +97,7 @@ ways to deploy:
 
 Simple way to create and manage Kubernetes clusters on AWS.
 
-    __Install eksctl__
+__Install eksctl__
 
         eksctl is a command-line tool for creating and managing EKS clusters. It allows you to define and deploy the cluster easily using a YAML configuration file.
 
@@ -106,7 +106,7 @@ Simple way to create and manage Kubernetes clusters on AWS.
             https://eksctl.io/installation/
 
         
-    __Install AWS CLI & Configure AWS__
+__Install AWS CLI & Configure AWS__
 
         Make sure the AWS CLI is installed and configured with your AWS credentials.
 
@@ -114,7 +114,7 @@ Simple way to create and manage Kubernetes clusters on AWS.
 
             Enter your AWS Access Key ID, Secret Access Key, and the region (e.g., us-west-2).
 
-    __Create a YAML File for the Cluster__
+__Create a YAML File for the Cluster__
 
         Create a YAML file (cluster.yaml) to define your EKS cluster's settings.
 
