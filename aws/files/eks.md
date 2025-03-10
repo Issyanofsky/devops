@@ -13,7 +13,12 @@ __* NOTE__ the user that deploy the cluster has the admin privilage.
 
     Navigate to EKS on the webpage.
 
-    click create cluster --> custom configuration 
+ways to deploy:
+
+1. EKS Auto Mode - new feture to create a cluster.
+2. using web:
+
+       click create cluster --> custom configuration 
 
 
           disable EKS Auto mode
@@ -88,4 +93,7 @@ __* NOTE__ the user that deploy the cluster has the admin privilage.
 
             --> create
             
-    
+## 3. installing using EKSCTL (Recomended Way to Install EKS).
+
+        
+
