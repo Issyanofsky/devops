@@ -19,6 +19,7 @@
    * [RDS (Relational Database Service)](./files/RDS.md)
    * [CloudFront (CDN)](./files/CDN.md)
    * [CloudFormation](./files/cloudFormation.md)
+   * [Elastik Beanstalk (EB)](./files/beanstalk.md)
 
 __Cloud Service Models:__ 
 
