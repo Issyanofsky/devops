@@ -42,6 +42,13 @@ Verify  installation
               Default region name: Enter the AWS region you want to use (e.g., us-east-1, us-west-2, etc.). You can find the available regions here.
               Default output format: Choose the output format for the CLI (either json, text, or table).
 
+        Test the Configuration:
+
+             aws s3 ls
+
+             (This will list all the S3 buckets in your AWS account. If the configuration is correct, it will show the list of S3 buckets (if any)).
 
 
+
+        
                   
