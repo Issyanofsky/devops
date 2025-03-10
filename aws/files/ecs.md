@@ -58,11 +58,12 @@ __not fit for large scales:__
 
   __Prerequisites:__
 
-     1. Docker Image: You need to have a Docker container image ready. This can be stored in Amazon [ECR (Elastic Container Registry)](ecr.md)  or any other container registry like Docker Hub.
+     1. Docker Image: You need to have a Docker container image ready. This can be stored in Amazon ECR (Elastic Container Registry) or any other container registry like Docker Hub. 
      2. AWS CLI Installed: Ensure you have the AWS CLI installed and configured on your local machine.
      3. IAM Permissions: Ensure your AWS account has appropriate IAM permissions to use ECS, ECR, and other required services.
 
-
+ [ECR (Elastic Container Registry)](ecr.md)  
+ 
 ## 1. Create an ECS Task Definition:
 
 The task definition is a blueprint for your application (Docker container) and tells ECS how to run your containers.
@@ -111,6 +112,6 @@ The task definition is a blueprint for your application (Docker container) and t
  * You can set up auto-scaling by modifying the ECS service settings and defining scaling policies.
 
 
-   
+
    
    
