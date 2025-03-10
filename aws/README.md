@@ -24,6 +24,7 @@
    * [Lambda](./files/lambda.md)
    * [CodeDeploy (CD)](./files/codedeploy.md)
    * [ECS (Elastic Container Service)](./files/ecs.md)
+   * [Elastic Container Registry (ECR)](./files/ecr.md)
 
 ## Other:
 
