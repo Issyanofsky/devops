@@ -27,7 +27,11 @@ __CodeDeploy key components:__
       Service rolw - role allowing CodeDeploy for AWS services.
       Target revision - which version will deployed.
 
-# create CodeDeploy
+<div align="center">
+
+# **Create AWS CodeDeploy**
+
+</div>
 
 ## 1. IAM Role
 
@@ -71,12 +75,17 @@ __(can be done within the CodeDeploy page - there a need to add under UserData t
 
             mechine name - add a name suit to the mechines (EC2).
             choose OS - choose the Operating system (like Amazon kinux2).
+            
             under network setting:
                 allow HTTP
                 key-pair - Optional
+                
             under Advanced setting:
+            
                 set the Role we created.
+                
             under UserData (example):
+            
                 #!/bin/bash
                 # This installs the CodeDeploy agent and its prerequisites on Ubuntu 22.04.
                 
@@ -97,6 +106,113 @@ __(can be done within the CodeDeploy page - there a need to add under UserData t
                 systemctl list-units --type=service | grep codedeploy
                 sudo service codedeploy-agent status
               
-                      
-            
-  
+             --> launch Instance
+
+__Recomended:__ adding Tag (e.g codeDeploy true) for better managing of deployments.
+
+## 3. setting CodeDeploy 
+
+        Navigate to CodeDeploy webpage.
+
+        creating a script which defines the deployment process and instructions for deploying an application to an EC2 instance or other compute resources.
+
+        example - 
+
+              version: 0.0
+              os: linux
+              files:
+                - source: /index.html
+                  destination: /var/www/html/
+              hooks:
+                BeforeInstall:
+                  - location: scripts/install_dependencies
+                    timeout: 300
+                    runas: root
+                  - location: scripts/start_server
+                    timeout: 300
+                    runas: root
+                ApplicationStop:
+                  - location: scripts/stop_server
+                    timeout: 300
+                    runas: root
+
+        create application --> 
+
+              Application anme - anming the process.
+
+              computer platform - define wher we deploy (i choose EC2)
+
+              --> creat app
+
+      create deployment group:
+
+            create deployment group -->
+
+                Deployent group name - naming the group.
+
+                Service Role - Set the IAM role we created (step 1).
+
+                Deployment type - (i set to In-place)
+
+                Environment configuration - selecting the servers to run on (i choose Amazon EC2 instance).
+
+                setting the mechine to install - by Name or by Tag.
+
+                agent configure with.. - (if agent wasnt install) i choose Never because we install the agent already on deploying the EC2 (step 2)).
+
+                Deploy setting
+
+                LoadBalancer (if we have one).
+
+                --> create deployment group
+                
+## 4. setting what to deploy
+
+      navigate to deployment (in CodeDeploy web page)
+
+      create deployment --> 
+          
+          Revision Type (where the app installed).
+
+          GitHub token (if already connected to git (on the computer) it will create a token automaticaly. there is only need to give a name.
+
+          enter Repository Name - (e.g. https://github.com/Issyanofsky/Codedeploy)
+
+          Commit in - set the commit to handle.
+
+          --> create deployment
+          
+
+<div align="center">
+
+# **Create AWS CodePipeline**
+
+</div>
+
+doesnt Build but can work with Jenkins (for example).
+
+## 1. preperations:
+
+   * copy or clone the code to GitHub
+   * create an IAM Role for Jenkins to use.
+   * install and configure Jenkins and AWS CodePipeline plugin for Jenkins.
+
+## 2. craete the pipeline
+
+  navigate to pipeline on AWS web page.
+
+      step 1: pipeline name.
+      step 2: source: girhub.
+      step3: build, choose Add Jenkins (in provider name) 
+      step 4: Service Role- set the service Role.
+      step 5: review.
+
+__Add steps to te pipeline:__
+
+    look up the IP address of an instance.
+
+    create a Jenkins project for testing the Deployment.
+
+    create a forth stage
+
+      
