@@ -23,7 +23,7 @@
    * [Elastik Beanstalk (EB)](./files/beanstalk.md)
    * [Lambda](./files/lambda.md)
    * [CodeDeploy (CD)](./files/codedeploy.md)
-   * [ecs](./files/ecs.md)
+   * [ECS (Elastic Container Service)](./files/ecs.md)
 
 ## Other:
 
