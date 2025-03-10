@@ -5,15 +5,11 @@
 
  A service that lets you run your code without managing servers. You just upload your code, and Lambda runs it in response to events (like a file upload or an API call).
 
-Supports a variety languages.
-
-not good for API.
-
-not suitable for task needed to work 24/7.
-
-good for roles like turning computers on and off.
-
-good for moving Data from one S3 to another.
+  * Supports a variety languages.
+  * not good for API.
+  * not suitable for task needed to work 24/7.
+  * good for roles like turning computers on and off.
+  * good for moving Data from one S3 to another.
 
 __Key Points:__
 
