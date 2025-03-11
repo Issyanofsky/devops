@@ -206,5 +206,5 @@ __uninstall ingress controller__
 
 </div>
 
-[setting CertBot)](..../kubernetes/files/certbot.md)
+[setting CertBot)](/kubernetes/files/certbot.md)
 
