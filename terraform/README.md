@@ -1,4 +1,4 @@
-<div align="center">
+For more Terraform examples. visit: <div align="center">
 
 # **TerraForm**
 
@@ -401,3 +401,62 @@ Modules are like reusable building blocks of infrastructure code. They help you 
 A module is a collection of resources that are used together. You can think of it as a "package" or a "blueprint" for creating parts of your infrastructure. Modules allow you to write infrastructure code once and reuse it across different projects or environments.
 
 
+## Creating a module
+
+1. Create a folder to host the module in.
+
+2. Create files: main.tf, variables.tf and output.tf (in the folder we just created).
+
+3. Example:
+
+      main.tf
+
+      resource "aws_instance" "example" {
+        ami           = var.ami_id
+        instance_type = var.instance_type
+        tags = {
+          Name = var.instance_name
+        }
+      }
+
+     variables.tf
+
+     variable "ami_id" {
+       description = "The AMI ID"
+     }
+     
+     variable "instance_type" {
+       description = "The instance type"
+     }
+     
+     variable "instance_name" {
+       description = "The name of the instance"
+     }
+
+
+     output.tf
+
+     output "instance_id" {
+       value = aws_instance.example.id
+     }
+     
+     output "public_ip" {
+       value = aws_instance.example.public_ip
+     }
+
+## Use This Module
+
+After creating this module, you can use it in another Terraform configuration as follows:
+
+     module "ec2_instance" {
+       source        = "./my-ec2-instance-module"  # Path to your module
+       ami_id        = "ami-12345678"
+       instance_type = "t2.micro"
+       instance_name = "MyWebServer"
+     }
+     
+     output "instance_id" {
+       value = module.ec2_instance.instance_id
+     }
+
+ 
