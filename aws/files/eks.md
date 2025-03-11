@@ -184,7 +184,7 @@ aws eks update-kubeconfig --name <Name_cluster> --region <region>
 
 <div align="center">
 
-# **install NGINX Ingress on the EKS cluster**
+# **Install NGINX Ingress on the EKS cluster**
 
 </div>
 
@@ -198,3 +198,13 @@ __install ingress controller with NLB__
 __uninstall ingress controller__
 
         helm uninstall ingress-nginx -n ingress-ngins
+
+
+<div align="center">
+
+# **Set CertBot Certificate on cluster**
+
+</div>
+
+[setting CertBot)](.../kubernetes/files/certbot.md)
+
