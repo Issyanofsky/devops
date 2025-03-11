@@ -65,7 +65,7 @@ Deploy the file:
 
 This will redirect traffic from HTTPS to HTTP.
 
-[Ingress](Ingress.md)
+on the Ingress deployment [Ingress](Ingress.md):
 
     Add thoses annotations to the Yaml Ingress install:
 
