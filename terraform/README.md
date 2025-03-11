@@ -5,6 +5,8 @@
 ![Terraform](./pic/terraform.gif)
 </div>
 
+https://github.com/Issyanofsky/terraform-class
+
 A tool that helps you automate and manage your cloud infrastructure in a simple and consistent way.
 
 Instead of manually creating and configuring cloud resources (like servers, databases, and networks), you write code to describe the infrastructure you need. Terraform then automatically creates and manages those resources for you.
@@ -386,3 +388,16 @@ Overrides allow you to modify the resource behavior at runtime. It’s less comm
             ami = "ami-12345678"  # Override the AMI ID at runtime
           }
         }
+
+
+<div align="center">
+
+# **Modules**
+
+</div>
+
+Modules are like reusable building blocks of infrastructure code. They help you organize and manage your configuration into smaller, logical pieces, making your code cleaner and more maintainable.
+
+A module is a collection of resources that are used together. You can think of it as a "package" or a "blueprint" for creating parts of your infrastructure. Modules allow you to write infrastructure code once and reuse it across different projects or environments.
+
+
