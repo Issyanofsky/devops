@@ -125,4 +125,48 @@ delete the infrastructure. removes all the resources managed by Terraform.
    
         terraform destroy
 
+<div align="center">
+
+## **State**
+
+</div>
   
+Terraform maintains a state file (usually called terraform.tfstate) that keeps track of your resources and their current status. This allows Terraform to know what resources exist and what needs to be changed when you apply updates.
+The state file is important for managing the lifecycle of resources and keeping track of any changes.
+
+
+<div align="center">
+
+## **Variables (variables.tf)**
+
+</div>
+
+Variables in Terraform allow you to parameterize your configuration. Instead of hardcoding values like instance types, regions, or AMI IDs, you use variables so you can change them easily.
+
+__Using Variables:__
+
+    1. Create a variables.tf file in the same directory as the main.tf file.
+    2. edit the file and Add the Variables. for example:
+
+          variable "region" {
+            description = "The AWS region to launch the instance"
+            default     = "us-west-2"
+          }
+          
+          variable "instance_type" {
+            description = "The type of EC2 instance"
+            default     = "t2.micro"
+          }
+   
+    3. Edit the main.tf to get the Variables. example:
+
+         provider "aws" {
+           region = var.region
+         }
+         
+         resource "aws_instance" "example" {
+           ami           = "ami-0c55b159cbfafe1f0"
+           instance_type = var.instance_type
+         }
+
+         
