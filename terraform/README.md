@@ -409,40 +409,40 @@ A module is a collection of resources that are used together. You can think of i
 
 3. Example:
 
-      main.tf
-
-      resource "aws_instance" "example" {
-        ami           = var.ami_id
-        instance_type = var.instance_type
-        tags = {
-          Name = var.instance_name
-        }
+       main.tf
+ 
+       resource "aws_instance" "example" {
+         ami           = var.ami_id
+         instance_type = var.instance_type
+         tags = {
+           Name = var.instance_name
+         }
+       }
+ 
+      variables.tf
+ 
+      variable "ami_id" {
+        description = "The AMI ID"
+      }
+      
+      variable "instance_type" {
+        description = "The instance type"
+      }
+      
+      variable "instance_name" {
+        description = "The name of the instance"
       }
 
-     variables.tf
 
-     variable "ami_id" {
-       description = "The AMI ID"
-     }
-     
-     variable "instance_type" {
-       description = "The instance type"
-     }
-     
-     variable "instance_name" {
-       description = "The name of the instance"
-     }
+      output.tf
 
-
-     output.tf
-
-     output "instance_id" {
-       value = aws_instance.example.id
-     }
-     
-     output "public_ip" {
-       value = aws_instance.example.public_ip
-     }
+      output "instance_id" {
+        value = aws_instance.example.id
+      }
+      
+      output "public_ip" {
+        value = aws_instance.example.public_ip
+      }
 
 ## Use This Module
 
