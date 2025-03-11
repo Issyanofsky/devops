@@ -291,3 +291,98 @@ To reference each instance, you use count.index
        output "instance_public_ip" {
          value = aws_instance.example[0].public_ip  # Access the first instance's public IP
        }
+
+## for_each
+
+Create resources based on a map or set of values. It’s useful for creating resources with different configurations.
+
+    Example:
+
+        resource "aws_instance" "example" {
+          for_each      = toset(["web", "db", "cache"])  # Creates 3 EC2 instances for each type
+          ami           = "ami-0c55b159cbfafe1f0"
+          instance_type = "t2.micro"
+        
+          tags = {
+            Name = each.key  # "web", "db", "cache"
+          }
+        }
+
+To reference each instance
+
+     output "instance_tags" {
+       value = aws_instance.example["web"].tags["Name"]  # Access the "web" instance's tag
+     }
+
+## depends_on
+
+Used to explicitly define the dependencies between resources. It’s helpful when Terraform doesn’t automatically detect the order in which resources should be created or modified.
+
+
+    Example (makes sure that the EC2 instance is created after the security group is created):
+
+        resource "aws_security_group" "example" {
+          name        = "example-sg"
+          description = "Example security group"
+        }
+        
+        resource "aws_instance" "example" {
+          ami           = "ami-0c55b159cbfafe1f0"
+          instance_type = "t2.micro"
+        
+          depends_on = [aws_security_group.example]  # Ensure security group is created first
+        }
+
+## lifecycle
+
+The lifecycle block is used to control the creation, update, and deletion of resources. It has properties like prevent_destroy, create_before_destroy, and ignore_changes.
+
+    Example:
+
+        resource "aws_instance" "example" {
+          ami           = "ami-0c55b159cbfafe1f0"
+          instance_type = "t2.micro"
+        
+          lifecycle {
+            prevent_destroy = true  # Prevents the instance from being destroyed
+          }
+        }
+
+   __Lifecycle Options:__
+
+   * prevent_destroy: ensures that Terraform will not destroy this resource, even if it’s removed from the configuration. This is useful for critical resources like databases that you don't want to accidentally delete.
+   * create_before_destroy: Ensures that a new resource is created before destroying the old one (used during updates).
+   * ignore_changes: Tells Terraform to ignore certain changes to the resource during updates.
+
+## tags
+
+Tags are key-value pairs that you can attach to resources for organization, cost tracking, and management. They can be used on resources like EC2 instances, S3 buckets, and more.
+
+
+    Example (assigns a name and environment tag to the EC2 instance):
+
+        resource "aws_instance" "example" {
+          ami           = "ami-0c55b159cbfafe1f0"
+          instance_type = "t2.micro"
+        
+          tags = {
+            Name        = "MyInstance"
+            Environment = "Production"
+          }
+        }
+
+
+## override
+
+Overrides allow you to modify the resource behavior at runtime. It’s less commonly used but can be helpful in some edge cases.
+
+    Example:
+
+        resource "aws_instance" "example" {
+          ami           = "ami-0c55b159cbfafe1f0"
+          instance_type = "t2.micro"
+        
+          override {
+            ami = "ami-12345678"  # Override the AMI ID at runtime
+          }
+        }
