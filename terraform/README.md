@@ -92,6 +92,37 @@ Navigate using Gitbash (Powershell) to the folder
 
 Initilize the folder. create and download the nessery files needed for deploying the Terraform script.
 
+   type in GitBash:
+   
         terraform init
 
 __*__ done once (or in case there a change in the structure - like modules inside)
+
+## Plan
+
+shows you what changes Terraform will make to your infrastructure based on your configuration.
+
+   type in GitBash:
+   
+        terraform plan
+
+## apply
+
+After reviewing the plan, you run terraform apply to create or modify your infrastructure based on the configuration files.
+
+it compare the "new" configuration to the state and apply the changes (not exucting all).
+
+   type in GitBash:
+   
+        terraform apply
+
+## detroy
+
+delete the infrastructure. removes all the resources managed by Terraform.
+
+
+   type in GitBash:
+   
+        terraform destroy
+
+  
