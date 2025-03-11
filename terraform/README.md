@@ -556,14 +556,14 @@ the command for importing into state is:
 
         terraform import <RESOURCE_TYPE>.<RESOURCE_NAME> <RESOURCE_ID>
 
-      Example (Importing an AWS EC2 Instance that was created outside Terraform):
+   Example (Importing an AWS EC2 Instance that was created outside Terraform):
 
-      Find the EC2 instance ID
+     Find the EC2 instance ID
       
            aws ec2 describe-instances --query "Reservations[*].Instances[*].InstanceId"
 
-      Run the terraform import command to import the EC2 instance into Terraform state
+     Run the terraform import command to import the EC2 instance into Terraform state
 
             terraform import aws_instance.example i-1234567890abcdef0
    
-   This will improt the EC2 to the state so it will managed by the Terraform.
+  This will improt the EC2 to the state so it will managed by the Terraform.
