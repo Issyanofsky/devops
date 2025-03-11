@@ -6,6 +6,8 @@
 
 Tool that helps you automatically get and renew SSL/TLS certificates for your website, allowing your site to use HTTPS (secure connection). It interacts with the Let's Encrypt service to get free certificates.
 
+https://certbot.eff.org/instructions?ws=nginx&os=pip
+
 # Kubernetes Install
 
 ## 1. Install CerBot on the Cluster
@@ -78,4 +80,6 @@ on the Ingress deployment [Ingress](Ingress.md):
              - hosts:
                - domain.com
     
-            
+## 5. PortForward 
+
+Set traffic to the cluster to been directed to the Ingress (LoadBalancer) IP-Address on port 443 (HTTPS).
