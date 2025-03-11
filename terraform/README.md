@@ -542,7 +542,7 @@ By default, Terraform stores this state locally in a file called terraform.tfsta
              }
            }
 
-   <div align="center">
+<div align="center">
 
 # **Importing state**
 
