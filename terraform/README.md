@@ -100,6 +100,16 @@ Initilize the folder. create and download the nessery files needed for deploying
 
 __*__ done once (or in case there a change in the structure - like modules inside)
 
+__--reconfigure (flag):__
+
+Done when changes to the provider configuration or module sources that Terraform needs to pick up.
+
+Or
+
+If you want to reset or refresh your environment without deleting the .terraform directory manually.
+
+         terraform init --reconfigure
+
 ## Plan
 
 shows you what changes Terraform will make to your infrastructure based on your configuration.
@@ -444,7 +454,7 @@ A module is a collection of resources that are used together. You can think of i
          value = aws_instance.example.public_ip
        }
 
-## Use This Module
+## Useing the Module
 
 After creating this module, you can use it in another Terraform configuration as follows:
 
@@ -460,3 +470,32 @@ After creating this module, you can use it in another Terraform configuration as
      }
 
  
+<div align="center">
+
+# **execution plan**
+
+</div>
+
+Generating an execution plan file. contains the changes Terraform intends to make to your infrastructure, and it can be used later to apply those changes.
+
+## Create an execution plan
+
+Run Terraform Plan with --out flag. allows you to save this plan to a file.
+
+       terraform plan --out=myplan.tfplan
+
+## Review the Plan (optional)
+
+You can inspect the plan file by running:
+
+       terraform show myplan.tfplan
+
+## Apply the Plan
+
+ apply the changes (deploy the infrastructure), use the command:
+
+      terraform apply myplan.tfplan
+
+
+
+
