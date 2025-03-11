@@ -208,3 +208,38 @@ __uninstall ingress controller__
 
 [Setting CertBot on the Cluster](/kubernetes/files/certbot.md)
 
+<div align="center">
+
+# **AWS IRSA (IAM Roles for Service Accounts)**
+
+</div>
+
+A way to give permissions to your Kubernetes pods running on Amazon EKS (Elastic Kubernetes Service) without needing to manage AWS access keys (like a general IAM role for the pods to use, by identify as the k8s (oidc)).
+AWS IRSA lets your Kubernetes pods securely access AWS resources by using IAM roles, without the need for hardcoding AWS credentials inside your pods. The OIDC connection ensures secure identity verification between EKS and AWS.
+
+## How IRSA works:
+
+  * create an IAM role with specific AWS permissions.
+  * associate this IAM role with a Kubernetes service account using OIDC.
+
+        example:
+            apiVersion: v1
+            kind: ServiceAccount
+            metadata:
+              name: my-service-account
+              annotations:
+                eks.amazonaws.com/role-arn: arn:aws:iam::<AWS_ACCOUNT_ID>:role/MyEKSIRSA
+
+        apply
+
+            kubectl apply -f service-account.yaml
+
+  * assume the IAM role and get the necessary permissions to access AWS resources (like S3, DynamoDB, etc.).
+
+        example (in the deployment YAML of the pod under "spec:" add the following line):
+
+             serviceAccountName: my-service-account
+
+        apply the deployment 
+
+            kubectl apply -f pod-deployment.yaml
