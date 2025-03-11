@@ -108,7 +108,9 @@ Or
 
 If you want to reset or refresh your environment without deleting the .terraform directory manually.
 
-         terraform init --reconfigure
+     type in GitBash:
+   
+        terraform init --reconfigure
 
 ## Plan
 
