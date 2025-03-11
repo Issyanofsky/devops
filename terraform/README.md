@@ -270,7 +270,7 @@ __*Recomended__ placing the output on a differant file - output.tf (in the same 
 
 <div align="center">
 
-# ** properties and arguments (resources) **
+# **properties and arguments (resources)**
 
 </div>
 
