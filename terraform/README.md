@@ -225,3 +225,69 @@ define how Terraform connects to a remote resource (like an EC2 instance) for ta
 __Create SSH Key__
 
         ssh-keygen -t rsa
+
+
+<div align="center">
+
+## **Data**
+
+</div>
+
+Refers to information you can read from external sources (like your cloud provider) that you can use in your configuration. It doesn’t create new resources, but retrieves information about existing resources.
+
+    Example (Terraform fetches the latest Amazon Linux 2 AMI using data "aws_ami"):
+
+        data "aws_ami" "latest_ami" {
+          most_recent = true
+          owners      = ["amazon"]
+          filters = {
+            name = "amzn2-ami-hvm-*-x86_64-gp2"
+          }
+        }
+        
+        resource "aws_instance" "example" {
+          ami           = data.aws_ami.latest_ami.id
+          instance_type = "t2.micro"
+        }
+
+
+<div align="center">
+
+## **Output**
+
+</div>
+
+Output in Terraform is used to display values after applying the configuration, so you can get important information like the IP address of a created instance, or any other computed value.
+
+__*Recomended__ placing the output on a differant file - output.tf (in the same folder as the main.tf).
+
+     Example (Output the EC2 instance public IP):
+
+         output "instance_public_ip" {
+           value = aws_instance.example.public_ip
+         }
+
+
+<div align="center">
+
+# ** properties and arguments (resources) **
+
+</div>
+
+## count
+
+allows you to create multiple instances of a resource based on a number. It’s useful when you need to create a specific number of resources, like multiple EC2 instances.
+
+    Example:     
+ 
+        resource "aws_instance" "example" {
+          count         = 3  # Creates 3 EC2 instances
+          ami           = "ami-0c55b159cbfafe1f0"
+          instance_type = "t2.micro"
+        }
+
+To reference each instance, you use count.index
+
+       output "instance_public_ip" {
+         value = aws_instance.example[0].public_ip  # Access the first instance's public IP
+       }
