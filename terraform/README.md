@@ -65,7 +65,7 @@ Example for creating an EC2 instance:
       }
 
 
-__IMPORTANT__ the workflow (file .tf) contin the Providers and Resources. the correct file should be:
+__* NOTICE__ the workflow (file .tf) contin the Providers and Resources. the correct file should be:
 
       provider "aws" {
         region = "us-east-1"
