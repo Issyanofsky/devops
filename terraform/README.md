@@ -409,7 +409,7 @@ A module is a collection of resources that are used together. You can think of i
 
 3. Example:
 
-       main.tf
+   main.tf
  
        resource "aws_instance" "example" {
          ami           = var.ami_id
@@ -419,7 +419,7 @@ A module is a collection of resources that are used together. You can think of i
          }
        }
  
-       variables.tf
+   variables.tf
   
        variable "ami_id" {
          description = "The AMI ID"
@@ -434,7 +434,7 @@ A module is a collection of resources that are used together. You can think of i
        }
 
 
-       output.tf
+   output.tf
  
        output "instance_id" {
          value = aws_instance.example.id
