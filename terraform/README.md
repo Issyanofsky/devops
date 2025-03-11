@@ -419,30 +419,30 @@ A module is a collection of resources that are used together. You can think of i
          }
        }
  
-      variables.tf
+       variables.tf
+  
+       variable "ami_id" {
+         description = "The AMI ID"
+       }
+       
+       variable "instance_type" {
+         description = "The instance type"
+       }
+       
+       variable "instance_name" {
+         description = "The name of the instance"
+       }
+
+
+       output.tf
  
-      variable "ami_id" {
-        description = "The AMI ID"
-      }
-      
-      variable "instance_type" {
-        description = "The instance type"
-      }
-      
-      variable "instance_name" {
-        description = "The name of the instance"
-      }
-
-
-      output.tf
-
-      output "instance_id" {
-        value = aws_instance.example.id
-      }
-      
-      output "public_ip" {
-        value = aws_instance.example.public_ip
-      }
+       output "instance_id" {
+         value = aws_instance.example.id
+       }
+       
+       output "public_ip" {
+         value = aws_instance.example.public_ip
+       }
 
 ## Use This Module
 
