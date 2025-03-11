@@ -30,6 +30,7 @@
 ## Other:
 
    * [AWS Cli](./files/cli.md)
+   * [TerraForm](/terraform/README.md)
      
 __Cloud Service Models:__ 
 
