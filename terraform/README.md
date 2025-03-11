@@ -170,3 +170,58 @@ __Using Variables:__
          }
 
          
+<div align="center">
+
+## **Provisioners**
+
+</div>
+
+Execute scripts or commands on the resources after they are created or modified. It’s like performing a setup task (e.g., installing software) on your resources after Terraform has created them.
+
+     Example (When Terraform creates an EC2 instance, it will automatically run the commands to install Nginx on it):
+
+         resource "aws_instance" "example" {
+           ami           = "ami-0c55b159cbfafe1f0"
+           instance_type = "t2.micro"
+         
+           provisioner "remote-exec" {
+             inline = [
+               "sudo apt-get update",
+               "sudo apt-get install -y nginx"
+             ]
+           }
+         }
+
+
+<div align="center">
+
+## **Connections**
+
+</div>
+
+define how Terraform connects to a remote resource (like an EC2 instance) for tasks like provisioning or running scripts. Typically, you use SSH for Linux instances or WinRM for Windows.
+
+     Example (Terraform uses the connection block to SSH into the instance (ubuntu user, using the private key) and execute commands like creating the hello.txt file):
+       
+         resource "aws_instance" "example" {
+           ami           = "ami-0c55b159cbfafe1f0"
+           instance_type = "t2.micro"
+         
+           connection {
+             type        = "ssh"
+             user        = "ubuntu"
+             private_key = file("~/.ssh/id_rsa")
+             host        = self.public_ip
+           }
+         
+           provisioner "remote-exec" {
+             inline = [
+               "echo 'Hello, world!' > /home/ubuntu/hello.txt"
+             ]
+           }
+         }
+
+
+__Create SSH Key__
+
+        ssh-keygen -t rsa
