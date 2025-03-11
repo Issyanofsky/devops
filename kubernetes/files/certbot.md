@@ -74,8 +74,8 @@ on the Ingress deployment [Ingress](Ingress.md):
               nginx.ingress.kubernetes.io/secure-backends: "false"
               nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
 
-            tls:
-              - hosts:
-                - domain.com
+          spec.tls:
+             - hosts:
+               - domain.com
     
             
