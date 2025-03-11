@@ -2,6 +2,6 @@
 
 # **TerraForm**
 
-![Terraform](./pic/terraform.gif)
+![Terraform](./pic/terraform.png)
 </div>
 
