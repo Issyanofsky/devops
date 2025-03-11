@@ -1,7 +1,7 @@
 <div align="center">
 
 # **CertBot**
-
+![CertBot](./pic/certbot.gif)
 </div>
 
 Tool that helps you automatically get and renew SSL/TLS certificates for your website, allowing your site to use HTTPS (secure connection). It interacts with the Let's Encrypt service to get free certificates.
