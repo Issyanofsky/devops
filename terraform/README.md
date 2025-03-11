@@ -1,11 +1,11 @@
-For more Terraform examples. visit: <div align="center">
+<div align="center">
 
 # **TerraForm**
 
 ![Terraform](./pic/terraform.gif)
 </div>
 
-https://github.com/Issyanofsky/terraform-class
+For more Terraform examples. visit: https://github.com/Issyanofsky/terraform-class
 
 A tool that helps you automate and manage your cloud infrastructure in a simple and consistent way.
 
