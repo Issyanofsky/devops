@@ -22,7 +22,7 @@ popular Ingress:
 
 <div align="center">
 
-# **Install NGINX Ingress**
+# **Install Ingress (Nginx)**
 
 </div>
 
