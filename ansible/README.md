@@ -28,3 +28,12 @@ __*IMPORTANT__ only work on Linux. Ansible must be deploy on a Linux base server
 
 __* NOTE__ Not good for installing operation systems.
 
+<div align="center">
+
+# **Install Ansible Server**
+
+</div>
+
+https://www.ansiblepilot.com/articles/how-to-install-ansible-in-ubuntu-24.04-ansible-install/
+
+## 
