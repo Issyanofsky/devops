@@ -11,7 +11,7 @@ Terragrunt automates tasks like setting variables, handling state files, and wor
 
 Example (creating EKS and ECS cluster using Terragrunt): https://github.com/Issyanofsky/infra
 
-# pre-hook, post-hook, and error-hook
+## pre-hook, post-hook, and error-hook
 
 In Terragrunt, pre-hook, post-hook, and error-hook are commands you can use to run custom scripts before, after, or if something goes wrong during the Terraform run.
 
@@ -68,7 +68,7 @@ In Terragrunt, pre-hook, post-hook, and error-hook are commands you can use to r
 
 <div align="center">
 
-## **Install Terragrunt**
+# **Install Terragrunt**
 
 </div>
 
