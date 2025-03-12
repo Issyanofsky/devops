@@ -65,3 +65,32 @@ In Terragrunt, pre-hook, post-hook, and error-hook are commands you can use to r
               args    = []
             }
           ]
+
+<div align="center">
+
+## **Install Terragrunt**
+
+</div>
+
+__1. download Terragrunt.exe__
+
+     Navigate to https://terragrunt.gruntwork.io/docs/getting-started/install/.
+
+     Download the correct file (for windows download - terragrunt_windows_amd64.exe)
+
+__2. Copy file (Terragrunt.exe)__
+
+    Copy content to a NEW folder on the computer.
+
+__3. set Environment setting__
+
+    Set the PATH of the folder just created in the environment setting of windows.
+
+__4. Check Installation__
+
+    type:
+
+      terragrunt --version 
+
+
+
