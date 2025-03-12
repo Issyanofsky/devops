@@ -36,4 +36,34 @@ __* NOTE__ Not good for installing operation systems.
 
 https://www.ansiblepilot.com/articles/how-to-install-ansible-in-ubuntu-24.04-ansible-install/
 
-## 
+## 1. Prerequisites
+
+  * A Linux server for deploying Ansible.
+
+## 2. Creating Key-pair
+
+creating a key-pair for connecting  to the network mechine using SSH.
+    
+    Log into the server, and type:
+
+          ssh-keygen -t rsa
+
+## 3. Install Ansible
+
+on the ansible server (log into it):
+
+          sudo apt update
+          sudo apt upgrade
+          sudo apt install ansible
+
+Verify Installation:
+    
+          ansible --version
+          ansible-playbook --version
+          ansible-galaxy --version
+
+__*IMPORTANT__ check that all versions are the same.
+
+          
+
+        
