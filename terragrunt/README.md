@@ -11,7 +11,7 @@ Terragrunt automates tasks like setting variables, handling state files, and wor
 
 Example (creating EKS and ECS cluster using Terragrunt): https://github.com/Issyanofsky/infra
 
-__Terragrunt File type:__ in Terragrount the file types used are __.hcl__ (file.hcl).
+__Terragrunt File type (hcl):__ in Terragrount the file types used are __.hcl__ (file.hcl).
 
 ## pre-hook, post-hook, and error-hook
 
