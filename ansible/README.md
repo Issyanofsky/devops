@@ -278,6 +278,8 @@ Ansible provides different ways to loop through data, such as using __loop__, __
 
 A feature in Ansible that allows you to encrypt sensitive data, such as passwords, API keys, or private information, so they can be safely stored in your playbooks and inventories without exposing them in plain text.
 
+Ansible Vault is used to encrypt sensitive data and protect it with a password, ensuring that sensitive information remains secure within your automation workflows (can upload to Github without exposing secrets (password and such)).
+
   __Key Features:__
 
    * __Encryption:__ Ansible Vault encrypts files, variables, or even specific parts of playbooks, making them unreadable to unauthorized users.
