@@ -227,3 +227,89 @@ Interacts with the Terraform state, allowing you to perform actions like show, l
      Example:
 
         terragrunt state list
+
+
+<div align="center">
+
+# **Terragrunt Key blocks**
+
+</div>
+
+## terraform {}
+
+Specifies the Terraform configuration, like the source of the modules you want to use.
+
+     Example (tells Terragrunt where to find the Terraform module for network):
+
+         terraform {
+           source = "../modules/network"
+         }
+
+## locals {}
+
+Define local variables within your Terragrunt configuration that you can reuse.
+
+     Example (defines a local variable environment with the value "dev"):
+
+         locals {
+           environment = "dev"
+         }
+
+## include {}
+
+Includes settings from another Terragrunt configuration, making it reusable across different environments.
+
+     Example (includes a common configuration from a parent folder):
+
+         include {
+           path = find_in_parent_folders()
+         }
+
+
+## inputs {}
+
+Passes variables (inputs) to Terraform modules.
+
+     Example (passes the region and instance_type values to the Terraform module):
+
+         inputs = {
+           region = "us-east-1"
+           instance_type = "t2.micro"
+         }
+
+## generate "provider" {}
+
+Automatically generates a Terraform configuration file, typically for setting up providers (e.g., AWS, Azure).
+
+     Example (generates a provider.tf file with the AWS provider configuration):
+
+         generate "provider" {
+           path = "provider.tf"
+           if_exists = "overwrite"
+           contents = <<EOF
+         provider "aws" {
+           region = "us-west-2"
+         }
+         EOF
+         }
+
+## generate "backend" {}
+
+Automatically generates the backend configuration for storing Terraform state (e.g., in S3, remote storage).
+
+     Example (generates a backend.tf file to store the Terraform state in an S3 bucket):
+
+         generate "backend" {
+           path = "backend.tf"
+           if_exists = "overwrite"
+           contents = <<EOF
+         terraform {
+           backend "s3" {
+             bucket = "my-tf-state"
+             key    = "path/to/statefile"
+             region = "us-west-2"
+           }
+         }
+         EOF
+         }
+
