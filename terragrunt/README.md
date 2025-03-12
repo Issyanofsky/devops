@@ -17,6 +17,32 @@ For more on [TerraForm](/terraform/README.md)
 
 __Terragrunt File type (hcl):__ in Terragrount the file types used are __.hcl__ (file.hcl).
 
+<div align="center">
+
+# **Install Terragrunt**
+
+</div>
+
+__1. download Terragrunt.exe__
+
+     Navigate to https://terragrunt.gruntwork.io/docs/getting-started/install/.
+
+     Download the correct file (for windows download - terragrunt_windows_amd64.exe)
+
+__2. Copy file (Terragrunt.exe)__
+
+    Copy content to a NEW folder on the computer.
+
+__3. set Environment setting__
+
+    Set the PATH of the folder just created in the environment setting of windows.
+
+__4. Check Installation__
+
+    type:
+
+      terragrunt --version 
+
 ## pre-hook, post-hook, and error-hook
 
 In Terragrunt, pre-hook, post-hook, and error-hook are commands you can use to run custom scripts before, after, or if something goes wrong during the Terraform run.
@@ -108,31 +134,6 @@ Deploying Terragrunt in a folder structure helps keep everything organized and r
           │   │   └── outputs.tf
           └── /terragrunt.hcl
 
-<div align="center">
-
-# **Install Terragrunt**
-
-</div>
-
-__1. download Terragrunt.exe__
-
-     Navigate to https://terragrunt.gruntwork.io/docs/getting-started/install/.
-
-     Download the correct file (for windows download - terragrunt_windows_amd64.exe)
-
-__2. Copy file (Terragrunt.exe)__
-
-    Copy content to a NEW folder on the computer.
-
-__3. set Environment setting__
-
-    Set the PATH of the folder just created in the environment setting of windows.
-
-__4. Check Installation__
-
-    type:
-
-      terragrunt --version 
 
 <div align="center">
 
