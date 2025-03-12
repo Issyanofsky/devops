@@ -92,5 +92,80 @@ __4. Check Installation__
 
       terragrunt --version 
 
+<div align="center">
+
+# **Terragrunt commands**
+
+</div>
+
+## init
+
+This command initializes the Terragrunt working directory, setting up necessary Terraform providers and modules.
+
+     Example:
+
+        terragrunt init
+        
+## plan
+
+This command generates an execution plan for Terraform. It shows what changes Terragrunt will make to your infrastructure.
+
+     Example:
+
+        terragrunt plan
+
+## apply
+
+This command applies the changes defined in your Terraform configuration to your infrastructure.
+
+     Example:
+
+        terragrunt apply
+
+## destroy
+
+This command destroys all the resources defined in your Terraform configuration, effectively removing the infrastructure.
+
+     Example:
+
+        terragrunt destroy
+
+## output
+
+This command displays the outputs from a previously applied Terraform plan. Useful to view the values defined in your Terraform output blocks.
+
+     Example:
+
+        terragrunt output
 
 
+## validate
+
+This command checks the syntax and validity of your Terraform configuration files.
+
+     Example:
+
+        terragrunt validate
+
+    Also for validates all the Terraform configurations in all directories.
+
+        terragrunt validate-all
+
+## run-all
+
+Runs the command in all subdirectories (environments) recursively. Useful if you have multiple environments or modules.
+
+     Example:
+
+        terragrunt run-all plan
+        terragrunt run-all apply
+        terragrunt run-all destroy
+        terragrunt run-all output (Retrieves the outputs from all Terraform configurations recursively across multiple environments.) 
+
+## state
+
+Interacts with the Terraform state, allowing you to perform actions like show, list, etc.
+
+     Example:
+
+        terragrunt state list
