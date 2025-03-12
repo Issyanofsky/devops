@@ -139,6 +139,12 @@ delete the infrastructure. removes all the resources managed by Terraform.
    
         terraform destroy
 
+__* --auto-approve (flag)__  automatically approves and applies changes to your infrastructure without asking for confirmation.
+
+By default, Terraform will prompt you to confirm before making any changes. Using --auto-approve skips that prompt, making the process quicker when you're confident about the changes you're making.
+
+      terraform apply --auto-approve
+      
 <div align="center">
 
 ## **State**
