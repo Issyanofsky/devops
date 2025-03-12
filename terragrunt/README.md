@@ -25,8 +25,10 @@ __Terragrunt File type (hcl):__ in Terragrount the file types used are __.hcl__ 
 
 __1. download Terragrunt.exe__
 
-     Navigate to https://terragrunt.gruntwork.io/docs/getting-started/install/.
-
+     Navigate to 
+               
+          https://terragrunt.gruntwork.io/docs/getting-started/install/
+     
      Download the correct file (for windows download - terragrunt_windows_amd64.exe)
 
 __2. Copy file (Terragrunt.exe)__
