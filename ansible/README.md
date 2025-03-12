@@ -9,9 +9,13 @@ Ansible is a tool used for automating tasks like setting up servers, configuring
 
 example:
 
-    ansible project: [https://github.com/Issyanofsky/react-java0mysql](https://github.com/Issyanofsky/react-java0mysql)
+    ansible project:
+    
+[https://github.com/Issyanofsky/react-java0mysql](https://github.com/Issyanofsky/react-java0mysql)
   
-    ansible exercise: [https://github.com/Issyanofsky/react-java0mysql](https://github.com/Issyanofsky/ansible-class)
+    ansible exercise:
+
+[https://github.com/Issyanofsky/react-java0mysql](https://github.com/Issyanofsky/ansible-class)
 
 ## Key Points:
 
