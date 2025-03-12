@@ -94,12 +94,12 @@ Set the remote mechine to allow access to the Ansible (root privilage).
 
  <div align="center">
  
-   # structures
+   # structure
    
 ![Ansible](./pic/ansible1.gif)
 </div>    
 
-## Key files structures
+## Key files structure
 
   * __Inventory:__ This file lists all the servers (hosts) that Ansible will manage. It can be a simple text file where you list server names or IP addresses.
   * __Playbook:__ A playbook is a YAML file where you write instructions (plays) for Ansible to follow. It tells Ansible what tasks to run on the servers (like installing software, copying files, etc.).
@@ -111,3 +111,44 @@ Set the remote mechine to allow access to the Ansible (root privilage).
             ├── inventory/       # List of servers
             ├── playbooks/       # YAML playbook files
             └── roles/           # Optional, for organizing tasks
+
+## Creating Ansible evironment
+
+ initialize an Ansible configuration file with all options disabled.
+
+       on the absible server:
+
+           ansible-config init --disabled > ansible.cfg
+
+__*Optionally__ 
+
+    create a folder and create a ansible.cfg file manualy.
+
+    Add the follwoing line to the ansible.cfg:
+
+          [defaults]
+          inventory=<location_of_the_inventory_file>
+
+## Setting Inventory File
+
+Simple text file where you list server names or IP addresses.
+
+Add the mechine to manage in a list:
+
+          nano inventory.ini
+
+  add the mechine (including the Ansible), example:
+
+          [remote-controler]
+          ansible ansible_host=172.0.0.1 ansible_connection=local become=true
+          
+          [control-plane]
+          cp ansible_host=192.168.1.70 ansible_become=true
+          
+          [workers]
+          w0 ansible_host=192.168.1.71 ansible_become=true
+          w1 ansible_host=192.168.1.72 ansible_become=true
+          
+          [k8s_cluster:children]
+          control-plain
+          workers
