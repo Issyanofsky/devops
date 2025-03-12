@@ -349,3 +349,183 @@ You can install roles from Galaxy using the ansible-galaxy command.
     Deploy:
 
             ansible-playbook site.yml
+
+ <div align="center">
+ 
+   ## Common Commands and FLags
+
+</div> 
+
+## Run Playbook
+
+execute a playbook.
+
+        ansible-playbook <playbook.yml>
+
+if inventory.ini located on diferent folder:
+
+        ansible-playbook -i <Inventory_file_path_&_Name> <playbook.yml>
+
+        (ansible-playbook -i ../inventory.ini playbook.yaml)
+
+## Ping All Hosts
+
+check the connection to all hosts defined in your inventory.
+
+        ansible all -m ping
+
+## Check Specific Host(s)
+
+run a task or command on a specific host or group of hosts from your inventory.
+
+        ansible <host/group> -m <module>
+        (ansible webservers -m ping)
+
+## Run a Command on Hosts
+
+run any command (shell command) on remote hosts.
+
+        ansible <host/group> -m shell -a "command"
+
+## Check the Hosts Inventory
+
+This command shows the list of hosts defined in your Ansible inventory.
+
+        ansible-inventory --list
+
+## Test an Ansible Configuration
+
+You can test if your Ansible configuration file (ansible.cfg) is set up correctly.
+
+        ansible-config list
+
+## Install a Role from Ansible Galaxy
+
+To install roles from Ansible Galaxy, which is a community repository for Ansible content.
+
+        ansible-galaxy install <role_name>
+
+## Create a New Role
+
+To create a new role in the default directory structure.
+
+        ansible-galaxy init <role_name>
+
+## Check for Syntax Errors in a Playbook
+
+To validate the syntax of your playbook before running it. This runs the playbook in check mode, which means it shows you what would happen, but it doesn't make any changes.
+
+        ansible-playbook playbook.yml --check
+
+## View Available Collections
+
+ List all available collections installed on your system.
+
+         ansible-galaxy collection list
+
+## View Ansible Version
+    
+check which version of Ansible is installed.
+
+        ansible --version
+        ansible-playbook --version
+        ansible-galaxy --version
+
+## List Hosts in an Inventory
+
+List all the hosts in your inventory file.
+
+        ansible-inventory --host <hostname>
+
+## Get Facts from Hosts
+
+Ansible can collect detailed information about your hosts using the setup module. This gives you "facts" about the system.
+
+        ansible <host/group> -m setup
+        (ansible webservers -m setup | grep OS_family)
+
+## Run a Playbook with Extra Variables
+
+If you want to pass extra variables while running a playbook.
+
+        ansible-playbook playbook.yml -e "variable_name=value"
+
+        (ansible-playbook site.yml -e "nginx_version=1.18")
+
+## Run a Playbook with Tags
+
+You can execute only specific parts of a playbook using tags.
+
+        ansible-playbook playbook.yml --tags "tag_name"
+
+## Run a Playbook with Limit
+
+You can limit the playbook execution to specific hosts (useful for running playbooks on subsets of hosts).
+
+        ansible-playbook playbook.yml --limit <host/group>
+
+## View Available Modules
+
+see all the available modules in your version of Ansible.
+
+        ansible-doc -l
+
+## Get Help on a Specific Module
+
+To view documentation about a specific module.
+
+        ansible-doc <module_name>
+
+## Creating a file on all remote clients
+
+       ansible all –m file –a “path=/home/iafzal/adhoc1 state=touch mode=700”
+
+## Deleting a file on all remote clients
+
+       ansible all –m file –a “path=/home/iafzal/adhoc1 state=absent”
+
+## Copying a file to remote clients
+
+       ansible all –m copy –a “src=/tmp/adhoc2 dest=/home/iafzal/adhoc2”
+
+## Installing package (telnet and httpd-manual)
+
+       ansible all –m yum –a “name=telnet state=present”
+
+       ansible all –m yum –a “name=httpd-manual state=present”. 
+
+## Starting httpd package service
+   
+       ansible all –m service –a “name=httpd state=started”
+
+## Start httpd and enable at boot time
+
+       ansible all –m service –a “name=httpd state=started enabled=yes”
+
+## Checking httpd service status on remote client
+
+       ansible all –m shell -a “systemctl status httpd”
+
+## Remove httpd package
+
+       ansible all –m yum –a “name=httpd state=absent”
+OR
+       ansible all –m shell -a “yum remove httpd”.
+
+## Creating a user on remote clients
+
+       ansible all –m user –a “name=jsmith home=/home/jsmith shell=/bin/bash state=present”
+
+## To add a user to a different group
+
+       ansible all –m user –a “name=jsmith group=iafzal”
+
+## Deleting a user on remote clients
+
+       ansible all –m user –a “name=jsmith home=/home/jsmith shell=/bin/bash state=absent”
+OR
+       ansible all –m shell –a “userdel jsmith”
+
+## You can run commands on the remote host without a shell module e.g. reboot client1
+
+      ansible client1 –a “/sbin/reboot”
