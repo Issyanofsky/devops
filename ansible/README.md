@@ -229,28 +229,28 @@ condition types:
      - failed_when: This condition determines when a task is considered failed based on its result.
      - changed_when: This condition controls when a task is considered changed (i.e., when it has modified something).
 
-        - name: Check if a file exists
-          stat:
-            path: /path/to/file
-          register: file_status
-          failed_when: file_status.stat.exists == False  # Fail if the file doesn't exist
-
-        - name: Update config file
-          copy:
-            src: config.conf
-            dest: /etc/config.conf
-          changed_when: false  # Task is never marked as "changed", even if it updates the file
+            - name: Check if a file exists
+              stat:
+                path: /path/to/file
+              register: file_status
+              failed_when: file_status.stat.exists == False  # Fail if the file doesn't exist
+    
+            - name: Update config file
+              copy:
+                src: config.conf
+                dest: /etc/config.conf
+              changed_when: false  # Task is never marked as "changed", even if it updates the file
 
    * __until__ You can use until with conditions to retry tasks until a certain condition is met.
     
-        - name: Wait for service to be up
-          service:
-            name: nginx
-            state: started
-          register: service_status
-          until: service_status.state == 'started'
-          retries: 5
-          delay: 10  # Retry every 10 seconds
+            - name: Wait for service to be up
+              service:
+                name: nginx
+                state: started
+              register: service_status
+              until: service_status.state == 'started'
+              retries: 5
+              delay: 10  # Retry every 10 seconds
 
 
 ## Ansible Roles
