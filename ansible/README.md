@@ -274,7 +274,46 @@ Ansible provides different ways to loop through data, such as using __loop__, __
                 - curl
                 - git
 
-    
+## Ansible Vault
+
+A feature in Ansible that allows you to encrypt sensitive data, such as passwords, API keys, or private information, so they can be safely stored in your playbooks and inventories without exposing them in plain text.
+
+  __Key Features:__
+
+   * __Encryption:__ Ansible Vault encrypts files, variables, or even specific parts of playbooks, making them unreadable to unauthorized users.
+   * __Password Protection:__ You can use a password to encrypt and decrypt these files, ensuring only authorized users can access sensitive information.
+
+   __Use Cases:__   
+
+   * Storing secrets like database passwords.
+   * Protecting sensitive configuration files.
+   * Encrypting variables in playbooks.
+
+### Create a new encrypted file
+
+This will open an editor where you can add encrypted content.
+
+            ansible-vault create secret.yml
+
+ ### Encrypt an existing file
+
+            ansible-vault encrypt plain_text_file.yml
+
+
+ ### Decrypt a file
+
+            ansible-vault decrypt secret.yml
+
+ ### Edit an encrypted file
+
+            ansible-vault edit secret.yml
+
+  ### Run a playbook with encrypted variables
+
+  This will prompt you for the vault password to decrypt the content during execution.
+  
+           ansible-playbook --ask-vault-pass playbook.yml
+
 ## Ansible Roles
 
 A way to organize playbooks and tasks into reusable, logical units. A role contains tasks, variables, handlers, files, templates, and defaults in a structured directory format.
@@ -356,7 +395,7 @@ You can install roles from Galaxy using the ansible-galaxy command.
 
 </div> 
 
-## Run Playbook
+### Run Playbook
 
 execute a playbook.
 
