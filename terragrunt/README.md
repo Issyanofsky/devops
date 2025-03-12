@@ -13,6 +13,8 @@ Example (creating EKS and ECS cluster using Terragrunt): https://github.com/Issy
 
 Terragrunt is essentially a wrapper for Terraform. It is built on top of Terraform and extends its functionality to make managing infrastructure easier, especially in complex scenarios where you have multiple environments, modules, or configurations.
 
+For more on [TerraForm](/terraform/README.md)
+
 __Terragrunt File type (hcl):__ in Terragrount the file types used are __.hcl__ (file.hcl).
 
 ## pre-hook, post-hook, and error-hook
