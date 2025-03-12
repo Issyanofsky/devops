@@ -72,6 +72,42 @@ In Terragrunt, pre-hook, post-hook, and error-hook are commands you can use to r
             }
           ]
 
+
+<div align="center">
+
+# **Terragrunt Folder structure**
+
+</div>
+
+Deploying Terragrunt in a folder structure helps keep everything organized and reusable.
+
+      example:
+  
+          /infrastructure
+          ├── /live
+          │   ├── /dev
+          │   │   ├── terragrunt.hcl
+          │   │   └── /network
+          │   │       └── terragrunt.hcl
+          │   ├── /staging
+          │   │   ├── terragrunt.hcl
+          │   │   └── /network
+          │   │       └── terragrunt.hcl
+          │   └── /prod
+          │       ├── terragrunt.hcl
+          │       └── /network
+          │           └── terragrunt.hcl
+          ├── /modules
+          │   ├── /network
+          │   │   └── main.tf
+          │   │   └── variables.tf
+          │   │   └── outputs.tf
+          │   ├── /database
+          │   │   └── main.tf
+          │   │   └── variables.tf
+          │   │   └── outputs.tf
+          └── /terragrunt.hcl
+
 <div align="center">
 
 # **Install Terragrunt**
