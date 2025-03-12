@@ -7,6 +7,10 @@
 
 Ansible is a tool used for automating tasks like setting up servers, configuring software, and managing infrastructure.
 
+example:
+  ansible project: [https://github.com/Issyanofsky/react-java0mysql](https://github.com/Issyanofsky/react-java0mysql)
+  ansible exercise: [https://github.com/Issyanofsky/react-java0mysql](https://github.com/Issyanofsky/ansible-class)
+
 ## Key Points:
 
   1. __Configuration Management:__ It helps automate the setup and management of servers (like installing software, updating settings, etc.).
@@ -191,4 +195,10 @@ __key structure:__
               service:
                 name: "{{ app_name }}"
                 state: restarted
+
+## Ansible Roles
+
+A way to organize playbooks and tasks into reusable, logical units. A role contains tasks, variables, handlers, files, templates, and defaults in a structured directory format.
+
+Roles make your playbooks more modular, readable, and reusable.
 
