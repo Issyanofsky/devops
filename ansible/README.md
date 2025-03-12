@@ -202,6 +202,57 @@ __key structure:__
                 name: "{{ app_name }}"
                 state: restarted
 
+## Condition
+
+Control the flow of tasks, allowing them to run only when certain conditions are met.
+
+condition types:
+
+   * __when__ The when statement allows you to run a task only if a condition is true.
+
+         - name: Install nginx
+          apt:
+            name: nginx
+            state: present
+          when: nginx_installed.rc != 0  # Only run if nginx is not installed
+
+    Boolean (True/False)
+    
+        - name: Install apache if apache_enabled is true
+          apt:
+            name: apache2
+            state: present
+          when: apache_enabled == true
+
+   * __failed_when and changed_when__
+
+     - failed_when: This condition determines when a task is considered failed based on its result.
+     - changed_when: This condition controls when a task is considered changed (i.e., when it has modified something).
+
+        - name: Check if a file exists
+          stat:
+            path: /path/to/file
+          register: file_status
+          failed_when: file_status.stat.exists == False  # Fail if the file doesn't exist
+
+        - name: Update config file
+          copy:
+            src: config.conf
+            dest: /etc/config.conf
+          changed_when: false  # Task is never marked as "changed", even if it updates the file
+
+   * __until__ You can use until with conditions to retry tasks until a certain condition is met.
+    
+        - name: Wait for service to be up
+          service:
+            name: nginx
+            state: started
+          register: service_status
+          until: service_status.state == 'started'
+          retries: 5
+          delay: 10  # Retry every 10 seconds
+
+
 ## Ansible Roles
 
 A way to organize playbooks and tasks into reusable, logical units. A role contains tasks, variables, handlers, files, templates, and defaults in a structured directory format.
