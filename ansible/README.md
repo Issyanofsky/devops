@@ -18,3 +18,13 @@ Ansible is a tool used for automating tasks like setting up servers, configuring
 __*__ on the free version - it doesnt have a Database.
 
 __*IMPORTANT__ only work on Linux. Ansible must be deploy on a Linux base server.
+
+## Good for:
+
+  1. __Provision System:__ It sets up new machines or servers by installing the necessary software and configurations.
+  2. __Configure System:__ It adjusts system settings, like network configurations or software settings, to match a desired state.
+  3. __Deploy Apps:__ It installs and updates applications on servers.
+  4. __Manage Systems and Apps:__ It ensures the systems and apps are running smoothly and as expected, fixing issues if needed.
+
+__* NOTE__ Not good for installing operation systems.
+
