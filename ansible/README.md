@@ -64,6 +64,32 @@ Verify Installation:
 
 __*IMPORTANT__ check that all versions are the same.
 
-          
+<div align="center">
 
-        
+# **Setting Remote mechine (computers)**
+
+</div>
+
+Set the remote mechine to allow access to the Ansible (root privilage).
+
+  1. __export public key__
+
+     Allowing SSH connection using key-pair (avoiding passward).
+
+           From within the Ansible server (repeat this for each remote mechine):
+
+                 ssh-copy-id <ansible_user>@<mechine_name or IP>
+     
+  2. __Set root permission (on Ubuntu)__
+     
+      gives the user permission to run any command as any user (including root) without needing to enter a password when using sudo
+
+           On each of the mechine (connect to each one), set root permission.
+     
+                sudo visudo
+
+           roll down, under %sudo, Add the following line:
+
+               <user> ALL=(ALL) NOPASSWD: ALL
+
+     
