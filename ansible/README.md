@@ -152,3 +152,43 @@ Add the mechine to manage in a list:
           [k8s_cluster:children]
           control-plain
           workers
+
+
+## Ansible playbook
+
+__key structure:__
+
+  * __hosts:__ Specifies the target machines or groups of machines (from the inventory) where tasks will be executed.
+  * __Tasks:__ A list of actions (commands or modules) to be performed on the hosts. Each task typically uses a module, like installing a package or copying a file.
+  * __Variables:__ Optional, but you can define variables that can be reused throughout the playbook.
+  * __Handlers:__ Special tasks that only run when notified by other tasks (like restarting a service after a configuration change).
+  * __Name:__ A human-readable description of the playbook, tasks, or handlers, used for clarity and documentation.
+  * __tags:__ used to run specific parts of a playbook or limit the execution of tasks. This is helpful when you only want to run certain tasks instead of the entire playbook.
+  * __become:__ used to execute tasks with escalated privileges (like sudo), allowing Ansible to run commands as a different user, typically as the root user.
+
+    Example:
+
+        ---
+        - name: Example playbook
+          hosts: webservers
+          become: yes  # Use sudo to execute tasks as root
+          vars:
+            app_name: "myapp"
+          
+          tasks:
+            - name: Install package
+              apt:
+                name: "{{ app_name }}"
+                state: present
+        
+            - name: Start service
+              service:
+                name: "{{ app_name }}"
+                state: started
+        
+          handlers:
+            - name: Restart service
+              service:
+                name: "{{ app_name }}"
+                state: restarted
+
