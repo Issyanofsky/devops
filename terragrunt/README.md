@@ -11,6 +11,8 @@ Terragrunt automates tasks like setting variables, handling state files, and wor
 
 Example (creating EKS and ECS cluster using Terragrunt): https://github.com/Issyanofsky/infra
 
+Terragrunt is essentially a wrapper for Terraform. It is built on top of Terraform and extends its functionality to make managing infrastructure easier, especially in complex scenarios where you have multiple environments, modules, or configurations.
+
 __Terragrunt File type (hcl):__ in Terragrount the file types used are __.hcl__ (file.hcl).
 
 ## pre-hook, post-hook, and error-hook
@@ -153,6 +155,22 @@ This command checks the syntax and validity of your Terraform configuration file
 
         terragrunt validate-all
 
+## hclfmt
+
+This command formats your terragrunt.hcl files to make them more readable and consistent, following standard HCL (HashiCorp Configuration Language) style guidelines.
+
+     Example:
+
+        terragrunt hclfmt
+
+## hclcheck
+
+This command checks if your terragrunt.hcl files are valid. It ensures that the syntax is correct, which helps avoid errors before running Terraform.
+
+     Example:
+
+        terragrunt hclcheck
+        
 ## run-all
 
 Runs the command in all subdirectories (environments) recursively. Useful if you have multiple environments or modules.
