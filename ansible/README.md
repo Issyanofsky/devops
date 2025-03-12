@@ -92,4 +92,7 @@ Set the remote mechine to allow access to the Ansible (root privilage).
 
                <user> ALL=(ALL) NOPASSWD: ALL
 
-     
+ <div align="center">
+
+![Ansible](./pic/ansible1.gif)
+</div>    
