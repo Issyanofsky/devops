@@ -11,3 +11,57 @@ Terragrunt automates tasks like setting variables, handling state files, and wor
 
 Example (creating EKS and ECS cluster using Terragrunt): https://github.com/Issyanofsky/infra
 
+# pre-hook, post-hook, and error-hook
+
+In Terragrunt, pre-hook, post-hook, and error-hook are commands you can use to run custom scripts before, after, or if something goes wrong during the Terraform run.
+
+  * __per-hook:__ Runs a command or script before Terraform starts. For example, you can use it to check for prerequisites or set up something needed for the infrastructure.
+  * __post-hook:__ Runs a command or script after Terraform finishes. You can use this to do cleanup, send notifications, or any other task once the changes are applied.
+  * __error-hook:__ Runs a command or script if Terraform fails (e.g., if an error happens during the process). You can use it for logging or alerting in case of failure.
+
+      Example:
+    
+          terraform {
+            source = "../modules/network"
+          }
+          
+          # Pre-hook: Run before Terraform plan or apply
+          locals {
+            pre_hook_command = "echo 'Running pre-hook: Checking prerequisites...'"
+          }
+          
+          # Run pre-hook before any terraform commands
+          dependencies {
+            pre_hooks = [
+              {
+                command = local.pre_hook_command
+                args    = []
+              }
+            ]
+          }
+          
+          # Post-hook: Run after Terraform apply
+          locals {
+            post_hook_command = "echo 'Running post-hook: Sending notifications...'"
+          }
+          
+          # Run post-hook after terraform apply
+          post_hooks = [
+            {
+              command = local.post_hook_command
+              args    = []
+            }
+          ]
+          
+          # Error-hook: Run if Terraform fails
+          locals {
+            error_hook_command = "echo 'Error occurred: Running error-hook for logging...'"
+          }
+          
+          # Run error-hook if terraform fails
+          error_hooks = [
+            {
+              command = local.error_hook_command
+              args    = []
+            }
+          ]
