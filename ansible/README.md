@@ -208,3 +208,71 @@ A way to organize playbooks and tasks into reusable, logical units. A role conta
 
 Roles make your playbooks more modular, readable, and reusable.
 
+
+    __Role structure:__
+
+    deviding the YAML file (extracting the task part to a ceperate file (in the root folder)
+    
+        my_playbook/
+          ├── site.yml
+          └── roles/
+              └── nginx/
+                  └── tasks/
+                      └── main.yml
+
+
+    Example:
+
+        roles/nginx/tasks/main.yml
+
+            ---
+            - name: Install nginx
+              apt:
+                name: nginx
+                state: present
+            
+            - name: Start nginx service
+              service:
+                name: nginx
+                state: started
+                enabled: yes
+                
+        site.yml
+
+            ---
+            - name: Deploy nginx on webservers
+              hosts: webservers
+              become: yes
+              roles:
+                - nginx
+
+    Run playbook:
+
+            ansible-playbook site.yml
+
+## Ansible Galaxy
+
+a community platform where you can share, discover, and reuse Ansible roles and collections. You can find pre-made roles for various tasks, like setting up databases, web servers, or monitoring tools.
+
+You can install roles from Galaxy using the ansible-galaxy command.
+
+    Example (contain 2 galaxy roles):
+
+            ansible-galaxy role install geerlingguy.docker
+
+            ansible-galaxy role install geerlgguy.pip
+
+    create a YAML file:
+
+            ---
+              - hosts: ansible
+                vars:
+                  pip_install_packages:
+                    - name: docker
+                roles:
+                  - geerlingguy.pip
+                  - geerlingguy.docker
+
+    Deploy:
+
+            ansible-playbook site.yml
