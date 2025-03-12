@@ -226,8 +226,8 @@ condition types:
 
    * __failed_when and changed_when__
 
-     - failed_when: This condition determines when a task is considered failed based on its result.
-     - changed_when: This condition controls when a task is considered changed (i.e., when it has modified something).
+     - __failed_when:__ This condition determines when a task is considered failed based on its result.
+     - __changed_when:__ This condition controls when a task is considered changed (i.e., when it has modified something).
 
             - name: Check if a file exists
               stat:
