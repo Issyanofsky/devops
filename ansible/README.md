@@ -66,7 +66,7 @@ __*IMPORTANT__ check that all versions are the same.
 
 <div align="center">
 
-# **Setting Remote mechine (computers)**
+## **Setting Remote mechine (computers)**
 
 </div>
 
@@ -93,6 +93,19 @@ Set the remote mechine to allow access to the Ansible (root privilage).
                <user> ALL=(ALL) NOPASSWD: ALL
 
  <div align="center">
-
+ #structures
 ![Ansible](./pic/ansible1.gif)
 </div>    
+
+## Key files structures
+
+  * __Inventory:__ This file lists all the servers (hosts) that Ansible will manage. It can be a simple text file where you list server names or IP addresses.
+  * __Playbook:__ A playbook is a YAML file where you write instructions (plays) for Ansible to follow. It tells Ansible what tasks to run on the servers (like installing software, copying files, etc.).
+  * __Roles (optional):__ for organizing tasks into reusable units.
+
+  Example of file structure:
+
+          ansible/
+            ├── inventory/       # List of servers
+            ├── playbooks/       # YAML playbook files
+            └── roles/           # Optional, for organizing tasks
