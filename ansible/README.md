@@ -252,7 +252,29 @@ condition types:
               retries: 5
               delay: 10  # Retry every 10 seconds
 
+## Loop
 
+Allow to run a task multiple times with different inputs. This is useful when you need to repeat the same task for a list of items, like installing several packages, managing users, or iterating over files.
+
+Ansible provides different ways to loop through data, such as using __loop__, __with_items__, or __with_dict__, but the modern and recommended approach is to use loop.
+
+    Example (Loop over list of items):
+
+        ---
+        - name: Install multiple packages
+          hosts: all
+          become: yes
+          tasks:
+            - name: Install packages
+              apt:
+                name: "{{ item }}"
+                state: present
+              loop:
+                - nginx
+                - curl
+                - git
+
+    
 ## Ansible Roles
 
 A way to organize playbooks and tasks into reusable, logical units. A role contains tasks, variables, handlers, files, templates, and defaults in a structured directory format.
