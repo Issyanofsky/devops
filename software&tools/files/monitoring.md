@@ -1,6 +1,6 @@
 <div align="center">
 
-# **Monitoring**
+# **Analyzing logs**
 
 ![Monitoring](../pic/monitoring1.gif)
 </div>
