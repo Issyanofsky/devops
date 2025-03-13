@@ -3,7 +3,7 @@
 # **EC2 (Elastic Compute Cloud)**
 
 
-![EC2 (Elastic Compute Cloud)](./pic/ec2.gif)
+![EC2 (Elastic Compute Cloud)](../pic/ec2.gif)
 
 </div>
 
