@@ -5,7 +5,7 @@
 ![Elk Elasticsearch](../pic/elk.gif)
 </div>
 
-## Installing
+## Installing Elasticsearch
 
 (installing of one server)
 
@@ -95,3 +95,130 @@ Configure Elasticsearch:
   restart for configuration to take change:
 
         sudo systemctl restart elasticsearch
+
+  Checking the elasticsearch (if work):
+
+     
+        curl -X GET "localhost:9200"
+
+     Or
+
+        http://<ELK_server_IP>:9200
+
+__* NOTICE__ best practice is to install __Logstash__ and __Kibana__ on seperate mechine (server).
+
+## Installing Logstash
+
+  On the server:
+
+        sudo apt update
+        sudo apt-get install logstash
+
+   Start the Logstash service:
+
+        sudo systemctl start logstash
+
+  Enable the Logstash service:
+
+        sudo systemctl enable logstash
+
+  check the status of the service
+
+        sudo systemctl status logstash
+
+### Configure logstash
+
+        sudo nano /etc/logstash/logstash.yml
+
+## Installing Kibana
+
+  On the server:
+
+        sudo apt update
+        sudo apt-get install kibana
+
+  Start the Kibana service:
+
+        sudo systemctl start kibana
+
+  Enable the Kibana service:
+
+        sudo systemctl enable kibana
+
+  Let’s check the status of kibana:
+
+        sudo systemctl status kibana
+
+### Configure Kibana 
+
+  open the kibana.yml configuration file for editing:
+
+        sudo nano /etc/kibana/kibana.yml
+
+  Uncomment this below lines and localhost replace with 0.0.0.0 (means any ip_address):
+
+        server.port: 5601
+
+        server.host: "localhost"
+
+        elasticsearch.hosts: ["http://localhost:9200"]
+
+  restart kibana
+
+        sudo systemctl restart kibana
+
+  To access Kibana, open a web browser and browse to the following address:
+
+        http://ip_address:5601
+
+## Installing Filebeat
+
+Acts as an agent that collects and sends logs to the ELK stack (Elasticsearch, Logstash, Kibana). It is a lightweight, resource-efficient tool that you install on the source systems where the logs are generated (like web servers, application servers, or any other machine producing logs).
+
+Install on each of the source:
+
+sudo apt-get install filebeat
+
+### Configure Filebeat
+
+Filebeat, by default, sends data to Elasticsearch. Filebeat can also be configured to send event data to Logstash.
+
+  Open configuration file using below command:
+
+
+        sudo nano /etc/filebeat/filebeat.yml
+
+  Under the Elasticsearch output section, comment out the following lines:
+
+
+        # output.elasticsearch:
+
+        # Array of hosts to connect to.
+
+        # hosts: ["localhost:9200"]
+
+  Under the Logstash output section, uncomment in the following two lines:
+
+        output.logstash
+        hosts: ["localhost:5044"]
+
+  Enable the Filebeat system module:
+
+        sudo filebeat modules enable system
+
+  Load the index template:
+
+        sudo filebeat setup --index-management -E output.logstash.enabled=false -E 'output.elasticsearch.hosts=["0.0.0.0:9200"]'
+
+  Start and enable the Filebeat service:
+
+        sudo systemctl start filebeat
+        sudo systemctl enable filebeat
+
+  Verify Elasticsearch Reception of Data:
+
+        curl -XGET http://43.205.98.238:9200/_cat/indices?v
+
+   Or
+
+        http://43.205.98.238:9200/_cat/indices?v
