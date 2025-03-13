@@ -2,6 +2,7 @@
 
 # **Git**
 
+![Git](./pic/git.gif)
 </div>
 
 ## clone
