@@ -8,4 +8,4 @@
 __Legent:__
 
   * [Quality & Security Tools](./files/quality_and_security.md)
-  * [Monitoring Tools](./files/monitoring.md)
+  * [Analyzing logs](./files/monitoring.md)
