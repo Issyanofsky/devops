@@ -2,6 +2,7 @@
 
 # **Python**
 
+![Python](./pic/python.gif)
 </div>
 
 # type conversion or type casting
