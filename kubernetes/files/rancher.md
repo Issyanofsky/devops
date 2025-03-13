@@ -15,7 +15,9 @@ This deployment is of single rancher node installation. it deployed in a Docker 
 
 ### Prerequisites:
 
- A server to deploy the Container. this guide is on a AWS Instance.
+A server to deploy the Container. this guide is on a AWS Instance.
+
+__* IMPORTANT__ lossing the IP will lose all connection to the rancher.
 
 on the AWS consol. 
 
@@ -64,3 +66,11 @@ type
       docker run -d --restart=unless-stopped -p 80:80 -p 443:443 --privileged rancher/rancher
 
 __*__ there is no need to set volume. the container has its own volume set.
+
+Verify:
+
+     docker ps
+     
+## Entering Rancher
+
+type the IP of the EC2 on the browser
