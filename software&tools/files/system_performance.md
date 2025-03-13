@@ -7,7 +7,7 @@
 
 Refers to how well an application, server, or infrastructure is performing. It includes aspects like speed, resource usage (CPU, memory, disk), and uptime. Metrics tools are used to track and monitor these performance aspects in real-time to ensure systems are running efficiently, predict potential problems, and improve decision-making.
 
-__Common Metrics Monitored:__
+## Common Metrics Monitored:
 
   * __CPU Usage:__ How much CPU is being used by the system or application.
   * __Memory Usage:__ Amount of memory being used and available.
@@ -17,7 +17,7 @@ __Common Metrics Monitored:__
   * __Uptime:__ How long the system has been up and running.
   * __Network Traffic:__ Data being sent and received by the system.
 
-__System Performance & Metrics Tools:__
+## System Performance & Metrics Tools:
 
   * __Prometheus:__ monitoring system and time-series database primarily used for metrics. It collects and stores metrics data (e.g., CPU usage, memory usage, response times) and is commonly used to monitor application and infrastructure performance.
   * __Grafana:__ a popular open-source dashboard tool that visualizes metrics collected from systems like Prometheus, InfluxDB, or other monitoring tools.
