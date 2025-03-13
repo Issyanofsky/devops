@@ -2,6 +2,6 @@
 
 # **Prometheus**
 
-![Prometheus](../pic/prometheus.gif)
+![Prometheus](../pic/prometeus.gif)
 </div>
 
