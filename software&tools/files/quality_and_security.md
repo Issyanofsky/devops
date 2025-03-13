@@ -3,6 +3,6 @@ Software & Tools
 
 # **Quality Tools**
 
-![Quality Tools](./pic/qualityTools.gif)
+![Quality Tools](../pic/qualityTools.gif)
 </div>
 
