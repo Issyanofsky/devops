@@ -36,6 +36,7 @@
    * [OpenEBS (mayastor)](files/openEBS.md)
    * [CertBot (Certificate)](files/certbot.md)
    * [Prometheus & Grafana](files/prometheus.md)
+   * [Kafka](files/kafka.md)
      
 
 ![kubernetes](kubernetes.gif)
