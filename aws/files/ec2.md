@@ -2,6 +2,9 @@
 
 # **EC2 (Elastic Compute Cloud)**
 
+
+![EC2 (Elastic Compute Cloud)](../pic/EC2.gif)
+
 </div>
 
 virtual computers (called instances) to run your applications, websites, or services.
