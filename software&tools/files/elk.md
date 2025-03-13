@@ -175,9 +175,9 @@ __* NOTICE__ best practice is to install __Logstash__ and __Kibana__ on seperate
 
 Acts as an agent that collects and sends logs to the ELK stack (Elasticsearch, Logstash, Kibana). It is a lightweight, resource-efficient tool that you install on the source systems where the logs are generated (like web servers, application servers, or any other machine producing logs).
 
-Install on each of the source:
+  Install on each of the source:
 
-sudo apt-get install filebeat
+        sudo apt-get install filebeat
 
 ### Configure Filebeat
 
@@ -185,16 +185,12 @@ Filebeat, by default, sends data to Elasticsearch. Filebeat can also be configur
 
   Open configuration file using below command:
 
-
         sudo nano /etc/filebeat/filebeat.yml
 
   Under the Elasticsearch output section, comment out the following lines:
 
-
         # output.elasticsearch:
-
         # Array of hosts to connect to.
-
         # hosts: ["localhost:9200"]
 
   Under the Logstash output section, uncomment in the following two lines:
