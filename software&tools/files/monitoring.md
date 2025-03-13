@@ -100,7 +100,7 @@ A cloud-based log management service built on top of the ELK Stack (Elasticsearc
 
 # **Splunk**
 
-![Splunk](../pic/logzio.gif)
+![Splunk](../pic/splunk.gif)
 
 </div>
 
