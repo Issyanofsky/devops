@@ -9,9 +9,6 @@
 
 (installing of one server)
 
-__* NOTICE__ for cluster installation. dont activate the system untill the all cluster is installed.
-
-
 ### Prerequisites:
 
 Ubuntu Server (for hosting the ELK).
@@ -62,3 +59,39 @@ Ubuntu Server (for hosting the ELK).
 
         sudo apt-get update
         sudo apt-get install elasticsearch
+
+__* NOTICE__ for cluster installation. dont activate the system untill the all cluster is installed.
+
+  Start elacticsearch services
+
+        sudo systemctl start elasticsearch
+
+  Enable elacticsearch at system startup          
+
+        sudo systemctl enable elasticsearch
+
+  To check the status of elasticsearch
+
+        sudo systemctl status elasticsearch
+
+Configure Elasticsearch:
+
+  configuration file
+
+        sudo nano /etc/elasticsearch/elasticsearch.yml
+
+  Go to Network section and uncomment network.host and replace your system IP with
+
+        network.host: 0.0.0.0
+
+  add this line discovery.seed_hosts: [ ] in discovery section
+
+        discovery.seed_hosts: [ ]
+
+  go to the BEGIN SECURITY AUTO CONFIGURATION and here you need to replace this true with false as shown in below:
+
+        xpack.security.enabled: false
+
+  restart for configuration to take change:
+
+        sudo systemctl restart elasticsearch
