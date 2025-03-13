@@ -50,3 +50,15 @@ Ubuntu Server (for hosting the ELK).
 
         echo $JAVA_HOME
   
+  Download and install the public signing key:
+
+        wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo gpg --dearmor -o /usr/share/keyrings/elasticsearch-keyring.gpg
+
+  Save the repository definition to /etc/apt/sources.list.d/elastic-8.x.list:
+
+        echo "deb [signed-by=/usr/share/keyrings/elasticsearch-keyring.gpg] https://artifacts.elastic.co/packages/8.x/apt stable main" | sudo tee /etc/apt/sources.list.d/elastic-8.x.list
+
+  Install the Elasticsearch:
+
+        sudo apt-get update
+        sudo apt-get install elasticsearch
