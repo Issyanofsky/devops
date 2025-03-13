@@ -2,6 +2,6 @@
 
 # **Prometheus**
 
-![Elk Elasticsearch](../pic/elk.gif)
+![Prometheus](../pic/prometheus.gif)
 </div>
 
