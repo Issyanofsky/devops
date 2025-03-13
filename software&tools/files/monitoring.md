@@ -1,4 +1,3 @@
-Software & Tools
 <div align="center">
 
 # **Monitoring**
@@ -40,3 +39,20 @@ __Containers and Logs:__
         docker logs <container_id> (for Docker)
         kubectl logs <pod_name> (for Kubernetes)
     
+<div align="center">
+
+# **Syslogs**
+
+![Syslogs](../pic/syslogs.gif)
+
+</div>
+
+Syslogs (short for System Logs) are a standard for message logging used in many computer systems, including Linux, UNIX, and other operating systems. Syslog is used to record messages from various system processes, services, applications, and hardware devices. These messages can provide valuable information for monitoring system performance, diagnosing issues, and ensuring system security.
+
+__* IMPORTANT__ 
+   
+   - syslog server is a centerize sever that collect all logs ( it doesnt retrive logs. it need to be fetch logs from the targets).
+   - use UDP (can cose consinstency problems. UDP not garente reciving all logs).
+     
+
+
