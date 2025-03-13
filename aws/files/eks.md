@@ -2,6 +2,8 @@
 
 # **EKS (Elastic Kubernetes Service)**
 
+![EKS (Elastic Kubernetes Service)](../pic/eks.gif)
+
 </div>
 
 A fully managed service that makes it easy to run and manage Kubernetes clusters on AWS.
