@@ -3,7 +3,7 @@ Software & Tools
 
 # **Monitoring**
 
-![Monitoring](../pic/qualityTools.gif)
+![Monitoring](../pic/monitoring1.gif)
 </div>
 
 __Monitoring__ means keeping an eye on the health, performance, and reliability of applications, systems, and infrastructure. It involves collecting data on things like server uptime, response times, error rates, and resource usage, and then using that data to identify and fix problems before they affect users.
