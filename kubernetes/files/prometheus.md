@@ -166,7 +166,7 @@ __* BEFOR__ In order to find theright annotations. we edit an existed one and to
       helm get values ingress-nginx --namespace ingress-nginx 
 
 
- ## Exctra
+ ## Extra
 
  in some cases i had to add those to the kube-prometheus installation:
 
