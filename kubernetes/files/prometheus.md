@@ -51,7 +51,7 @@ Download the Chart:
 
     helm pull prometheus-community/kube-prometheus-stack --untar
 
-edit the value.yml file (*Best practice - make a copy):
+edit the value.yml file (*Best practice - make a copy) - it will set the prometheus, grafana (with storage) and set ingress in the cluster:
 
    set the following values:
 
@@ -92,3 +92,16 @@ edit the value.yml file (*Best practice - make a copy):
                        resources:
                           reqests:
                             storage: 50 Gi
+
+
+Apply the helm chart (install Prometheus and Grafana):
+
+        helm upgrade --install kube-prom-stack prometheus-community/kube-prometheus-stack --name-space monitoring --create-namespace -f value.yaml 
+
+verify Installation:
+
+       kubectl get pods -n monitoring -i "release=kube-prom-stack"
+
+       helm ls -n monitoring
+
+       kubectl get all -n monitoring
