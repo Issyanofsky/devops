@@ -2,8 +2,13 @@
 
 # **Elk Elasticsearch**
 
-![Elk Elasticsearch](./pic/elk.gif)
+![Elk Elasticsearch](../pic/elk.gif)
 </div>
 
-# Installation
+## Installing
+
+(installing of one server)
+
+__* NOTICE__ for cluster installation. dont activate the system untill the all cluster is installed.
+
 
