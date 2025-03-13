@@ -54,5 +54,22 @@ __* IMPORTANT__
    - syslog server is a centerize sever that collect all logs ( it doesnt retrive logs. it need to be fetch logs from the targets).
    - use UDP (can cose consinstency problems. UDP not garente reciving all logs).
      
+<div align="center">
+
+# **ELK (Elasticsearch)*
+
+![ELK (Elasticsearch)](../pic/elk.gif)
+
+</div>
+
+__ELK__ helps collect, search, analyze, and display data (like logs) in a simple and powerful way, making it easier for teams to monitor systems and troubleshoot issues.
+
+ELK helps collect, search, analyze, and display data (like logs) in a simple and powerful way, making it easier for teams to monitor systems and troubleshoot issues.
+
+   1. __Elasticsearch:__ A powerful search engine that stores and indexes large amounts of data, making it easy to search and retrieve information quickly.
+   2. __Logstash:__ A tool that collects, processes, and transforms data from various sources (like logs, databases, or applications) before sending it to Elasticsearch for storage and analysis (ELK recive JSON type files. Logstach convert the logs to JSON and send to ELK server (__Elasticsearch)).
+   3. __Kibana:__ A dashboard and visualization tool that helps you explore and visualize the data stored in Elasticsearch, like showing logs and trends in charts or graphs.
+   4. __filebit:__ for __Kubernetes__ . filebit is a lightweight data shipper used to send log files from servers to Logstash or directly to Elasticsearch. It’s typically installed on the source machines (e.g., web servers, application servers) to collect logs and forward them in real-time.
+
 
 
