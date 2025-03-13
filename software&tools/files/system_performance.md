@@ -19,7 +19,7 @@ Refers to how well an application, server, or infrastructure is performing. It i
 
 ## System Performance & Metrics Tools:
 
-  * __Prometheus:__ [prometheus](/kubernetes/files/prometheus.md) monitoring system and time-series database primarily used for metrics. It collects and stores metrics data (e.g., CPU usage, memory usage, response times) and is commonly used to monitor application and infrastructure performance.
+  * [prometheus](/kubernetes/files/prometheus.md): monitoring system and time-series database primarily used for metrics. It collects and stores metrics data (e.g., CPU usage, memory usage, response times) and is commonly used to monitor application and infrastructure performance.
   * __Grafana:__ a popular open-source dashboard tool that visualizes metrics collected from systems like Prometheus, InfluxDB, or other monitoring tools.
   * __Nagios:__ a monitoring tool that tracks the status of various systems, network devices, and applications, ensuring that systems are up and running.
   * __Datadog:__ a cloud-based monitoring and analytics platform for infrastructure and application performance.
