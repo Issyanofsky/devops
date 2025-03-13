@@ -22,6 +22,9 @@
 
    * [minikube](files/MiniKube.md)
    * [Kubernetes (kubeadm)](files/kubernetes.md)
+   * [ECS (Elastic Container Service)](/kubernetes/files/ecs.md)
+   * [EKS (Elastic Kubernetes Service)](/kubernetes/files/eks.md)
+
 
 ## Other install:
 
