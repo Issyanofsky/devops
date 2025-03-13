@@ -51,7 +51,7 @@ Download the Chart:
 
     helm pull prometheus-community/kube-prometheus-stack --untar
 
-edit the value.yml file (Best practice - make a copy):
+edit the value.yml file (*Best practice - make a copy):
 
    set the following values:
 
