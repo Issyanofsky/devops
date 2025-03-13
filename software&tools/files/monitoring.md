@@ -74,7 +74,7 @@ ELK helps collect, search, analyze, and display data (like logs) in a simple and
 
 Installing ELK example:
 
-      [Install ELK](elk.md)
+   [Install ELK](elk.md)
 
       
 <div align="center">
