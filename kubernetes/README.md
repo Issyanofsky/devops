@@ -4,6 +4,7 @@
 
 # **Kubernetes (K8s)**
 
+![Kubernetes](./pic/kubernetes1.gif)
 </div>
 
 # Legend:
