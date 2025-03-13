@@ -81,7 +81,7 @@ follow the instructions on the rancher webpage.
 
          docker logs <container_ID> 2>&1 | grep "Bootstrap password:"
 
-__* Notice__ on the first login the rancher set the IP in his files. so make sure this IP (server) is right.
+__* Notice__ on the first login the rancher set the IP in his files. so make sure this IP (server) is right!!.
 
 __* RECOMEND__ change password for better security.
 
