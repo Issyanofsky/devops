@@ -166,9 +166,9 @@ __* BEFOR__ In order to find theright annotations. we edit an existed one and to
       helm get values ingress-nginx --namespace ingress-nginx 
 
 
- ## Excetas
+ ## Exctra
 
- in some cases i had to add those:
+ in some cases i had to add those to the kube-prometheus installation:
 
       prometheus.prometheusSpec.podMonitorSelectorNilUsesHelmValue=false
       prometheus.prometheusSpec.serviceMonitorSelectorNilUsesHelmValue=false
