@@ -171,6 +171,11 @@ __* NOTICE__ best practice is to install __Logstash__ and __Kibana__ on seperate
 
         http://ip_address:5601
 
+check connectivity of Kibana. 
+
+        enter thekibana webpage --> Management --> Stack Management --> Index Management 
+        (turn On: include hidden indices, include rollup indices)
+        
 ## Installing Filebeat
 
 Acts as an agent that collects and sends logs to the ELK stack (Elasticsearch, Logstash, Kibana). It is a lightweight, resource-efficient tool that you install on the source systems where the logs are generated (like web servers, application servers, or any other machine producing logs).
@@ -218,3 +223,9 @@ Filebeat, by default, sends data to Elasticsearch. Filebeat can also be configur
    Or
 
         http://43.205.98.238:9200/_cat/indices?v
+
+__trubelshoot__
+
+  check logs at:
+
+        tail -f /var/log/filebeat
