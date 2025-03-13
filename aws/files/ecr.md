@@ -2,6 +2,7 @@
 
 # **Elastic Container Registry (ECR)**
 
+![Elastic Container Registry (ECR)](../pic/ecr.gif)
 </div>
 
  fully managed container image registry service provided by AWS (like DockerHub).
