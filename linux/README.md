@@ -2,6 +2,7 @@
 
 # **Linux**
 
+![Linux](./pic/linux.gif)
 </div>
 
 ## pwd
