@@ -2,6 +2,6 @@
 
 # **System Preformance & Metrics Tools**
 
-![System Preformance & Metrics Tools](../pic/qualityTools.gif)
+![System Preformance & Metrics Tools](../pic/metrics.gif)
 </div>
 
