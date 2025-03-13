@@ -56,7 +56,7 @@ __* IMPORTANT__
      
 <div align="center">
 
-# **ELK (Elasticsearch)*
+# **ELK (Elasticsearch)**
 
 ![ELK (Elasticsearch)](../pic/elk.gif)
 
@@ -71,5 +71,39 @@ ELK helps collect, search, analyze, and display data (like logs) in a simple and
    3. __Kibana:__ A dashboard and visualization tool that helps you explore and visualize the data stored in Elasticsearch, like showing logs and trends in charts or graphs.
    4. __filebit:__ for __Kubernetes__ . filebit is a lightweight data shipper used to send log files from servers to Logstash or directly to Elasticsearch. It’s typically installed on the source machines (e.g., web servers, application servers) to collect logs and forward them in real-time.
 
+<div align="center">
 
+# **Graylog**
 
+![Graylog](../pic/graylog.gif)
+
+</div>
+
+A log management platform that collects, stores, and analyzes log data. It helps monitor and troubleshoot systems by providing search and visualization tools for logs in real-time.
+
+  * uses DataBase (DB)
+  * advanced Tool.
+
+<div align="center">
+
+# **Logz.io**
+
+![Logz.io](../pic/logzio.gif)
+
+</div>
+
+A cloud-based log management service built on top of the ELK Stack (Elasticsearch, Logstash, Kibana). It helps collect, analyze, and visualize logs and metrics, making it easier to monitor applications and infrastructure.
+
+(paying by traffic)
+
+<div align="center">
+
+# **Splunk**
+
+![Splunk](../pic/logzio.gif)
+
+</div>
+
+A powerful tool for searching, monitoring, and analyzing machine-generated data (like logs) in real time. It’s used for troubleshooting, security monitoring, and business intelligence.
+
+__complicated system but give extended performances.
