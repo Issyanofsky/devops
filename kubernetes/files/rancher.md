@@ -17,7 +17,7 @@ This deployment is of single rancher node installation. it deployed in a Docker 
 
 A server to deploy the Container. this guide is on a AWS Instance.
 
-__* IMPORTANT__ lossing the IP will lose all connection to the rancher.
+__* IMPORTANT__ lossing the IP of the server will lose all connection to the rancher (changing the IP can only dont within the rancher).
 
 on the AWS consol. 
 
@@ -74,3 +74,21 @@ Verify:
 ## Entering Rancher
 
 type the IP of the EC2 on the browser
+
+### log in
+
+follow the instructions on the rancher webpage.
+
+         docker logs <container_ID> 2>&1 | grep "Bootstrap password:"
+
+__* Notice__ on the first login the rancher set the IP in his files. so make sure this IP (server) is right.
+
+__* RECOMEND__ change password for better security.
+
+### IMPORTANT to Know:
+
+  * __Credentials:__ set credintials before creating any cluster to avoid permission issues (e.g. the acess key for AWS).
+  * __Kubectl:__ the kubectl commands are made throw the rancher servers.
+     - getting a kubeconfig file in the web page.
+     - rancher server must be ON for executing kubectl commands.
+  * __Delete:__ rancher can delete only what has been built with it (you can import other cluster for monitoring).
