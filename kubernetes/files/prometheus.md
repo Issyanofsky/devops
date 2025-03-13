@@ -68,4 +68,27 @@ edit the value.yml file (*Best practice - make a copy):
                  enabled: true
                  type: sts
                  storageClassName: "StorageClassName" (set this to the correct Storage Class Name)
-                 
+                 accessModes:
+                   - ReadWriteOnce
+                 size: 20Gi
+                 finalizers:
+                   - kubernetes.io/pvc-protection
+           sidecar:
+              datasources:
+                 exemplarTraceIdDestinations:
+                    alertmanager:
+                        enabled: false
+        prometheus:
+           ingress:
+              enabled: True
+              hosts:  (removed the "[]" and add the domain to publish)
+                - prometheus.domain.com
+           prometheusSpec:
+               storageSpec: (removed the"{}")
+                  volumeClaimTemplate: (removed the"#" frome the next lines)
+                     spec:
+                       storageClassName: sc (adjust to the storage class name on the cluster)
+                       acessModes: ["ReadWriteOnce"]
+                       resources:
+                          reqests:
+                            storage: 50 Gi
