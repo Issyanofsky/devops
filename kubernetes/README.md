@@ -35,6 +35,7 @@
    * [Istio (& kiali)](files/istio.md)
    * [OpenEBS (mayastor)](files/openEBS.md)
    * [CertBot (Certificate)](files/certbot.md)
+   * [Prometheus & Grafana](files/prometheus.md)
      
 
 ![kubernetes](kubernetes.gif)
