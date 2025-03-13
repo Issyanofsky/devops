@@ -71,6 +71,12 @@ ELK helps collect, search, analyze, and display data (like logs) in a simple and
    3. __Kibana:__ A dashboard and visualization tool that helps you explore and visualize the data stored in Elasticsearch, like showing logs and trends in charts or graphs.
    4. __filebit:__ for __Kubernetes__ . filebit is a lightweight data shipper used to send log files from servers to Logstash or directly to Elasticsearch. It’s typically installed on the source machines (e.g., web servers, application servers) to collect logs and forward them in real-time.
 
+
+Installing ELK example:
+
+      [Install ELK](elk.md)
+
+      
 <div align="center">
 
 # **Graylog**
