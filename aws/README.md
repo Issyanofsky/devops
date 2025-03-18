@@ -22,6 +22,7 @@
    * [CloudFormation](./files/cloudFormation.md)
    * [Elastik Beanstalk (EB)](./files/beanstalk.md)
    * [Lambda](./files/lambda.md)
+   * [SageMaker](./files/sagemaker.md)
    * [CodeDeploy (CD)](./files/codedeploy.md)
    * [ECS (Elastic Container Service)](./files/ecs.md)
    * [Elastic Container Registry (ECR)](./files/ecr.md)
