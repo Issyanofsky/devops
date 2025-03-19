@@ -25,4 +25,4 @@
 
 # Tools:
 
-  * [have i been pwned?]([terraform/README.md](https://haveibeenpwned.com/))
+  * [have i been pwned?](https://haveibeenpwned.com/)
