@@ -43,6 +43,7 @@
    * [Prometheus & Grafana](files/prometheus.md)
    * [Kafka](files/kafka.md)
    * [argo](files/argo.md)
+   * [OpenLens](files/openlens.md)
 
      
 ![kubernetes](kubernetes.gif)
