@@ -42,6 +42,7 @@
 
    * [Prometheus & Grafana](files/prometheus.md)
    * [Kafka](files/kafka.md)
+   * [argo](files/argo.md)
 
      
 ![kubernetes](kubernetes.gif)
