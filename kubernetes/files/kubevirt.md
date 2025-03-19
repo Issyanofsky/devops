@@ -18,3 +18,31 @@ Lets you run traditional virtual machines (like those you’d run on VMware or V
 
 ## Install:
 
+__Prerequisites:__
+
+  * a working Kubernetes cluster (on your local machine or cloud).
+  * __kubctl__ installed.
+
+Deploy KubeVirt Operator:
+
+Install the KubeVirt operator, which manages the lifecycle of KubeVirt components.
+
+       kubectl create -f https://github.com/kubevirt/kubevirt/releases/download/v0.56.0/kubevirt-operator.yaml
+
+Install KubeVirt
+       
+       kubectl create -f https://github.com/kubevirt/kubevirt/releases/download/v0.56.0/kubevirt-cr.yaml
+
+Verify Installation
+
+       kubectl get pods -n kubevirt
+
+## Access the KubeVirt UI
+
+To access the UI, expose it with the following command:
+
+       kubectl port-forward svc/virt-manager -n kubevirt 8001:443
+
+access the KubeVirt dashboard:
+
+       https://localhost:8001
