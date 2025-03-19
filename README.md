@@ -26,3 +26,4 @@
 # Tools:
 
   * [have i been pwned?](https://haveibeenpwned.com/)
+  * [SSL Server Test](https://www.ssllabs.com/ssltest/)
