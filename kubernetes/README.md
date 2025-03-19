@@ -44,7 +44,8 @@
    * [Kafka](files/kafka.md) - messenger system.
    * [argo](files/argo.md) -continuous delivery (CD) Tools.
    * [OpenLens](files/openlens.md) - Kubernetes management tool.
-   * [Kro (Kubernetes Resource Orchestrator)](files/kro.md)
+   * [Kro (Kubernetes Resource Orchestrator)](files/kro.md) - Kubernetes Resource Orchestrator is a tool.
+   * [KubeVirt](files/kubevirt.md)
 
      
 ![kubernetes](kubernetes.gif)
