@@ -17,6 +17,7 @@
    * [Kubernetes](kubernetes/README.md)
    * [AWS](aws/README.md)
    * [Terraform](terraform/README.md)
+   * [Atlantis](atlantis/README.md)
    * [Terragrunt](terragrunt/README.md)
    * [Ansible](ansible/README.md)
    * [Software & Tools](software&tools/README.md)
