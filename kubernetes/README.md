@@ -43,7 +43,7 @@
    * [Prometheus & Grafana](files/prometheus.md)
    * [Kafka](files/kafka.md) - messenger system.
    * [argo](files/argo.md) -continuous delivery (CD) Tools.
-   * [OpenLens](files/openlens.md)
+   * [OpenLens](files/openlens.md) - Kubernetes management tool.
    * [Kro (Kubernetes Resource Orchestrator)](files/kro.md)
 
      
