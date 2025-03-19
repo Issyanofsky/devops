@@ -44,6 +44,7 @@
    * [Kafka](files/kafka.md)
    * [argo](files/argo.md)
    * [OpenLens](files/openlens.md)
+   * [Kro (Kubernetes Resource Orchestrator)](files/kro.md)
 
      
 ![kubernetes](kubernetes.gif)
