@@ -19,3 +19,49 @@ __Use Cases:__
 
 ## Install Kubewatch:
 
+__Prerequisites:__
+
+ * Kubernetes Cluster: Argo CD requires a running Kubernetes cluster.
+ * Helm.
+
+Add the Kubewatch Helm repository:
+
+        helm repo add kubewatch https://github.com/bitnami-labs/kubewatch/releases/download/v0.1.0
+        helm repo update
+
+Install Kubewatch:
+
+        helm install kubewatch kubewatch/kubewatch --namespace kubewatch --create-namespace
+
+## Configure Notification Channels
+
+Kubewatch can send notifications to different services like Slack, Email, or Webhook. You need to configure which service you want to receive the alerts on.
+
+ 1. __Create a configuration file__ for Kubewatch to tell it where to send notifications (e.g. for Slack, you would need to set up a Slack webhook URL).
+ 2. __Configure Kubewatch:__
+
+Create a ConfigMap that contains your notification details (like the Slack webhook URL).
+
+Example for Slack:
+
+              apiVersion: v1
+              kind: ConfigMap
+              metadata:
+                name: kubewatch-config
+                namespace: kubewatch
+              data:
+                SLACK_WEBHOOK_URL: "<Your-Slack-Webhook-URL>"
+
+  3. __Apply the ConfigMap:__
+
+Save the above YAML file (e.g., kubewatch-config.yaml) and apply it:
+
+        kubectl apply -f kubewatch-config.yaml
+
+  4. __Verify Kubewatch is Running__
+
+        kubectl get pods -n kubewatch
+
+  5. __Testing Kubewatch__
+
+To test Kubewatch, you can make a change in your Kubernetes cluster (e.g., create a new pod or deploy a new service). Kubewatch should notify you about the change via your configured notification channel.
