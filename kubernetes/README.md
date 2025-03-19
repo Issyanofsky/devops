@@ -47,7 +47,7 @@
    * [Kro (Kubernetes Resource Orchestrator)](files/kro.md) - Kubernetes Resource Orchestrator is a tool.
    * [KubeVirt](files/kubevirt.md) - run traditional virtual machines (like those you’d run on VMware or VirtualBox) in a Kubernetes environment.
    * [Velero](files/velero.md) - backup, restore, and migrate your Kubernetes applications and data.
-   * [Kubewatch](files/kubewatch.md) - simple tool that watches your Kubernetes resources.
+   * [Kubewatch](files/kubewatch.md) - Alerting tool that watches your Kubernetes resources.
 
      
 ![kubernetes](kubernetes.gif)
