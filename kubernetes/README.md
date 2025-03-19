@@ -45,7 +45,7 @@
    * [argo](files/argo.md) -continuous delivery (CD) Tools.
    * [OpenLens](files/openlens.md) - Kubernetes management tool.
    * [Kro (Kubernetes Resource Orchestrator)](files/kro.md) - Kubernetes Resource Orchestrator is a tool.
-   * [KubeVirt](files/kubevirt.md)
+   * [KubeVirt](files/kubevirt.md) - run traditional virtual machines (like those you’d run on VMware or VirtualBox) in a Kubernetes environment.
 
      
 ![kubernetes](kubernetes.gif)
