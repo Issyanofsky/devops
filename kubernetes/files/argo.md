@@ -6,7 +6,7 @@
 
 </div>
 
-## Argo ecosystem:
+# Argo ecosystem:
 
 ## ArgoCD
 
@@ -44,3 +44,19 @@ Access the UI: If you're using a LoadBalancer, get the external IP:
           kubectl get svc -n argocd
 
           https://<EXTERNAL-IP>
+
+## Argo Workflows:
+
+Allows to define, schedule, and manage complex workflows in Kubernetes. You can use it to automate processes that involve multiple steps, like running jobs or orchestrating data pipelines.
+
+## Argo Events:
+
+This tool handles event-driven automation. It helps trigger workflows or actions based on external events (like file uploads, HTTP requests, etc.).
+
+## Argo Rollouts:
+
+It manages canary deployments and blue-green deployments on Kubernetes. It lets you gradually release new versions of applications, monitor their performance, and roll back if needed.
+
+## Argo CD Notifications:
+
+This tool helps you set up notifications for various ArgoCD events, such as when an application is synced or when an error occurs, so you're always informed about what's happening.
