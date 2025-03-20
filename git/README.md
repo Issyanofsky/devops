@@ -123,13 +123,13 @@
 
   ## GitHub Action 
 
-    allows you to automate workflows like testing, building, and deploying your code directly from a GitHub repository.
+  Allows you to automate workflows like testing, building, and deploying your code directly from a GitHub repository.
 
-    location: .github/workflows 
+  Location: .github/workflows 
 
-    type: YAML file type.
+  File type: YAML file type.
 
-    ## Workflow syntax and structure
+  ## Workflow syntax and structure
 
       [YAML]
       name: workflow name (optional).
@@ -137,7 +137,7 @@
       jobs: a list of jobs running
       steps: a list of steps within the job.
 
-      ## example 
+  ### example 
 
       name: Python CI
       
@@ -211,15 +211,15 @@
 
 ## need
 
-  used to control the order in which jobs run within a workflow. It allows you to specify dependencies between jobs, meaning that one job should only run after another job has successfully completed.
+Used to control the order in which jobs run within a workflow. It allows you to specify dependencies between jobs, meaning that one job should only run after another job has successfully completed.
 
-  refer to another job in the workflow (will execute only if another job as accomplished).
+Refer to another job in the workflow (will execute only if another job as accomplished).
 
 ## step & Actions
 
-  steps - a single task that is part of a job in a GitHub Actions workflow. 
+__steps__ - a single task that is part of a job in a GitHub Actions workflow. 
 
-  Action -  reusable block of code or a pre-built functionality that can be used within a step. 
+Action -  reusable block of code or a pre-built functionality that can be used within a step. 
     
     -  uses: actions/checkout@v2  # This uses a GitHub-hosted action to check out the repository code.
     -  uses: actions/setup-python@v2  # This uses a GitHub-hosted action to set up a Python environment.
@@ -228,7 +228,7 @@
 
 ## Environment Variabls 
 
-  Default Environment Variables (provided by GitHub): 
+Default Environment Variables (provided by GitHub): 
 
     - GITHUB_REPOSITORY - The name of the repository.
     - GITHUB_ACTOR - The username of the person who triggered the workflow.
@@ -236,7 +236,7 @@
     - GITHUB_SHA - The commit SHA that triggered the workflow.
     - RUNNER_OS - The operating system of the runner (e.g., Ubuntu, Windows).
 
-  Custom Environment Variables (User-Defined):
+Custom Environment Variables (User-Defined):
     
     jobs:
       build:
