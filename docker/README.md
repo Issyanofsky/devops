@@ -122,7 +122,7 @@ docker top - display the running processes inside a Docker container.
   
 # Key Dockerfile Instactions
 
-  by default the docker file caled Dockefile.
+  by default the docker file called Dockefile.
   
   ## FROM
 
