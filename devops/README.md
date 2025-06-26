@@ -120,10 +120,10 @@ an architectural pattern in software design where software components, called "s
 
     example tools:
 
-      - logs analysis
-      - system monitoring.
-      - Idagnostic tools
-      - reproducing the issue in a controlled enviroment.
+      - Logs analysis
+      - System monitoring.
+      - Diagnostic tools
+      - Reproducing the issue in a controlled enviroment.
 
   # metrics
 
