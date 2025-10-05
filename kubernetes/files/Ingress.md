@@ -37,7 +37,7 @@ installing Guide:
 
 download the correct yaml file (depends on the installed system - for server installation i choose Bare-Metal)
 
-   https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.12.0/deploy/static/provider/baremetal/deploy.yaml
+   https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.13.3/deploy/static/provider/baremetal/deploy.yaml
 
 edit the file that was download:
 
